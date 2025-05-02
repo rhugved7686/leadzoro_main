@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { 
@@ -27,7 +28,7 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: FaPhoneAlt, text: '+91 8789462971', href: 'tel:+911234567890' },
+    { icon: FaPhoneAlt, text: '+91 8789462971', href: 'tel:+918789462971' },
     { icon: FaEnvelope, text: 'info@leadzoro.com', href: 'mailto:info@leadzoro.com' },
     { icon: FaMapMarkerAlt, text: 'Pune, Maharashtra, India', href: '/' }
   ];
@@ -35,15 +36,33 @@ const Footer = () => {
   const footerLinks = [
     {
       title: 'Services',
-      links: ['Meta Ads', 'Google Ads', 'SEO Services', 'Website Development', 'Social Media', 'Local SEO']
+      links: [
+        { name: 'Meta Ads', href: '/meta-ads-services' },
+        { name: 'Google Ads', href: '/google-ads-services' },
+        { name: 'SEO Services', href: '/seo-services' },
+        { name: 'Website Development', href: '/website-development' },
+        { name: 'Social Media', href: '/social-media-marketing' },
+        { name: 'Local SEO', href: '/local-seo-services' }
+      ]
     },
     {
       title: 'Company',
-      links: ['About Us', 'Case Studies', 'Testimonials', 'Blog', 'Careers']
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Testimonials', href: '/testimonials' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Careers', href: '/careers' }
+      ]
     },
     {
       title: 'Resources',
-      links: ['Marketing Guide', 'SEO Checklist', 'Growth Tips', 'Tools']
+      links: [
+        { name: 'Marketing Guide', href: '/resources/marketing-guide' },
+        { name: 'SEO Checklist', href: '/resources/seo-checklist' },
+        { name: 'Growth Tips', href: '/resources/growth-tips' },
+        { name: 'Tools', href: '/resources/tools' }
+      ]
     }
   ];
 
@@ -52,8 +71,10 @@ const Footer = () => {
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80" />
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full filter blur-3xl animate-float" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-500/10 rounded-full filter blur-3xl animate-float" 
-             style={{ animationDelay: '-5s' }} />
+        <div
+          className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-500/10 rounded-full filter blur-3xl animate-float"
+          style={{ animationDelay: '-5s' }}
+        />
       </div>
 
       <motion.div
@@ -104,14 +125,17 @@ const Footer = () => {
               <ul className="space-y-3">
                 {section.links.map((link, index) => (
                   <motion.li
-                    key={link}
+                    key={link.name}
                     initial={{ opacity: 0, x: -20 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.5 + sectionIndex * 0.1 + index * 0.05 }}
                   >
-                    <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
-                      {link}
-                    </a>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                    >
+                      {link.name}
+                    </Link>
                   </motion.li>
                 ))}
               </ul>
@@ -157,4 +181,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
