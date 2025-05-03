@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import PageTransition from '@/components/PageTransition'
 import Script from 'next/script'
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -75,7 +77,9 @@ export default function RootLayout({
           />
         </noscript>
         <PageTransition>{children}</PageTransition>
+        <Analytics />
       </body>
+      <SpeedInsights />
     </html>
   );
 }
