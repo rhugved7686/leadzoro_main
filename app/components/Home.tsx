@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { 
@@ -36,6 +37,7 @@ const services = [
     title: 'Meta Ads',
     description: 'Craft thumb-stopping creatives and precision-targeted Meta Ads to put your brand in front of the right audience.',
     icon: <FaFacebook className="w-8 h-8" />,
+    href: '/meta-ads-services',
     features: [
       'Laser-targeted audience segmentation',
       'A/B tested creatives',
@@ -48,6 +50,7 @@ const services = [
     title: 'Google Ads Management',
     description: 'Get found when it matters most with keyword-optimized campaigns that reach ready-to-convert customers.',
     icon: <FaGoogle className="w-8 h-8" />,
+    href: '/google-ads-services',
     features: [
       'Search, Display & Video Ads',
       'Daily performance monitoring',
@@ -60,6 +63,7 @@ const services = [
     title: 'SEO Services',
     description: 'Stay on top of search results with robust SEO strategies that dominate Google rankings locally and nationally.',
     icon: <FaSearchengin className="w-8 h-8" />,
+    href: '/seo-services',
     features: [
       'Keyword research',
       'Technical SEO audits',
@@ -72,6 +76,7 @@ const services = [
     title: 'Website Development',
     description: 'We build fast, responsive, SEO-friendly websites that convert visitors into paying customers.',
     icon: <FaLaptopCode className="w-8 h-8" />,
+    href: '/website-development-services',
     features: [
       'WordPress & Next.js',
       'Mobile-first design',
@@ -84,6 +89,7 @@ const services = [
     title: 'Social Media Management',
     description: 'Build a brand that talks and listens with curated content and engagement strategies.',
     icon: <FaInstagram className="w-8 h-8" />,
+    href: '/social-media-management-services',
     features: [
       'Content calendars',
       'Creative design',
@@ -96,6 +102,7 @@ const services = [
     title: 'GMB Optimization',
     description: 'Dominate local searches and be the top choice in Pune with our GMB optimization services.',
     icon: <FaMapMarkerAlt className="w-8 h-8" />,
+    href: '/gmb-optimization-services',
     features: [
       'Complete GMB setup',
       'Weekly post scheduling',
@@ -701,39 +708,43 @@ const Services = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="card group hover:bg-white/10 transition-all duration-300"
-            >
-              <div className="flex items-center mb-6">
-                <div className="text-primary-400 group-hover:text-primary-300 transition-colors duration-300">
-                  {service.icon}
+            <Link key={service.title} href={service.href}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="card group hover:bg-white/10 transition-all duration-300 cursor-pointer"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="text-primary-400 group-hover:text-primary-300 transition-colors duration-300">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold ml-4 gradient-text">
+                    {service.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-semibold ml-4 gradient-text">
-                  {service.title}
-                </h3>
-              </div>
-              <p className="text-gray-300 mb-6">
-                {service.description}
-              </p>
-              <ul className="space-y-2">
-                {service.features.map((feature, i) => (
-                  <motion.li
-                    key={i}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={inView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.4, delay: index * 0.1 + i * 0.1 }}
-                    className="text-gray-400 flex items-center"
-                  >
-                    <span className="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2" />
-                    {feature}
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
+                <p className="text-gray-300 mb-6">
+                  {service.description}
+                </p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, i) => (
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={inView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ duration: 0.4, delay: index * 0.1 + i * 0.1 }}
+                      className="text-gray-400 flex items-center"
+                    >
+                      <span className="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2" />
+                      {feature}
+                    </motion.li>
+                  ))}
+                </ul>
+                <div className="mt-6 text-primary-400 group-hover:text-primary-300 transition-colors duration-300">
+                  Learn More →
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </motion.div>
 

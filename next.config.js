@@ -18,7 +18,7 @@ const nextConfig = {
     config.resolve.alias['@'] = path.resolve(__dirname, 'src');
     return config;
   },
-  output: 'export',
+  // Removed 'output: export' to enable server-side features and dynamic sitemap generation
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,

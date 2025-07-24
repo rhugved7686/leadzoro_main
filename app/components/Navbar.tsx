@@ -60,7 +60,7 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '#', hasDropdown: true },
-    { name: 'Blogs', href: '#blogs' },
+    { name: 'Blogs', href: '/blog' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact-us' }
   ]

@@ -40,9 +40,9 @@ const Footer = () => {
         { name: 'Meta Ads', href: '/meta-ads-services' },
         { name: 'Google Ads', href: '/google-ads-services' },
         { name: 'SEO Services', href: '/seo-services' },
-        { name: 'Website Development', href: '/website-development' },
-        { name: 'Social Media', href: '/social-media-marketing' },
-        { name: 'Local SEO', href: '/local-seo-services' }
+        { name: 'Website Development', href: '/website-development-services' },
+        { name: 'Social Media Management', href: '/social-media-management-services' },
+        { name: 'GMB Optimization', href: '/gmb-optimization-services' }
       ]
     },
     {
