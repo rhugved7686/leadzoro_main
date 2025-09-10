@@ -35,13 +35,13 @@ const ServiceCard = ({ title, content, icon: Icon, delay = 0 }: ServiceCardProps
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay }}
-      className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+      className="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 border border-slate-100"
     >
       <div className="flex items-center mb-4">
         <Icon className="text-primary-500 text-3xl mr-3" />
-        <h3 className="text-xl font-bold gradient-text">{title}</h3>
+        <h3 className="text-xl font-bold text-slate-900">{title}</h3>
       </div>
-      <p className="text-gray-300">{content}</p>
+      <p className="text-slate-700">{content}</p>
     </motion.div>
   )
 }
@@ -71,8 +71,8 @@ const ProcessStep = ({ number, title, description, delay = 0 }: ProcessStepProps
         <span className="text-xl font-bold text-white">{number}</span>
       </div>
       <div>
-        <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-        <p className="text-gray-300">{description}</p>
+        <h3 className="text-xl font-bold text-slate-900 mb-2">{title}</h3>
+        <p className="text-slate-700">{description}</p>
       </div>
     </motion.div>
   )
@@ -103,7 +103,7 @@ const FeatureList = ({ items, className = "" }: FeatureListProps) => {
           className="flex items-start space-x-3"
         >
           <FaCheckCircle className="text-primary-500 text-xl flex-shrink-0 mt-1" />
-          <span className="text-gray-300">{item}</span>
+          <span className="text-slate-700">{item}</span>
         </motion.li>
       ))}
     </motion.ul>
@@ -130,7 +130,7 @@ const BenefitItem = ({ text, delay = 0 }: BenefitItemProps) => {
       className="flex items-start space-x-3"
     >
       <FaCheckCircle className="text-primary-500 text-xl flex-shrink-0 mt-1" />
-      <p className="text-gray-300">{text}</p>
+      <p className="text-slate-700">{text}</p>
     </motion.div>
   )
 }
@@ -152,7 +152,7 @@ const ServiceSection = ({
   image, 
   imageAlt, 
   reverse = false, 
-  bgClass = "bg-black" 
+  bgClass = "bg-white" 
 }: ServiceSectionProps) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -162,9 +162,9 @@ const ServiceSection = ({
   return (
     <section className={`py-20 ${bgClass} relative overflow-hidden`}>
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/10 to-secondary-500/10" />
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/10 rounded-full filter blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary-500/10 rounded-full filter blur-3xl animate-float" />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/6 to-secondary-500/6" />
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/6 rounded-full filter blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary-500/6 rounded-full filter blur-3xl animate-float" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,11 +181,11 @@ const ServiceSection = ({
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
             >
-              <span className="gradient-text">{title}</span>
+              <span className="gradient-text text-slate-900">{title}</span>
             </motion.h2>
 
             <motion.div
-              className="space-y-6 text-lg text-gray-300"
+              className="space-y-6 text-lg text-slate-700"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -200,13 +200,13 @@ const ServiceSection = ({
           </motion.div>
 
           <motion.div
-            ref={ref}
             initial={{ opacity: 0, x: reverse ? -50 : 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl"
+            className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-md"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-secondary-500/20 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/12 to-secondary-500/12 z-10 pointer-events-none opacity-20" />
             <Image
               src={image}
               alt={imageAlt}
@@ -239,9 +239,9 @@ const IndustryCard = ({ title, delay = 0 }: IndustryCardProps) => {
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay }}
-      className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+      className="bg-white p-6 rounded-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 border border-slate-100"
     >
-      <h3 className="text-lg font-semibold text-white">{title}</h3>
+      <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
       <div className="mt-2 h-1 w-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full" />
     </motion.div>
   )
@@ -256,12 +256,12 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <motion.div className="border-b border-gray-800">
+    <motion.div className="border-b border-slate-100">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
       >
-        <span className="text-xl font-semibold text-white group-hover:text-primary-500 transition-colors">
+        <span className="text-xl font-semibold text-slate-900 group-hover:text-primary-500 transition-colors">
           {question}
         </span>
         <motion.span
@@ -297,7 +297,7 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
         }}
         className="overflow-hidden"
       >
-        <p className="text-gray-300 pb-6">{answer}</p>
+        <p className="text-slate-700 pb-6">{answer}</p>
       </motion.div>
     </motion.div>
   )
@@ -315,18 +315,16 @@ const ServicesPage = () => {
     'User behaviors, shopping habits, and more'
   ]
 
-  // Remove the useEffect for setting document title and metadata
-
   return (
     <>
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-cyan-50 text-slate-900">
         <Navbar />
         {/* Hero Section */}
         <section className="pt-32 pb-16 relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/20 to-secondary-500/20" />
-            <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary-500/10 rounded-full filter blur-3xl animate-float" />
-            <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary-500/10 rounded-full filter blur-3xl animate-float" />
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/6 to-secondary-500/6" />
+            <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary-500/12 rounded-full filter blur-3xl animate-float" />
+            <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary-500/12 rounded-full filter blur-3xl animate-float" />
           </div>
 
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -340,18 +338,18 @@ const ServicesPage = () => {
                 className="lg:pr-8"
               >
                 <motion.h1 
-                  className="text-4xl md:text-5xl font-bold mb-6"
+                  className="text-4xl md:text-5xl font-bold mb-6 text-slate-900"
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   <span className="gradient-text">Meta Ads Services</span>
                   <br />
-                  <span className="text-white">That Drive Measurable Growth</span>
+                  <span className="text-slate-900">That Drive Measurable Growth</span>
                 </motion.h1>
                 
                 <motion.div
-                  className="space-y-6 text-lg text-gray-300"
+                  className="space-y-6 text-lg text-slate-700"
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -361,7 +359,7 @@ const ServicesPage = () => {
                     you already know this: people spend a lot of time on Facebook and Instagram. But what if your brand 
                     could show up exactly where your audience scrolls every day — with an offer they can't ignore?
                   </p>
-                  <p className="text-xl font-semibold text-white">
+                  <p className="text-xl font-semibold text-slate-900">
                     That's the power of Meta Ads — and at Leadzoro, we help you unlock it.
                   </p>
                   <p>
@@ -395,11 +393,12 @@ const ServicesPage = () => {
               {/* Image Side */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="relative h-[400px] lg:h-[450px] w-full rounded-xl overflow-hidden shadow-2xl group"
+                className="relative h-[400px] lg:h-[450px] w-full rounded-xl overflow-hidden shadow-md group"
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-secondary-500/20 z-10 group-hover:opacity-50 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/12 to-secondary-500/12 z-10 pointer-events-none opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
                 <Image
                   src={Services1}
                   alt="Meta Ads Services"
@@ -425,17 +424,17 @@ const ServicesPage = () => {
           ]}
           image={Services2}
           imageAlt="What Are Meta Ads"
-          bgClass="bg-gradient-to-b from-black to-gray-900"
+          bgClass="bg-white"
           reverse={false}
         />
 
         {/* Why Choose Leadzoro Section */}
-        <section className="py-20 bg-black relative overflow-hidden">
+        <section className="py-20 bg-white relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/10 to-secondary-500/10" />
-            <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/10 rounded-full filter blur-3xl animate-float" />
-            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary-500/10 rounded-full filter blur-3xl animate-float" />
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/6 to-secondary-500/6" />
+            <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/6 rounded-full filter blur-3xl animate-float" />
+            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary-500/6 rounded-full filter blur-3xl animate-float" />
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -453,12 +452,12 @@ const ServicesPage = () => {
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8 }}
                 >
-                  <span className="gradient-text">Why Choose Leadzoro</span>
+                  <span className="gradient-text text-slate-900">Why Choose Leadzoro</span>
                   <br />
-                  <span className="text-white">for Meta Ads?</span>
+                  <span className="text-slate-900">for Meta Ads?</span>
                 </motion.h2>
 
-                <p className="text-xl text-gray-300">
+                <p className="text-xl text-slate-700">
                   There are many Facebook Ads agencies in India. But here's why Pune-based businesses 
                   (and 100+ Indian brands) trust Leadzoro:
                 </p>
@@ -487,7 +486,7 @@ const ServicesPage = () => {
                 </div>
 
                 <motion.div
-                  className="space-y-4 text-lg text-gray-300"
+                  className="space-y-4 text-lg"
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8, delay: 0.7 }}
@@ -501,7 +500,7 @@ const ServicesPage = () => {
                     is data-backed, strategy-first, and optimized for outcomes that matter: leads, 
                     sales, and brand growth.
                   </p>
-                  <p className="text-xl font-semibold text-white">
+                  <p className="text-xl font-semibold text-slate-900">
                     And yes — we've seen brands grow from ₹0 to ₹10L/month in revenue through Meta Ads alone.
                   </p>
                 </motion.div>
@@ -524,17 +523,18 @@ const ServicesPage = () => {
               {/* Image Side */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="relative h-[400px] lg:h-[450px] w-full rounded-xl overflow-hidden shadow-2xl group"
+                className="relative h-[400px] lg:h-[450px] w-full rounded-xl overflow-hidden shadow-md group"
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-secondary-500/20 z-10 group-hover:opacity-50 transition-opacity duration-300" />
                 <Image
                   src={Services3}
                   alt="Why Choose Leadzoro"
                   fill
                   className="object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
                 />
               </motion.div>
             </div>
@@ -554,7 +554,7 @@ const ServicesPage = () => {
           ]}
           image={Services4}
           imageAlt="Facebook Ad Campaign Management"
-          bgClass="bg-black"
+          bgClass="bg-white"
         />
 
         {/* Instagram Ad Targeting */}
@@ -570,7 +570,7 @@ const ServicesPage = () => {
           image={Services5}
           imageAlt="Instagram Ad Targeting"
           reverse={true}
-          bgClass="bg-gradient-to-b from-black to-gray-900"
+          bgClass="bg-white"
         />
 
         {/* Lead Generation */}
@@ -584,7 +584,7 @@ const ServicesPage = () => {
           ]}
           image={Services6}
           imageAlt="Lead Generation & Funnel Ads"
-          bgClass="bg-black"
+          bgClass="bg-white"
         />
 
         {/* Retargeting */}
@@ -599,21 +599,21 @@ const ServicesPage = () => {
           image={Services7}
           imageAlt="Retargeting & Remarketing Ads"
           reverse={true}
-          bgClass="bg-gradient-to-b from-black to-gray-900"
+          bgClass="bg-white"
         />
 
         {/* Process Section */}
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+        <section className="py-20 bg-white relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/10 to-secondary-500/10" />
-            <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/10 rounded-full filter blur-3xl animate-float" />
-            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary-500/10 rounded-full filter blur-3xl animate-float" />
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/6 to-secondary-500/6" />
+            <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/6 rounded-full filter blur-3xl animate-float" />
+            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary-500/6 rounded-full filter blur-3xl animate-float" />
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <motion.h2 
-                className="text-4xl md:text-5xl font-bold mb-6"
+                className="text-4xl md:text-5xl font-bold mb-6 text-slate-900"
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8 }}
@@ -621,7 +621,7 @@ const ServicesPage = () => {
                 <span className="gradient-text">Our 5-Step Meta Ads Process</span>
               </motion.h2>
               <motion.p
-                className="text-xl text-gray-300"
+                className="text-xl text-slate-700"
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -650,8 +650,8 @@ const ServicesPage = () => {
                         <span className="text-xl font-bold text-white">1</span>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-4">Strategy Session</h3>
-                        <div className="space-y-3 text-gray-300">
+                        <h3 className="text-2xl font-bold text-slate-900 mb-4">Strategy Session</h3>
+                        <div className="space-y-3 text-slate-700">
                           <p>We start with a discovery call to understand your goals, budget, and customer journey.</p>
                           <p>We deep-dive into your product-market fit, industry benchmarks, and competitor analysis to lay the foundation.</p>
                         </div>
@@ -665,8 +665,8 @@ const ServicesPage = () => {
                         <span className="text-xl font-bold text-white">2</span>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-4">Ad Creative & Copy Design</h3>
-                        <div className="space-y-3 text-gray-300">
+                        <h3 className="text-2xl font-bold text-slate-900 mb-4">Ad Creative & Copy Design</h3>
+                        <div className="space-y-3 text-slate-700">
                           <p>We write compelling, conversion-driven copy and pair it with scroll-stopping creatives (images, videos, Reels).</p>
                           <p>Our in-house team follows performance creative frameworks designed for Meta — so every asset not only looks good but sells.</p>
                         </div>
@@ -680,8 +680,8 @@ const ServicesPage = () => {
                         <span className="text-xl font-bold text-white">3</span>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-4">Campaign Setup</h3>
-                        <div className="space-y-3 text-gray-300">
+                        <h3 className="text-2xl font-bold text-slate-900 mb-4">Campaign Setup</h3>
+                        <div className="space-y-3 text-slate-700">
                           <p>We set up ad sets with optimized targeting, pixel events, bidding strategy, and tracking integrations.</p>
                           <p>This includes event mapping, domain verification, API setups, and audience segmentation.</p>
                         </div>
@@ -695,8 +695,8 @@ const ServicesPage = () => {
                         <span className="text-xl font-bold text-white">4</span>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-4">Daily Optimization</h3>
-                        <div className="space-y-3 text-gray-300">
+                        <h3 className="text-2xl font-bold text-slate-900 mb-4">Daily Optimization</h3>
+                        <div className="space-y-3 text-slate-700">
                           <p>Our team monitors every ad — adjusting bids, pausing underperformers, and scaling winners.</p>
                           <p>We also rotate creatives weekly and test headlines, CTA buttons, and placements for continuous growth.</p>
                         </div>
@@ -710,11 +710,11 @@ const ServicesPage = () => {
                         <span className="text-xl font-bold text-white">5</span>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-4">Scaling & Reporting</h3>
-                        <div className="space-y-3 text-gray-300">
+                        <h3 className="text-2xl font-bold text-slate-900 mb-4">Scaling & Reporting</h3>
+                        <div className="space-y-3 text-slate-700">
                           <p>Once results are consistent, we increase budget, test new audiences, and send weekly reports.</p>
                           <p>We offer Google Data Studio dashboards and strategy calls to keep you aligned and in control.</p>
-                          <p className="text-lg font-semibold text-white">You'll always know what's working, why, and what comes next.</p>
+                          <p className="text-lg font-semibold text-slate-900">You'll always know what's working, why, and what comes next.</p>
                         </div>
                       </div>
                     </div>
@@ -725,11 +725,12 @@ const ServicesPage = () => {
               {/* Right Column - Image */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl lg:sticky lg:top-32"
+                className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-md lg:sticky lg:top-32"
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-secondary-500/20 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/12 to-secondary-500/12 z-10 pointer-events-none opacity-20" />
                 <Image
                   src={Services9}
                   alt="Our 5-Step Meta Ads Process"
@@ -744,11 +745,11 @@ const ServicesPage = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-black relative overflow-hidden">
+        <section className="py-20 bg-white relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/10 to-secondary-500/10" />
-            <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/10 rounded-full filter blur-3xl animate-float" />
-            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary-500/10 rounded-full filter blur-3xl animate-float" />
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/6 to-secondary-500/6" />
+            <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/6 rounded-full filter blur-3xl animate-float" />
+            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary-500/6 rounded-full filter blur-3xl animate-float" />
           </div>
 
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -758,7 +759,7 @@ const ServicesPage = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
                 <span className="gradient-text">FAQs – Meta Ads with Leadzoro</span>
               </h2>
             </motion.div>
@@ -802,7 +803,7 @@ const ServicesPage = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <section className="py-20 bg-gradient-to-b from-white to-slate-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <ServiceCard
@@ -834,12 +835,12 @@ const ServicesPage = () => {
         </section>
 
         {/* Who We Help Section */}
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/10 to-secondary-500/10" />
-            <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/10 rounded-full filter blur-3xl animate-float" />
-            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary-500/10 rounded-full filter blur-3xl animate-float" />
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/6 to-secondary-500/6" />
+            <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/6 rounded-full filter blur-3xl animate-float" />
+            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary-500/6 rounded-full filter blur-3xl animate-float" />
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -849,10 +850,10 @@ const ServicesPage = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
                 <span className="gradient-text">Who We Help</span>
               </h2>
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-slate-700">
                 Our Meta Ads Services in India are trusted by:
               </p>
             </motion.div>
@@ -883,11 +884,11 @@ const ServicesPage = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-center space-y-6"
             >
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-slate-700">
                 Whether you're launching, scaling, or reviving — our team customizes campaigns 
                 to your exact industry.
               </p>
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-slate-700">
                 We've helped everything from first-time founders to enterprise-level clients 
                 dominate Meta Ads platforms. Whatever your stage, we're ready to take you 
                 to the next level.

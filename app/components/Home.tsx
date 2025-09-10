@@ -3,8 +3,7 @@
 import React, { useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+
 import { 
   FaFacebook, 
   FaGoogle, 
@@ -114,12 +113,6 @@ const services = [
 ]
 
 const WhyChooseUs = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-    rootMargin: '-50px',
-  });
-
   const features = [
     '100% Transparent Reporting',
     'ROI-Driven Strategies',
@@ -132,70 +125,39 @@ const WhyChooseUs = () => {
     <div className="mt-32 relative">
       {/* Decorative background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/10 rounded-full filter blur-3xl animate-float" 
-             style={{ animationDelay: '-5s' }} />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary-500/10 rounded-full filter blur-3xl animate-float" 
-             style={{ animationDelay: '-2s' }} />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200/20 rounded-full filter blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary-200/20 rounded-full filter blur-3xl" />
       </div>
 
-      <motion.div
-        ref={ref}
-        className="max-w-4xl mx-auto text-center px-4"
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }}
-      >
-        <motion.div
-          className="inline-block text-4xl mb-6 text-primary-400"
-          initial={{ scale: 0 }}
-          animate={inView ? { scale: 1, rotate: 360 } : {}}
-          transition={{ duration: 0.8, type: "spring" }}
-        >
+      <div className="max-w-4xl mx-auto text-center px-4">
+        <div className="inline-block text-4xl mb-6 text-primary-600">
           <FaLightbulb />
-        </motion.div>
+        </div>
         
-        <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
           <span className="gradient-text">Why Choose Leadzoro?</span>
-        </motion.h2>
+        </h2>
 
-        <motion.p
-          className="text-xl text-gray-300 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
+        <p className="text-xl text-gray-700 mb-12">
           Because we don't just run campaigns — we drive business outcomes.
-        </motion.p>
+        </p>
 
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={feature}
-              className="flex items-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-primary-500/50 transition-all duration-300"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+              className="flex items-center p-4 rounded-lg bg-gray-50 border border-gray-200 hover:border-primary-500/50 hover:bg-gray-100 transition-all duration-300 shadow-sm"
             >
-              <FaCheckCircle className="text-primary-400 flex-shrink-0 w-6 h-6 mr-4" />
-              <span className="text-gray-200">{feature}</span>
-            </motion.div>
+              <FaCheckCircle className="text-primary-600 flex-shrink-0 w-6 h-6 mr-4" />
+              <span className="text-gray-800 font-medium">{feature}</span>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.p
-          className="mt-12 text-xl text-gray-300 font-medium"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
+        <p className="mt-12 text-xl text-gray-700 font-medium">
           We're not another agency — we're your growth partner.
-        </motion.p>
-      </motion.div>
+        </p>
+      </div>
     </div>
   );
 };
@@ -205,200 +167,208 @@ const ProcessStep = ({
   title, 
   description, 
   image, 
-  index, 
-  inView 
+  index,
+  icon: Icon,
+  color
 }: { 
   step: string | number;
   title: string;
   description: string;
-  image: StaticImageData; // Change from string to StaticImageData
+  image: StaticImageData;
   index: number;
-  inView: boolean;
+  icon: React.ElementType;
+  color: string;
 }) => {  
   const isEven = index % 2 === 0;
 
   return (
-    <motion.div 
-      className={`flex items-center gap-8 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col`}
-      initial={{ opacity: 0, x: isEven ? -50 : 50 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.8, delay: index * 0.2 }}
-    >
-      <div className="flex-1">
-        <motion.div 
-          className="relative group cursor-pointer overflow-hidden rounded-2xl h-[300px] w-full"
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.3 }}
-        >
-          <Image 
-            src={image}
-            alt={`Step ${step}: ${title}`}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            quality={90}
-            priority={index === 0}
-            className="rounded-2xl object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        </motion.div>
+    <div className="relative">
+      {/* Timeline Node */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-gray-200 flex items-center justify-center z-10 hidden lg:flex">
+        <div className={`w-10 h-10 bg-gradient-to-br ${color} rounded-full flex items-center justify-center`}>
+          <Icon className="w-5 h-5 text-white" />
+        </div>
       </div>
-      
-      <div className="flex-1 space-y-4">
-        <motion.div 
-          className="flex items-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: index * 0.2 + 0.2 }}
-        >
-          <span className="text-4xl font-bold gradient-text">Step {step}</span>
-        </motion.div>
+
+      <div className={`flex items-center gap-6 lg:gap-12 ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex-col lg:px-8`}>
+        {/* Content Side */}
+        <div className={`flex-1 ${isEven ? 'lg:pr-16' : 'lg:pl-16'} w-full`}>
+          <div className="card-modern glass-card hover:shadow-2xl transition-all duration-500 group">
+            {/* Colored background layer per step */}
+            <div className={`absolute inset-0 z-0 rounded-3xl bg-gradient-to-br ${color} opacity-20`} />
+            <div className="relative z-10">
+            {/* Step Header */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+              <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${color} rounded-xl lg:rounded-full flex items-center justify-center pulse-glow group-hover:scale-110 transition-transform duration-300 mx-auto sm:mx-0`}>
+                <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+              </div>
+              <div className="text-center sm:text-left">
+                <span className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider shimmer">Step {step}</span>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 group-hover:text-indigo-700 transition-colors duration-300">
+                  {title}
+                </h3>
+              </div>
+            </div>
+            
+            {/* Description */}
+            <p className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed text-center sm:text-left">
+              {description}
+            </p>
+            
+            {/* Progress Indicator */}
+            <div className="mt-6 flex items-center gap-2">
+              {Array.from({ length: 5 }, (_, i) => (
+                <div 
+                  key={i}
+                  className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
+                    i < Number(step) ? `bg-gradient-to-r ${color}` : 'bg-gray-200'
+                  } ${i < Number(step) ? 'w-6 sm:w-8' : 'w-1.5 sm:w-2'}`}
+                />
+              ))}
+            </div>
+            </div>
+          </div>
+        </div>
         
-        <motion.h3 
-          className="text-2xl font-bold text-white"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
-        >
-          {title}
-        </motion.h3>
-        
-        <motion.p 
-          className="text-gray-300 text-lg"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: index * 0.2 + 0.4 }}
-        >
-          {description}
-        </motion.p>
+        {/* Image Side */}
+        <div className="flex-1 w-full">
+          <div className="relative group overflow-hidden rounded-2xl lg:rounded-3xl h-[250px] sm:h-[300px] lg:h-[350px] w-full shadow-2xl">
+            <Image 
+              src={image}
+              alt={`Step ${step}: ${title}`}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+              quality={90}
+              priority={index === 0}
+              className="rounded-2xl lg:rounded-3xl object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            
+            {/* Floating Step Number */}
+            <div className="absolute top-4 left-4 lg:top-6 lg:left-6 w-10 h-10 lg:w-12 lg:h-12 bg-white/90 backdrop-blur-sm rounded-xl lg:rounded-2xl flex items-center justify-center">
+              <span className={`text-lg lg:text-xl font-bold bg-gradient-to-br ${color} bg-clip-text text-transparent`}>
+                {step}
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const ProcessSection = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-    rootMargin: '-50px',
-  });
-
   const steps = [
     {
       step: 1,
       title: "Discover",
       description: "We understand your goals, target audience, and market competitors.",
-      image: DiscoverImg
+      image: DiscoverImg,
+      icon: FaLightbulb,
+      color: "from-blue-500 to-cyan-500"
     },
     {
       step: 2,
       title: "Strategize",
       description: "We build a tailored plan across platforms that aligns with your budget and business model.",
-      image: StratergizeImg
+      image: StratergizeImg,
+      icon: FaTools,
+      color: "from-purple-500 to-pink-500"
     },
     {
       step: 3,
       title: "Execute",
       description: "Our experts launch your campaign with precision, creativity, and analytics-ready tracking.",
-      image: ExecuteImg
+      image: ExecuteImg,
+      icon: FaRocket,
+      color: "from-green-500 to-emerald-500"
     },
     {
       step: 4,
       title: "Optimize",
       description: "We tweak, refine, and split-test continuously for peak performance.",
-      image: OptimizeImg
+      image: OptimizeImg,
+      icon: FaChartLine,
+      color: "from-orange-500 to-red-500"
     },
     {
       step: 5,
       title: "Scale",
       description: "Once we hit ROI sweet spots, we scale your campaigns for long-term growth.",
-      image: ScaleImg
+      image: ScaleImg,
+      icon: FaPlane,
+      color: "from-indigo-500 to-purple-500"
     }
   ];
 
   return (
     <div className="mt-32 relative">
-      {/* Decorative background elements */}
+      {/* Enhanced background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl animate-float" 
-             style={{ animationDelay: '-5s' }} />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-50 to-white" />
+        <div className="absolute top-1/4 right-10 w-80 h-80 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-gradient-to-br from-indigo-400/10 to-pink-400/10 rounded-full blur-3xl" />
       </div>
 
-      <motion.div
-        ref={ref}
-        className="max-w-7xl mx-auto px-4"
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="text-center mb-16">
-          <motion.div
-            className="inline-block text-4xl mb-6 text-primary-400"
-            initial={{ scale: 0, rotate: 0 }}
-            animate={inView ? { scale: 1, rotate: 360 } : {}}
-            transition={{ duration: 0.8, type: "spring" }}
-          >
-            <FaChartLine />
-          </motion.div>
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl mb-6">
+            <FaChartLine className="w-8 h-8 text-white" />
+          </div>
           
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <span className="gradient-text">Our 5-Step Process to Digital Domination</span>
-          </motion.h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-indigo-800 to-purple-800 bg-clip-text text-transparent">
+            Our 5-Step Process to Digital Domination
+          </h2>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            A proven methodology that transforms your digital presence into a <span className="font-semibold text-gray-800">revenue-generating machine</span>.
+          </p>
         </div>
 
-        <div className="space-y-24">
-          {steps.map((step, index) => (
-            <ProcessStep 
-              key={step.step}
-              {...step}
-              index={index}
-              inView={inView}
-            />
-          ))}
+        {/* Modern Timeline Layout */}
+        <div className="relative">
+          {/* Central Timeline Line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-200 via-purple-200 to-pink-200 hidden lg:block" />
+          
+          <div className="space-y-16 lg:space-y-24">
+            {steps.map((step, index) => (
+              <ProcessStep 
+                key={step.step}
+                {...step}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
 
 const IndustryCard = ({ 
   icon: Icon, 
-  title, 
-  inView, 
-  delay 
+  title,
+  bgGradient,
+  iconGradient
 }: { 
   icon: React.ElementType;
   title: string;
-  inView: boolean;
-  delay: number;
+  bgGradient: string;
+  iconGradient: string;
 }) => (
-  <motion.div
-    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-primary-500/50"
-    initial={{ opacity: 0, y: 20 }}
-    animate={inView ? { opacity: 1, y: 0 } : {}}
-    transition={{ duration: 0.6, delay }}
-    whileHover={{ scale: 1.02 }}
-  >
-    <div className="flex flex-col items-center text-center space-y-3">
-      <div className="text-primary-400 text-4xl">
+  <div className="relative overflow-hidden rounded-xl p-6 transition-all duration-300 border border-gray-200 hover:border-primary-500/50 shadow-lg hover:shadow-xl hover:scale-[1.02] bg-white/70 backdrop-blur-sm">
+    {/* Colored gradient background layer */}
+    <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${bgGradient} opacity-80`} />
+    <div className="relative z-10 flex flex-col items-center text-center space-y-3">
+      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${iconGradient} text-white flex items-center justify-center`}>
         <Icon />
       </div>
-      <h3 className="text-xl font-semibold text-white">{title}</h3>
+      <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
     </div>
-  </motion.div>
+  </div>
 );
 
 const WhoWeWorkWith = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
   const industries = [
     { icon: FaStore, title: "E-commerce Brands" },
     { icon: FaGraduationCap, title: "Educational Institutes" },
@@ -409,66 +379,57 @@ const WhoWeWorkWith = () => {
     { icon: FaTools, title: "Local Service Providers" }
   ];
 
+  const industryBgGradients = [
+    'from-sky-400/15 to-blue-600/10',
+    'from-amber-400/15 to-orange-600/10',
+    'from-indigo-400/15 to-purple-600/10',
+    'from-emerald-400/15 to-teal-600/10',
+    'from-rose-400/15 to-pink-600/10',
+    'from-cyan-400/15 to-sky-600/10',
+    'from-violet-400/15 to-fuchsia-600/10'
+  ];
+  const industryIconGradients = [
+    'from-sky-500 to-blue-600',
+    'from-amber-500 to-orange-600',
+    'from-indigo-500 to-purple-600',
+    'from-emerald-500 to-teal-600',
+    'from-rose-500 to-pink-600',
+    'from-cyan-500 to-sky-600',
+    'from-violet-500 to-fuchsia-600'
+  ];
+
   return (
     <div className="mt-32 relative">
       {/* Decorative background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-float" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl animate-float" 
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-100/30 rounded-full filter blur-3xl animate-float" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-100/30 rounded-full filter blur-3xl animate-float" 
              style={{ animationDelay: '-5s' }} />
       </div>
 
-      <motion.div
-        ref={ref}
-        className="max-w-7xl mx-auto px-4"
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.8 }}
-      >
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <motion.div
-            className="inline-block text-4xl mb-6 text-primary-400"
-            initial={{ scale: 0 }}
-            animate={inView ? { scale: 1, rotate: 360 } : {}}
-            transition={{ duration: 0.8, type: "spring" }}
-          >
-          </motion.div>
-          
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
             <span className="gradient-text">Who We Work With</span>
-          </motion.h2>
+          </h2>
         </div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {industries.map((industry, index) => (
             <IndustryCard
               key={industry.title}
-              {...industry}
-              inView={inView}
-              delay={0.4 + index * 0.1}
+              icon={industry.icon}
+              title={industry.title}
+              bgGradient={industryBgGradients[index % industryBgGradients.length]}
+              iconGradient={industryIconGradients[index % industryIconGradients.length]}
             />
           ))}
-        </motion.div>
+        </div>
 
-        <motion.p
-          className="text-xl text-gray-300 text-center max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
+        <p className="text-xl text-gray-700 font-medium text-center max-w-3xl mx-auto">
           Whether you're in Pune or anywhere across India, Leadzoro adapts digital growth strategies that fit your industry like a glove.
-        </motion.p>
-      </motion.div>
+        </p>
+      </div>
     </div>
   );
 };
@@ -478,56 +439,36 @@ interface FAQItemProps {
   answer: string;
   isOpen: boolean;
   onToggle: () => void;
-  delay: number;
 }
 
-const FAQItem = ({ question, answer, isOpen, onToggle, delay }: FAQItemProps) => {
+const FAQItem = ({ question, answer, isOpen, onToggle }: FAQItemProps) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
-      className="border border-white/10 rounded-lg overflow-hidden"
-    >
+    <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
       <button
         onClick={onToggle}
-        className="w-full p-6 flex items-center justify-between text-left bg-white/5 hover:bg-white/10 transition-all duration-300"
+        className="w-full p-6 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-all duration-300"
       >
-        <span className="text-lg font-semibold text-white">{question}</span>
-        <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="text-primary-400"
+        <span className="text-lg font-semibold text-gray-900">{question}</span>
+        <div
+          className={`text-primary-600 transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
         >
           <FaChevronDown />
-        </motion.div>
+        </div>
       </button>
       
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-          >
-            <div className="p-6 text-gray-300 bg-white/5">
-              {answer}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+      {isOpen && (
+        <div className="overflow-hidden">
+          <div className="p-6 text-gray-700 font-medium bg-gray-50">
+            {answer}
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
 
   const faqs = [
     {
@@ -560,36 +501,19 @@ const FAQSection = () => {
     <div className="mt-32 relative">
       {/* Decorative background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl animate-float" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-float" 
-             style={{ animationDelay: '-5s' }} />
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-100/30 rounded-full filter blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-100/30 rounded-full filter blur-3xl" />
       </div>
 
-      <motion.div
-        ref={ref}
-        className="max-w-4xl mx-auto px-4"
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.8 }}
-      >
+      <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-16">
           
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
             <span className="gradient-text">Frequently Asked Questions</span>
-          </motion.h2>
+          </h2>
         </div>
 
-        <motion.div 
-          className="space-y-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
             <FAQItem
               key={index}
@@ -597,20 +521,15 @@ const FAQSection = () => {
               answer={faq.answer}
               isOpen={openIndex === index} 
               onToggle={() => toggleFAQ(index)}
-              delay={0.4 + index * 0.1}
             />
           ))}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   );
 };
 
 const CTASection = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
 
   return (
     <div className="mt-32 relative">
@@ -619,134 +538,125 @@ const CTASection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 via-secondary-500/20 to-primary-500/20 blur-3xl opacity-50" />
       </div>
 
-      <motion.div
-        ref={ref}
-        className="max-w-4xl mx-auto px-4 py-16 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm"
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }}
-      >
+      <div className="max-w-4xl mx-auto px-4 py-16 rounded-3xl border border-gray-200 bg-gray-50 backdrop-blur-sm shadow-lg">
         <div className="text-center space-y-8">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <h2 className="text-4xl md:text-5xl font-bold">
             <span className="gradient-text">Ready to Take Your Brand to the Next Level?</span>
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            className="text-xl text-gray-300"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
+          <p className="text-xl text-gray-700 font-medium">
             Let's talk growth. Let's talk results. Let's talk Leadzoro.
-          </motion.p>
+          </p>
 
-          <motion.div
-            className="flex flex-col items-center space-y-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <p className="text-lg text-gray-300 flex items-center gap-2">
+          <div className="flex flex-col items-center space-y-6">
+            <p className="text-lg text-gray-700 font-medium flex items-center gap-2">
               Schedule your free strategy session now and discover why we're the best marketing agency in India trusted by 50+ fast-growing brands.
             </p>
 
-            <motion.button
-              className="group relative px-8 py-4 overflow-hidden rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold text-lg shadow-2xl shadow-primary-500/20 hover:shadow-primary-500/40 transition-shadow duration-300"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
+            <button className="group relative px-8 py-4 overflow-hidden rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold text-lg shadow-2xl shadow-primary-500/20 hover:shadow-primary-500/40 transition-all duration-300 hover:scale-[1.02]">
               <span className="relative z-10">Click Here to Skyrocket Your Growth with Leadzoro</span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-secondary-500 to-primary-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                initial={false}
-              />
+              <div className="absolute inset-0 bg-gradient-to-r from-secondary-500 to-primary-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute inset-0 bg-gradient-to-r from-primary-500/50 to-secondary-500/50 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </motion.button>
-          </motion.div>
+            </button>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
 
 const Services = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-    rootMargin: '-50px',
-  })
+  // Per-card gradients for backgrounds and icons
+  const cardGradients = [
+    'from-sky-400/20 to-blue-600/10',
+    'from-amber-400/20 to-orange-600/10',
+    'from-emerald-400/20 to-teal-600/10',
+    'from-violet-400/20 to-fuchsia-600/10',
+    'from-rose-400/20 to-pink-600/10',
+    'from-indigo-400/20 to-purple-600/10'
+  ];
+  const iconGradients = [
+    'from-sky-500 to-blue-600',
+    'from-amber-500 to-orange-600',
+    'from-emerald-500 to-teal-600',
+    'from-violet-500 to-fuchsia-600',
+    'from-rose-500 to-pink-600',
+    'from-indigo-500 to-purple-600'
+  ];
 
   return (
-    <section id="services" className="py-20 px-4 relative overflow-hidden">
-      {/* Background Elements */}
+    <section id="services" className="py-24 px-4 relative overflow-hidden">
+      {/* Enhanced Background Elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/10 to-purple-600/10" />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" />
+        <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-indigo-400/15 to-pink-400/15 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Our Core Services</span>
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6">
+            <FaRocket className="w-8 h-8 text-white" />
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
+            Our Core Services
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We don't just market — we create measurable success with our comprehensive digital solutions.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            We don't just market — we create <span className="font-semibold text-gray-800">measurable success</span> with our comprehensive digital solutions.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <Link key={service.title} href={service.href}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="card group hover:bg-white/10 transition-all duration-300 cursor-pointer"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="text-primary-400 group-hover:text-primary-300 transition-colors duration-300">
-                    {service.icon}
+              <div className={`group card-modern bg-white/60 ${index % 2 === 0 ? 'float-animation' : 'float-animation-delayed'} cursor-pointer`}>
+                {/* Colored gradient background layer per card */}
+                <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${cardGradients[index % cardGradients.length]} opacity-80`} />
+                {/* Glassmorphism overlay on hover */}
+                <div className="absolute inset-0 glass-card opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                {/* Icon and Title */}
+                <div className="relative z-10">
+                  <div className="flex flex-col sm:flex-row sm:items-center mb-6">
+                    <div className={`flex items-center justify-center w-14 h-14 bg-gradient-to-br ${iconGradients[index % iconGradients.length]} rounded-2xl text-white group-hover:scale-110 transition-transform duration-300 pulse-glow mb-4 sm:mb-0`}>
+                      {service.icon}
+                    </div>
+                    <h3 className="sm:ml-4 text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-300 text-center sm:text-left">
+                      {service.title}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-semibold ml-4 gradient-text">
-                    {service.title}
-                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
+                    {service.description}
+                  </p>
+                  
+                  {/* Features */}
+                  <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-start text-gray-700 font-medium">
+                        <div className="flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 bg-gradient-to-br from-green-400 to-blue-500 rounded-full mr-3 flex-shrink-0 mt-0.5">
+                          <FaCheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-white" />
+                        </div>
+                        <span className="text-sm sm:text-base">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  {/* CTA */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors duration-300 shimmer text-sm sm:text-base">
+                      Learn More
+                    </span>
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 group-hover:scale-110 transition-all duration-300">
+                      <span className="text-blue-600 font-bold text-sm sm:text-base">→</span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-300 mb-6">
-                  {service.description}
-                </p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, i) => (
-                    <motion.li
-                      key={i}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={inView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.4, delay: index * 0.1 + i * 0.1 }}
-                      className="text-gray-400 flex items-center"
-                    >
-                      <span className="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2" />
-                      {feature}
-                    </motion.li>
-                  ))}
-                </ul>
-                <div className="mt-6 text-primary-400 group-hover:text-primary-300 transition-colors duration-300">
-                  Learn More →
-                </div>
-              </motion.div>
+              </div>
             </Link>
           ))}
-        </motion.div>
+        </div>
 
         {/* Why Choose Us Section */}
         <WhyChooseUs />

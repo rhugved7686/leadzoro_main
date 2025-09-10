@@ -5,14 +5,10 @@ import {
   motion, 
   Variants 
 } from 'framer-motion';
+import { FaCalendarAlt } from 'react-icons/fa';
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import j1 from '../../public/assets/j1.png'
-import j2 from '../../public/assets/j2.png'
-import j3 from '../../public/assets/j3.png'
-import j4 from '../../public/assets/j4.png'
-import j5 from '../../public/assets/j5.png'
-
+import r1 from '../../public/assets/r1.png'
 
 const fadeIn: Variants = {
   initial: { opacity: 0, y: 20 },
@@ -27,945 +23,90 @@ const staggerContainer: Variants = {
   }
 };
 
-const Services5Page: React.FC = () => {
+interface ServiceCardProps {
+  title: string;
+  content: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  delay?: number;
+}
+
+const ServiceCard = ({ title, content, icon: Icon, delay = 0 }: ServiceCardProps) => {
+  // ... existing code ...
+};
+
+const Services4Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
-          <Navbar />
-          {/* Hero Section */}
-          <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 z-0">
-              <Image
-                src={j1}
-                alt="Social Media Management Services"
-                fill
-                className="object-cover opacity-40"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900"></div>
-            </div>
-            
-            <motion.div 
-              className="container mx-auto px-4 relative z-10 text-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-                Social Media Management Services India: Ignite Your Brand's Voice with Leadzoro
-              </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-blue-300">
-                Crafting Digital Experiences That Convert
-              </h2>
-              <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300">
-                Transform your digital presence with cutting-edge social media solutions
-              </p>
-            </motion.div>
-          </section>
-
-          {/* Main Content Section */}
-          <section className="py-20 px-4">
-            <motion.div 
-              className="container mx-auto max-w-4xl"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <motion.p 
-                className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
-                variants={fadeIn}
-              >
-                In a digital-first India, where over 600 million+ people scroll, swipe, and share daily — your brand needs more than just a presence. It needs personality, power, and performance. Whether you're a local salon in Pune or a nationwide D2C startup, Social Media isn't just optional anymore. It's essential.
-              </motion.p>
-              
-              <motion.p 
-                className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
-                variants={fadeIn}
-              >
-                Welcome to Leadzoro — the Best Social Media Marketing Agency in India, designed for the doers, dreamers, and disruptors who want more than just likes. We help you build influence, engage communities, and drive leads across platforms like Instagram, Facebook, YouTube, and LinkedIn with our tailored Social Media Management Services India.
-              </motion.p>
-
-              <motion.p 
-                className="text-xl md:text-2xl font-semibold text-blue-400 mb-12"
-                variants={fadeIn}
-              >
-                Transform your social media presence into a powerful growth engine with Leadzoro's expert social media management services.
-              </motion.p>
-            </motion.div>
-          </section>
-
-          {/* Why Social Media Marketing Matters Section */}
-          <section className="py-20 px-4 bg-gradient-to-b from-gray-800 to-gray-900 relative overflow-hidden">
-            {/* Decorative background elements */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
-              <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
-            </div>
-
-            <motion.div 
-              className="container mx-auto max-w-6xl relative z-10"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                {/* Image Column */}
-                <motion.div
-                  className="lg:col-span-5 relative"
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                    <Image
-                      src={j2}
-                      alt="Why Social Media Marketing Matters in India"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover transform hover:scale-105 transition-transform duration-700"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
-                  </div>
-                </motion.div>
-
-                {/* Content Column */}
-                <motion.div
-                  className="lg:col-span-7 space-y-8"
-                  variants={staggerContainer}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{ once: true }}
-                >
-                  <motion.h2 
-                    className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
-                    variants={fadeIn}
-                  >
-                    Why Social Media Marketing Matters in India
-                  </motion.h2>
-
-                  <motion.p 
-                    className="text-xl text-gray-300 leading-relaxed"
-                    variants={fadeIn}
-                  >
-                    India is one of the fastest-growing digital economies. Here's why social media isn't just noise—it's your growth engine:
-                  </motion.p>
-
-                  <motion.div 
-                    className="space-y-6"
-                    variants={staggerContainer}
-                  >
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">✨</span>
-                        <p className="text-lg text-gray-300">71% of Indian consumers discover new brands via Instagram & Facebook</p>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">☕</span>
-                        <p className="text-lg text-gray-300">90% of purchase decisions are influenced by social media storytelling</p>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">🌐</span>
-                        <p className="text-lg text-gray-300">India ranks #1 in WhatsApp, Facebook & Instagram usage globally</p>
-                      </div>
-                    </motion.div>
-                  </motion.div>
-
-                  <motion.p 
-                    className="text-xl text-gray-300 leading-relaxed"
-                    variants={fadeIn}
-                  >
-                    Social media is where trust begins. It's where followers turn into loyal customers — and brands into movements. If you're not marketing here, you're missing where India listens, speaks, and buys.
-                  </motion.p>
-                </motion.div>
-              </div>
-            </motion.div>
-          </section>
-
-          {/* The New Buying Journey Section */}
-          <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-            {/* Decorative background elements */}
-            <div className="absolute inset-0">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-            </div>
-
-            <motion.div 
-              className="container mx-auto max-w-6xl relative z-10"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                {/* Content Column */}
-                <motion.div
-                  className="lg:col-span-7 space-y-8 order-2 lg:order-1"
-                  variants={staggerContainer}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{ once: true }}
-                >
-                  <motion.h2 
-                    className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600"
-                    variants={fadeIn}
-                  >
-                    The New Buying Journey Is Social
-                  </motion.h2>
-
-                  <motion.p 
-                    className="text-xl text-gray-300 leading-relaxed"
-                    variants={fadeIn}
-                  >
-                    Consumers in India don't just visit your website anymore — they check your Instagram reels, Facebook reviews, and story highlights. They judge your credibility by how consistent, creative, and human your brand feels online.
-                  </motion.p>
-
-                  <motion.p 
-                    className="text-xl text-gray-300 leading-relaxed"
-                    variants={fadeIn}
-                  >
-                    Whether you're a solopreneur or a growing brand, being social is being searchable.
-                  </motion.p>
-
-                  <motion.div 
-                    className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                    variants={staggerContainer}
-                  >
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">📱</span>
-                        <p className="text-lg text-gray-300">Instagram reels & story highlights showcase your brand personality</p>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">⭐</span>
-                        <p className="text-lg text-gray-300">Facebook reviews build trust and credibility</p>
-                      </div>
-                    </motion.div>
-                  </motion.div>
-                </motion.div>
-
-                {/* Image Column */}
-                <motion.div
-                  className="lg:col-span-5 relative order-1 lg:order-2"
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl transform -rotate-6 scale-95"></div>
-                    <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                      <Image
-                        src={require('../../public/assets/j3.png')}
-                        alt="The New Buying Journey Is Social"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover transform hover:scale-105 transition-transform duration-700"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
-          </section>
-
-          {/* Organic + Paid Growth Section */}
-          <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-            {/* Decorative background elements */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
-              <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
-            </div>
-
-            <motion.div 
-              className="container mx-auto max-w-6xl relative z-10"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                {/* Image Column */}
-                <motion.div
-                  className="lg:col-span-5 relative"
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl transform rotate-6 scale-95"></div>
-                    <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                      <Image
-                        src={require('../../public/assets/j3.png')}
-                        alt="Organic + Paid = Scalable Growth"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover transform hover:scale-105 transition-transform duration-700"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Content Column */}
-                <motion.div
-                  className="lg:col-span-7 space-y-8"
-                  variants={staggerContainer}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{ once: true }}
-                >
-                  <motion.h2 
-                    className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600"
-                    variants={fadeIn}
-                  >
-                    Organic + Paid = Scalable Growth
-                  </motion.h2>
-
-                  <motion.p 
-                    className="text-xl text-gray-300 leading-relaxed"
-                    variants={fadeIn}
-                  >
-                    The right mix of organic content and targeted paid campaigns can do magic. Social media isn't just a branding tool; it's a lead magnet, a feedback loop, and a direct sales engine — when done right.
-                  </motion.p>
-
-                  <motion.div 
-                    className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                    variants={staggerContainer}
-                  >
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">🌱</span>
-                        <p className="text-lg text-gray-300">Organic content builds trust and community</p>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">🚀</span>
-                        <p className="text-lg text-gray-300">Paid campaigns drive targeted growth</p>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">💬</span>
-                        <p className="text-lg text-gray-300">Engagement creates valuable feedback loops</p>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">💰</span>
-                        <p className="text-lg text-gray-300">Direct sales through social commerce</p>
-                      </div>
-                    </motion.div>
-                  </motion.div>
-                </motion.div>
-              </div>
-            </motion.div>
-          </section>
-
-          {/* Local SMM Support in Pune Section */}
-          <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-            {/* Decorative background elements */}
-            <div className="absolute inset-0">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-              <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-              <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
-            </div>
-
-            <motion.div 
-              className="container mx-auto max-w-6xl relative z-10"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <motion.div
-                className="text-center mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <motion.h2 
-                  className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 mb-6"
-                  variants={fadeIn}
-                >
-                  Why Businesses in Pune Need Local SMM Support
-                </motion.h2>
-                <motion.p 
-                  className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto"
-                  variants={fadeIn}
-                >
-                  Whether you're a cozy coffee shop in Koregaon Park, a real estate brand in Baner, or a tech startup in Kharadi — Social Media Marketing Services in Pune are your shortcut to local love and leads.
-                </motion.p>
-              </motion.div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <motion.div 
-                  className="p-8 rounded-2xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex flex-col items-center text-center">
-                    <span className="text-5xl mb-4">🚌</span>
-                    <h3 className="text-xl font-semibold mb-3 text-blue-300">Geo-targeted Campaigns</h3>
-                    <p className="text-gray-300">Bring footfalls & phone calls with precision targeting</p>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  className="p-8 rounded-2xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex flex-col items-center text-center">
-                    <span className="text-5xl mb-4">⭐</span>
-                    <h3 className="text-xl font-semibold mb-3 text-purple-300">Hyper-local Content</h3>
-                    <p className="text-gray-300">Build loyalty and recall with community-focused content</p>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  className="p-8 rounded-2xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex flex-col items-center text-center">
-                    <span className="text-5xl mb-4">🌎</span>
-                    <h3 className="text-xl font-semibold mb-3 text-pink-300">Local Trends</h3>
-                    <p className="text-gray-300">Leverage Pune-specific trends & festivals for higher relevance</p>
-                  </div>
-                </motion.div>
-              </div>
-
-              <motion.div 
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <motion.h3 
-                  className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-6"
-                  variants={fadeIn}
-                >
-                  Cultural Relevance Drives Engagement
-                </motion.h3>
-                <motion.p 
-                  className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto"
-                  variants={fadeIn}
-                >
-                  From celebrating Ganesh Chaturthi to local food trails and monsoon moments, Pune-based businesses need a social presence that resonates with the city's heart. That's where we come in — blending culture with conversion.
-                </motion.p>
-              </motion.div>
-            </motion.div>
-          </section>
-
-          {/* Why Choose Leadzoro Section */}
-          <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
-            {/* Decorative background elements */}
-            <div className="absolute inset-0">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-              <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-              <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
-            </div>
-
-            <motion.div 
-              className="container mx-auto max-w-6xl relative z-10"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                {/* Image Column */}
-                <motion.div
-                  className="lg:col-span-5 relative"
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl transform rotate-6 scale-95"></div>
-                    <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                      <Image
-                        src={require('../../public/assets/j7.png')}
-                        alt="Why Choose Leadzoro for Social Media Management"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover transform hover:scale-105 transition-transform duration-700"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Content Column */}
-                <motion.div
-                  className="lg:col-span-7 space-y-8"
-                  variants={staggerContainer}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{ once: true }}
-                >
-                  <motion.h2 
-                    className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600"
-                    variants={fadeIn}
-                  >
-                    Why Choose Leadzoro for Social Media Management?
-                  </motion.h2>
-
-                  <motion.div 
-                    className="space-y-6"
-                    variants={staggerContainer}
-                  >
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">🎉</span>
-                        <p className="text-lg text-gray-300">Human-Led, Insight-Fueled: Every campaign is crafted by real social media experts who blend data with emotions.</p>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">📊</span>
-                        <p className="text-lg text-gray-300">AI-Powered Optimization: From post timings to audience targeting — we use AI tools to optimize reach, but keep creativity 100% human.</p>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">📈</span>
-                        <p className="text-lg text-gray-300">Focused on ROI, Not Just Reach: We don't chase vanity metrics. We generate leads, sales, sign-ups, bookings — whatever moves your needle.</p>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">🫏🏻</span>
-                        <p className="text-lg text-gray-300">Platform Specialists: From Instagram growth services for Indian brands to Facebook page management services India, we have domain-specific experts.</p>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-blue-900/50 to-purple-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">🚀</span>
-                        <p className="text-lg text-gray-300">Startup-Minded Pricing: We understand budgets. Our affordable social media marketing India plans start from as low as ₹9,999/month.</p>
-                      </div>
-                    </motion.div>
-                  </motion.div>
-
-                  <motion.div 
-                    className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-sm border border-white/10"
-                    variants={fadeIn}
-                  >
-                    <motion.h3 
-                      className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-4"
-                      variants={fadeIn}
-                    >
-                      Our Brand Promise
-                    </motion.h3>
-                    <motion.p 
-                      className="text-lg text-gray-300 leading-relaxed"
-                      variants={fadeIn}
-                    >
-                      We don't just manage your socials — we craft narratives that position your brand as a thought leader, community builder, and conversion driver. We become your creative wing, your growth partner, and your biggest cheerleader.
-                    </motion.p>
-                  </motion.div>
-                </motion.div>
-              </div>
-            </motion.div>
-          </section>
-
-          {/* Core Social Media Marketing Services Section */}
-          <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-            {/* Decorative background elements */}
-            <div className="absolute inset-0">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-              <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-              <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
-            </div>
-
-            <motion.div 
-              className="container mx-auto max-w-6xl relative z-10"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <motion.div
-                className="text-center mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <motion.h2 
-                  className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 mb-6"
-                  variants={fadeIn}
-                >
-                  Our Core Social Media Marketing Services
-                </motion.h2>
-              </motion.div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                {/* Image Column */}
-                <motion.div
-                  className="lg:col-span-5 relative"
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl transform rotate-6 scale-95"></div>
-                    <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                      <Image
-                        src={require('../../public/assets/j8.png')}
-                        alt="Facebook & Instagram Management"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover transform hover:scale-105 transition-transform duration-700"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Content Column */}
-                <motion.div
-                  className="lg:col-span-7 space-y-8"
-                  variants={staggerContainer}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{ once: true }}
-                >
-                  <motion.h3 
-                    className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
-                    variants={fadeIn}
-                  >
-                    Facebook & Instagram Management
-                  </motion.h3>
-
-                  <motion.p 
-                    className="text-xl text-gray-300 leading-relaxed"
-                    variants={fadeIn}
-                  >
-                    We build your brand's personality, design scroll-stopping creatives, and keep your community active — every single day. Our social media page manager Pune team ensures consistency and interaction.
-                  </motion.p>
-
-                  <motion.div 
-                    className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                    variants={staggerContainer}
-                  >
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">🎨</span>
-                        <div>
-                          <h4 className="text-lg font-semibold text-blue-300 mb-2">Creative Design</h4>
-                          <p className="text-gray-300">Scroll-stopping visuals that capture attention</p>
-                        </div>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">💬</span>
-                        <div>
-                          <h4 className="text-lg font-semibold text-purple-300 mb-2">Community Management</h4>
-                          <p className="text-gray-300">Active engagement and consistent interaction</p>
-                        </div>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">📱</span>
-                        <div>
-                          <h4 className="text-lg font-semibold text-pink-300 mb-2">Daily Management</h4>
-                          <p className="text-gray-300">Consistent presence and timely responses</p>
-                        </div>
-                      </div>
-                    </motion.div>
-
-                    <motion.div 
-                      className="p-6 rounded-xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
-                      variants={fadeIn}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <span className="text-3xl">🎯</span>
-                        <div>
-                          <h4 className="text-lg font-semibold text-indigo-300 mb-2">Brand Personality</h4>
-                          <p className="text-gray-300">Unique voice and consistent messaging</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </motion.div>
-                </motion.div>
-              </div>
-            </motion.div>
-          </section>
-
-          {/* Social Media Content Creation Section */}
-          <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
-            {/* Decorative background elements */}
-            <div className="absolute inset-0">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-              <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-              <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
-            </div>
-
-            <motion.div 
-              className="container mx-auto max-w-6xl relative z-10"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                {/* Content Column */}
-                <motion.div
-                  className="lg:col-span-7 space-y-8 order-2 lg:order-1"
-                  variants={staggerContainer}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{ once: true }}
-                >
-                  <motion.h3 
-                    className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
-                    variants={fadeIn}
-                  >
-                    Social Media Content Creation
-                  </motion.h3>
-
-                  <motion.p 
-                    className="text-xl text-gray-300 leading-relaxed"
-                    variants={fadeIn}
-                  >
-                From reels and carousels to captions and memes — we're your social media content agency for real estate Pune, e-commerce, and personal brands. We blend storytelling with trends.
-              </motion.p>
-
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                variants={staggerContainer}
-              >
-                <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">🎬</span>
-                    <div>
-                      <h4 className="text-lg font-semibold text-blue-300 mb-2">Video Content</h4>
-                      <p className="text-gray-300">Engaging reels and stories that tell your story</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">📝</span>
-                    <div>
-                      <h4 className="text-lg font-semibold text-purple-300 mb-2">Captions & Copy</h4>
-                      <p className="text-gray-300">Compelling text that resonates with your audience</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">🎨</span>
-                    <div>
-                      <h4 className="text-lg font-semibold text-pink-300 mb-2">Visual Design</h4>
-                      <p className="text-gray-300">Eye-catching carousels and static posts</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">📊</span>
-                    <div>
-                      <h4 className="text-lg font-semibold text-indigo-300 mb-2">Trend Integration</h4>
-                      <p className="text-gray-300">Stay relevant with trending content formats</p>
-                    </div>
-                  </div>
-                </motion.div>
-              </motion.div>
-
-              <motion.div 
-                className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-sm border border-white/10"
-                variants={fadeIn}
-              >
-                <motion.h4 
-                  className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-4"
-                  variants={fadeIn}
-                >
-                  Strategy + Calendar Planning
-                </motion.h4>
-                <motion.p 
-                  className="text-lg text-gray-300 leading-relaxed"
-                  variants={fadeIn}
-                >
-                  Monthly content calendars, campaign ideas, hashtag banks, and festival marketing plans tailored for your industry.
-                </motion.p>
-              </motion.div>
-            </motion.div>
-
-            {/* Image Column */}
-            <motion.div
-              className="lg:col-span-5 relative order-1 lg:order-2"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl transform -rotate-6 scale-95"></div>
-                <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
-                    src={require('../../public/assets/j9.png')}
-                    alt="Social Media Content Creation"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transform hover:scale-105 transition-transform duration-700"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 text-gray-900">
+      <Navbar />
+      {/* Hero Section */}
+      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={r1}
+            alt="Website Development Services"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-gray-100/80"></div>
+        </div>
+        
+        <motion.div 
+          className="container mx-auto px-4 relative z-10 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-800">
+            Website Development Services India | Custom Website Design Company in Pune
+          </h1>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-blue-700">
+            Crafting Digital Experiences That Convert
+          </h2>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-700 font-semibold">
+            Transform your digital presence with cutting-edge web solutions
+          </p>
         </motion.div>
       </section>
 
-      {/* Paid Ad Management Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+      {/* Main Content Section */}
+      <section className="py-20 px-4">
+        <motion.div 
+          className="container mx-auto max-w-4xl"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <motion.p 
+            className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed font-semibold"
+            variants={fadeIn}
+          >
+            In today's fast-moving digital economy, your website isn't just another box to tick — it's your brand's handshake, digital showroom, and conversation starter rolled into one.
+          </motion.p>
+          
+          <motion.p 
+            className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed font-semibold"
+            variants={fadeIn}
+          >
+            Whether you're an ambitious startup in Delhi or a fitness hub in Pune, your website often sets the tone for how the world sees you.
+          </motion.p>
+
+          <motion.p 
+            className="text-xl md:text-2xl font-bold text-blue-600 mb-12"
+            variants={fadeIn}
+          >
+            Welcome to Leadzoro — where innovation meets craftsmanship. As a top website development company in Pune and India, we empower businesses with dynamic, conversion-focused websites that drive growth and elevate brand perception.
+          </motion.p>
+        </motion.div>
+      </section>
+
+      {/* Why Website Development Still Dominates Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         {/* Decorative background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl"></div>
         </div>
 
         <motion.div 
@@ -975,7 +116,14 @@ const Services5Page: React.FC = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-800"
+            variants={fadeIn}
+          >
+            Why Website Development Still Dominates in 2025
+          </motion.h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Image Column */}
             <motion.div
               className="lg:col-span-5 relative"
@@ -984,19 +132,16 @@ const Services5Page: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl transform rotate-6 scale-95"></div>
-                <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
-                    src={require('../../public/assets/j10.png')}
-                    alt="Paid Ad Management"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transform hover:scale-105 transition-transform duration-700"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
-                </div>
+              <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src={require('../../public/assets/r2.png')}
+                  alt="Why Website Development Still Dominates"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transform hover:scale-105 transition-transform duration-700"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent"></div>
               </div>
             </motion.div>
 
@@ -1008,258 +153,37 @@ const Services5Page: React.FC = () => {
               whileInView="animate"
               viewport={{ once: true }}
             >
-              <motion.h3 
-                className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
-                variants={fadeIn}
-              >
-                Paid Ad Management (Meta + YouTube)
-              </motion.h3>
-
               <motion.p 
-                className="text-xl text-gray-300 leading-relaxed"
+                className="text-xl text-gray-700 leading-relaxed font-semibold"
                 variants={fadeIn}
               >
-                Want reach, leads, or conversions? Our Facebook & Instagram Ads Manager Pune team builds and monitors campaigns for optimal ROAS. Our YouTube Marketing Services in Pune give you visual dominance too.
+                New platforms may emerge, but your website remains your digital headquarters. It's the only online space you fully own and control — and it pays dividends.
               </motion.p>
 
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                variants={staggerContainer}
-              >
-                <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">📱</span>
-                    <div>
-                      <h4 className="text-lg font-semibold text-blue-300 mb-2">Meta Ads</h4>
-                      <p className="text-gray-300">Targeted campaigns on Facebook & Instagram</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">🎥</span>
-                    <div>
-                      <h4 className="text-lg font-semibold text-purple-300 mb-2">YouTube Ads</h4>
-                      <p className="text-gray-300">Video campaigns for maximum impact</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">📊</span>
-                    <div>
-                      <h4 className="text-lg font-semibold text-pink-300 mb-2">ROAS Focus</h4>
-                      <p className="text-gray-300">Optimized campaigns for maximum returns</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">🎯</span>
-                    <div>
-                      <h4 className="text-lg font-semibold text-indigo-300 mb-2">Lead Generation</h4>
-                      <p className="text-gray-300">Targeted ads that convert visitors to leads</p>
-                    </div>
-                  </div>
-                </motion.div>
-              </motion.div>
-
-              <motion.div 
-                className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-sm border border-white/10"
-                variants={fadeIn}
-              >
-                <motion.h4 
-                  className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-4"
-                  variants={fadeIn}
-                >
-                  Engagement & Community Building
-                </motion.h4>
-                <motion.p 
-                  className="text-lg text-gray-300 leading-relaxed"
-                  variants={fadeIn}
-                >
-                  We reply, react, and respond like a human — not a bot. Because comments build community. DMs build trust.
-                </motion.p>
-              </motion.div>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Influencer Collaborations Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
-        {/* Decorative background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
-        </div>
-
-        <motion.div 
-          className="container mx-auto max-w-6xl relative z-10"
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Content Column */}
-            <motion.div
-              className="lg:col-span-7 space-y-8 order-2 lg:order-1"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <motion.h3 
-                className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
-                variants={fadeIn}
-              >
-                Influencer Collaborations
-              </motion.h3>
-
               <motion.p 
-                className="text-xl text-gray-300 leading-relaxed"
+                className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed font-semibold"
                 variants={fadeIn}
               >
-                Micro, macro, or nano — we find influencers your audience already trusts. Especially useful for Instagram marketing services India and D2C launches.
+                Whether you're an ambitious startup in Delhi or a fitness hub in Pune, your website often sets the tone for how the world sees you.
               </motion.p>
 
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                variants={staggerContainer}
-              >
-                <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">🌟</span>
-                    <div>
-                      <h4 className="text-lg font-semibold text-blue-300 mb-2">Micro-Influencers</h4>
-                      <p className="text-gray-300">High engagement with niche audiences</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">📱</span>
-                    <div>
-                      <h4 className="text-lg font-semibold text-purple-300 mb-2">Macro-Influencers</h4>
-                      <p className="text-gray-300">Wide reach with established credibility</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">🎯</span>
-                    <div>
-                      <h4 className="text-lg font-semibold text-pink-300 mb-2">Nano-Influencers</h4>
-                      <p className="text-gray-300">Authentic connections with local audiences</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">🚀</span>
-                    <div>
-                      <h4 className="text-lg font-semibold text-indigo-300 mb-2">D2C Launches</h4>
-                      <p className="text-gray-300">Strategic partnerships for product launches</p>
-                    </div>
-                  </div>
-                </motion.div>
-              </motion.div>
-
-              <motion.div 
-                className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-sm border border-white/10"
+              <motion.p 
+                className="text-xl md:text-2xl font-bold text-blue-600 mb-12"
                 variants={fadeIn}
               >
-                <motion.h4 
-                  className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-4"
-                  variants={fadeIn}
-                >
-                  Performance Analytics & Reporting
-                </motion.h4>
-                <motion.p 
-                  className="text-lg text-gray-300 leading-relaxed"
-                  variants={fadeIn}
-                >
-                  Monthly reports with real numbers — reach, engagement, clicks, conversions. No fluff, just facts.
-                </motion.p>
-              </motion.div>
-            </motion.div>
-
-            {/* Image Column */}
-            <motion.div
-              className="lg:col-span-5 relative order-1 lg:order-2"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl transform -rotate-6 scale-95"></div>
-                <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
-                    src={require('../../public/assets/j11.png')}
-                    alt="Influencer Collaborations"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transform hover:scale-105 transition-transform duration-700"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
-                </div>
-              </div>
+                Welcome to Leadzoro — where innovation meets craftsmanship. As a top website development company in Pune and India, we empower businesses with dynamic, conversion-focused websites that drive growth and elevate brand perception.
+              </motion.p>
             </motion.div>
           </div>
         </motion.div>
       </section>
 
-      {/* 5-Step Social Media Growth Process Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+      {/* Why Pune and Indian Businesses Need Scalable Websites Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
         {/* Decorative background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 right-0 w-64 h-64 bg-blue-200 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-purple-200 rounded-full filter blur-3xl"></div>
         </div>
 
         <motion.div 
@@ -1269,559 +193,125 @@ const Services5Page: React.FC = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.h2 
-              className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 mb-6"
-              variants={fadeIn}
-            >
-              Our 5-Step Social Media Growth Process
-            </motion.h2>
-          </motion.div>
-
-          <div className="space-y-8">
-            {/* Step 1 */}
-            <motion.div 
-              className="flex flex-col md:flex-row items-start gap-8"
-              variants={fadeIn}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-2xl font-bold text-white">
-                1
-              </div>
-              <div className="flex-grow p-6 rounded-2xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30">
-                <h3 className="text-2xl font-bold text-blue-300 mb-4">Brand Discovery + Audit</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  We understand your brand voice, USPs, audience type, and competition. We also study current analytics and set measurable goals.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Step 2 */}
-            <motion.div 
-              className="flex flex-col md:flex-row items-start gap-8"
-              variants={fadeIn}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-2xl font-bold text-white">
-                2
-              </div>
-              <div className="flex-grow p-6 rounded-2xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30">
-                <h3 className="text-2xl font-bold text-purple-300 mb-4">Platform Strategy + Content Calendar</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  We define which platforms matter most and build monthly calendars with post topics, dates, formats, and goals. This includes influencer tie-ups, reel hooks, and more.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Step 3 */}
-            <motion.div 
-              className="flex flex-col md:flex-row items-start gap-8"
-              variants={fadeIn}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-2xl font-bold text-white">
-                3
-              </div>
-              <div className="flex-grow p-6 rounded-2xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30">
-                <h3 className="text-2xl font-bold text-pink-300 mb-4">Content Production & Publishing</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Designers, writers, editors — all working to build visually engaging and emotionally resonant content. From festival campaigns to weekly tips — we've got you.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Step 4 */}
-            <motion.div 
-              className="flex flex-col md:flex-row items-start gap-8"
-              variants={fadeIn}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center text-2xl font-bold text-white">
-                4
-              </div>
-              <div className="flex-grow p-6 rounded-2xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30">
-                <h3 className="text-2xl font-bold text-indigo-300 mb-4">Audience Engagement + Paid Boosting</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  We reply to comments, respond to DMs, and strategically boost top-performing posts for visibility. Lead generation through Instagram Pune is maximized here.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Step 5 */}
-            <motion.div 
-              className="flex flex-col md:flex-row items-start gap-8"
-              variants={fadeIn}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-2xl font-bold text-white">
-                5
-              </div>
-              <div className="flex-grow p-6 rounded-2xl bg-gradient-to-br from-blue-900/50 to-purple-900/50 backdrop-blur-sm border border-blue-500/30">
-                <h3 className="text-2xl font-bold text-blue-300 mb-4">Reporting + Optimization</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  We analyze what worked, what didn't — and refine your strategy for the next cycle. You'll always know what's driving growth.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Industry-Specific Social Media Services Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-        {/* Decorative background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
-        </div>
-
-        <motion.div 
-          className="container mx-auto max-w-6xl relative z-10"
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.h2 
-              className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 mb-6"
-              variants={fadeIn}
-            >
-              Industry-Specific Social Media Services
-            </motion.h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* E-commerce & D2C Brands */}
-            <motion.div 
-              className="p-8 rounded-2xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-              variants={fadeIn}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="flex flex-col items-center text-center">
-                <span className="text-5xl mb-6">🛍️</span>
-                <h3 className="text-2xl font-bold text-blue-300 mb-4">E-commerce & D2C Brands</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-center">
-                    <span className="mr-2">•</span>
-                    Product showcases & UGC
-                  </li>
-                  <li className="flex items-center">
-                    <span className="mr-2">•</span>
-                    Offer campaigns + story highlights
-                  </li>
-                  <li className="flex items-center">
-                    <span className="mr-2">•</span>
-                    Shopping integrations (Meta Catalog)
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-
-            {/* Real Estate */}
-            <motion.div 
-              className="p-8 rounded-2xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
-              variants={fadeIn}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="flex flex-col items-center text-center">
-                <span className="text-5xl mb-6">🏠</span>
-                <h3 className="text-2xl font-bold text-purple-300 mb-4">Real Estate</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-center">
-                    <span className="mr-2">•</span>
-                    Walkthrough reels, testimonial videos
-                  </li>
-                  <li className="flex items-center">
-                    <span className="mr-2">•</span>
-                    Builder announcements, project updates
-                  </li>
-                  <li className="flex items-center">
-                    <span className="mr-2">•</span>
-                    Social media content agency for real estate Pune campaigns
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-
-            {/* Coaches & Creators */}
-            <motion.div 
-              className="p-8 rounded-2xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
-              variants={fadeIn}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="flex flex-col items-center text-center">
-                <span className="text-5xl mb-6">🎓</span>
-                <h3 className="text-2xl font-bold text-pink-300 mb-4">Coaches & Creators</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-center">
-                    <span className="mr-2">•</span>
-                    Personal branding strategy
-                  </li>
-                  <li className="flex items-center">
-                    <span className="mr-2">•</span>
-                    Community polls, live Q&As
-                  </li>
-                  <li className="flex items-center">
-                    <span className="mr-2">•</span>
-                    Lead funnels via Instagram stories
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-
-            {/* Clinics, Salons, and Restaurants */}
-            <motion.div 
-              className="p-8 rounded-2xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
-              variants={fadeIn}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="flex flex-col items-center text-center">
-                <span className="text-5xl mb-6">💇</span>
-                <h3 className="text-2xl font-bold text-indigo-300 mb-4">Clinics, Salons, and Restaurants</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-center">
-                    <span className="mr-2">•</span>
-                    Festive offers, client reviews, treatments
-                  </li>
-                  <li className="flex items-center">
-                    <span className="mr-2">•</span>
-                    Instagram grid branding + before-afters
-                  </li>
-                  <li className="flex items-center">
-                    <span className="mr-2">•</span>
-                    Google Maps + WhatsApp CTA integrations
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-
-            {/* Events & Education */}
-            <motion.div 
-              className="p-8 rounded-2xl bg-gradient-to-br from-blue-900/50 to-purple-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group md:col-span-2 lg:col-span-4"
-              variants={fadeIn}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="flex flex-col items-center text-center">
-                <span className="text-5xl mb-6">🎓</span>
-                <h3 className="text-2xl font-bold text-blue-300 mb-4">Events & Education</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <ul className="space-y-3 text-gray-300">
-                    <li className="flex items-center">
-                      <span className="mr-2">•</span>
-                      Event countdowns
-                    </li>
-                    <li className="flex items-center">
-                      <span className="mr-2">•</span>
-                      Speaker spotlights
-                    </li>
-                  </ul>
-                  <ul className="space-y-3 text-gray-300">
-                    <li className="flex items-center">
-                      <span className="mr-2">•</span>
-                      Student testimonials
-                    </li>
-                    <li className="flex items-center">
-                      <span className="mr-2">•</span>
-                      Course explainers
-                    </li>
-                  </ul>
-                  <ul className="space-y-3 text-gray-300">
-                    <li className="flex items-center">
-                      <span className="mr-2">•</span>
-                      Story highlights
-                    </li>
-                    <li className="flex items-center">
-                      <span className="mr-2">•</span>
-                      Post-event recap reels
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Client Results Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-        {/* Decorative background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
-        </div>
-
-        <motion.div 
-          className="container mx-auto max-w-6xl relative z-10"
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Image Column */}
-            <motion.div
-              className="lg:col-span-5 relative"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl transform rotate-6 scale-95"></div>
-                <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
-                    src={require('../../public/assets/j12.png')}
-                    alt="Client Results"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transform hover:scale-105 transition-transform duration-700"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
-                </div>
-              </div>
-            </motion.div>
-
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
             {/* Content Column */}
             <motion.div
-              className="lg:col-span-7 space-y-8"
+              className="lg:w-1/2 space-y-8"
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
             >
               <motion.h2 
-                className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600"
+                className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-800"
                 variants={fadeIn}
               >
-                Client Results (Mini Case Studies)
+                Why Pune and Indian Businesses Need Scalable Websites
               </motion.h2>
 
-              <div className="grid grid-cols-1 gap-6">
-                {/* Case 1 */}
-                <motion.div 
-                  className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">🌟</span>
-                    <div>
-                      <h3 className="text-xl font-bold text-blue-300 mb-2">Local Pune Salon</h3>
-                      <p className="text-gray-300 mb-2"><span className="font-semibold">Problem:</span> Low Instagram activity</p>
-                      <p className="text-gray-300 mb-2"><span className="font-semibold">Solution:</span> Reels + influencer collab + festive calendar</p>
-                      <p className="text-gray-300"><span className="font-semibold">Result:</span> +350% engagement, 180+ appointment leads/month</p>
-                    </div>
-                  </div>
-                </motion.div>
+              <motion.p 
+                className="text-lg text-gray-700 leading-relaxed font-semibold"
+                variants={fadeIn}
+              >
+                From Pune to Chandigarh, Jaipur to Kochi, digital transformation is reshaping India. Whether it's a tech startup or a local salon, an effective website is no longer a luxury — it's a launchpad for business success.
+              </motion.p>
 
-                {/* Case 2 */}
-                <motion.div 
-                  className="p-6 rounded-2xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
+              <motion.div 
+                className="space-y-6"
+                variants={staggerContainer}
+              >
+                <motion.h3 
+                  className="text-xl font-bold text-blue-700"
                   variants={fadeIn}
-                  whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">🚀</span>
-                    <div>
-                      <h3 className="text-xl font-bold text-purple-300 mb-2">E-commerce Apparel Brand</h3>
-                      <p className="text-gray-300 mb-2"><span className="font-semibold">Problem:</span> Low conversions from Meta Ads</p>
-                      <p className="text-gray-300 mb-2"><span className="font-semibold">Solution:</span> Retargeting + UGC creatives</p>
-                      <p className="text-gray-300"><span className="font-semibold">Result:</span> 3.2x ROAS, 40% revenue from IG/FB</p>
-                    </div>
-                  </div>
-                </motion.div>
+                  Here's why more Indian businesses are prioritizing website development:
+                </motion.h3>
 
-                {/* Case 3 */}
-                <motion.div 
-                  className="p-6 rounded-2xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">🏡</span>
-                    <div>
-                      <h3 className="text-xl font-bold text-pink-300 mb-2">Real Estate Developer</h3>
-                      <p className="text-gray-300 mb-2"><span className="font-semibold">Problem:</span> No digital presence</p>
-                      <p className="text-gray-300 mb-2"><span className="font-semibold">Solution:</span> Facebook page + walkthrough videos + leads form ads</p>
-                      <p className="text-gray-300"><span className="font-semibold">Result:</span> 120+ qualified leads/month at ₹57 per lead</p>
-                    </div>
-                  </div>
-                </motion.div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    {
+                      stat: "93%",
+                      text: "of buying decisions begin with Google searches",
+                      color: "from-blue-500 to-blue-600"
+                    },
+                    {
+                      stat: "Mobile",
+                      text: "Mobile-first behavior demands responsive experiences",
+                      color: "from-purple-500 to-purple-600"
+                    },
+                    {
+                      stat: "D2C",
+                      text: "D2C brands are booming, and websites power their journeys",
+                      color: "from-pink-500 to-pink-600"
+                    },
+                    {
+                      stat: "Local",
+                      text: "Service-led businesses rely on local SEO and conversion-focused UI",
+                      color: "from-indigo-500 to-indigo-600"
+                    },
+                    {
+                      stat: "ROI",
+                      text: "Cost-effective lead generation with higher long-term ROI",
+                      color: "from-cyan-500 to-cyan-600"
+                    }
+                  ].map((item, index) => (
+                    <motion.div
+                      key={index}
+                      className="p-4 rounded-xl bg-white shadow-lg border border-gray-200 hover:border-blue-300 transition-all duration-300 group"
+                      variants={fadeIn}
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <div className="flex items-start space-x-3">
+                        <div className={`min-w-[48px] h-12 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center text-white font-bold text-sm shrink-0`}>
+                          {item.stat}
+                        </div>
+                        <p className="text-gray-700 text-sm leading-tight font-semibold">{item.text}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
 
-                {/* Case 4 */}
-                <motion.div 
-                  className="p-6 rounded-2xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <span className="text-3xl">🌿</span>
-                    <div>
-                      <h3 className="text-xl font-bold text-indigo-300 mb-2">Online Coach</h3>
-                      <p className="text-gray-300 mb-2"><span className="font-semibold">Problem:</span> No lead funnel for workshops</p>
-                      <p className="text-gray-300 mb-2"><span className="font-semibold">Solution:</span> Funnel-focused Instagram story ads</p>
-                      <p className="text-gray-300"><span className="font-semibold">Result:</span> Sold out 2-day workshop in 5 days</p>
-                    </div>
-                  </div>
-                </motion.div>
+              <motion.div 
+                className="mt-8 p-6 rounded-xl bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200"
+                variants={fadeIn}
+              >
+                <p className="text-lg text-gray-700 leading-relaxed font-semibold">
+                  Rather than relying solely on social media or listings, forward-thinking businesses build powerful websites that can scale.
+                </p>
+              </motion.div>
+            </motion.div>
+
+            {/* Image Column */}
+            <motion.div
+              className="lg:w-1/2 relative"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative w-full h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src={require('../../public/assets/r3.png')}
+                  alt="Why Pune and Indian Businesses Need Scalable Websites"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transform hover:scale-105 transition-transform duration-700"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent"></div>
               </div>
             </motion.div>
           </div>
         </motion.div>
       </section>
 
-      {/* Who We Serve Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+      {/* Why Partner with Leadzoro Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
-        </div>
-
-        <motion.div 
-          className="container mx-auto max-w-6xl relative z-10"
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.h2 
-              className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 mb-6"
-              variants={fadeIn}
-            >
-              Who We Serve
-            </motion.h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Small Businesses */}
-            <motion.div 
-              className="p-8 rounded-2xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-              variants={fadeIn}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="flex flex-col items-center text-center">
-                <span className="text-5xl mb-6">🏢</span>
-                <h3 className="text-xl font-bold text-blue-300 mb-4">Small Businesses</h3>
-                <p className="text-gray-300">
-                  Small businesses in Pune & India looking for affordable social media marketing
-                </p>
-              </div>
-            </motion.div>
-
-            {/* E-commerce & D2C */}
-            <motion.div 
-              className="p-8 rounded-2xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
-              variants={fadeIn}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="flex flex-col items-center text-center">
-                <span className="text-5xl mb-6">🚚</span>
-                <h3 className="text-xl font-bold text-purple-300 mb-4">E-commerce & D2C</h3>
-                <p className="text-gray-300">
-                  E-commerce & D2C brands needing consistent storytelling and conversion-focused ads
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Coaches & Creators */}
-            <motion.div 
-              className="p-8 rounded-2xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
-              variants={fadeIn}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="flex flex-col items-center text-center">
-                <span className="text-5xl mb-6">🤝</span>
-                <h3 className="text-xl font-bold text-pink-300 mb-4">Coaches & Creators</h3>
-                <p className="text-gray-300">
-                  Coaches, mentors & creators who want a strong online identity
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Local Businesses */}
-            <motion.div 
-              className="p-8 rounded-2xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
-              variants={fadeIn}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="flex flex-col items-center text-center">
-                <span className="text-5xl mb-6">🏛️</span>
-                <h3 className="text-xl font-bold text-indigo-300 mb-4">Local Businesses</h3>
-                <p className="text-gray-300">
-                  Local clinics, salons, and cafés growing through Instagram reels and community pages
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Real Estate & Education */}
-            <motion.div 
-              className="p-8 rounded-2xl bg-gradient-to-br from-blue-900/50 to-purple-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
-              variants={fadeIn}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="flex flex-col items-center text-center">
-                <span className="text-5xl mb-6">🏫</span>
-                <h3 className="text-xl font-bold text-blue-300 mb-4">Real Estate & Education</h3>
-                <p className="text-gray-300">
-                  Real estate firms and education providers building trust through video & visual content
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Freelancers */}
-            <motion.div 
-              className="p-8 rounded-2xl bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
-              variants={fadeIn}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="flex flex-col items-center text-center">
-                <span className="text-5xl mb-6">💼</span>
-                <h3 className="text-xl font-bold text-purple-300 mb-4">Freelancers</h3>
-                <p className="text-gray-300">
-                  Freelancers and solopreneurs needing visibility and lead generation without the agency bloat
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-        {/* Decorative background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
         </div>
 
         <motion.div 
@@ -1832,275 +322,135 @@ const Services5Page: React.FC = () => {
           viewport={{ once: true }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            {/* Content Column */}
+            <motion.div
+              className="lg:col-span-7 space-y-8 order-2 lg:order-1"
+              variants={staggerContainer}
+            >
+              <motion.div variants={fadeIn}>
+                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-800 mb-4">
+                  Why Partner with Leadzoro for Web Development?
+                </h2>
+                <div className="flex items-center space-x-2 text-blue-700 text-xl font-bold">
+                  <span>🎯</span>
+                  <span>Based in Pune. Trusted across India.</span>
+                </div>
+              </motion.div>
+
+              <motion.p 
+                className="text-lg text-gray-700 leading-relaxed font-semibold"
+                variants={fadeIn}
+              >
+                We craft websites that blend design, performance, and purpose. At Leadzoro, we don't just build websites — we engineer experiences.
+              </motion.p>
+
+              <motion.div variants={fadeIn}>
+                <h3 className="text-2xl font-bold text-blue-700 mb-6">Here's what you get:</h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {[
+                    {
+                      icon: "⚙️",
+                      title: "CMS or Custom-Built",
+                      description: "WordPress, Shopify, HTML/CSS, Next.js",
+                      gradient: "from-blue-50 to-blue-100"
+                    },
+                    {
+                      icon: "📱",
+                      title: "Mobile-First Design",
+                      description: "Optimized for on-the-go audiences",
+                      gradient: "from-purple-50 to-purple-100"
+                    },
+                    {
+                      icon: "🚀",
+                      title: "Speed-Tuned Layouts",
+                      description: "Optimized for conversions",
+                      gradient: "from-pink-50 to-pink-100"
+                    },
+                    {
+                      icon: "🎨",
+                      title: "UX/UI Excellence",
+                      description: "Inspired by behavioral psychology",
+                      gradient: "from-indigo-50 to-indigo-100"
+                    },
+                    {
+                      icon: "📈",
+                      title: "SEO-Ready Structure",
+                      description: "Schema, metadata, and content hierarchy",
+                      gradient: "from-cyan-50 to-cyan-100"
+                    },
+                    {
+                      icon: "🌐",
+                      title: "Core Web Vitals",
+                      description: "Compliant for better rankings",
+                      gradient: "from-teal-50 to-teal-100"
+                    }
+                  ].map((item, index) => (
+                    <motion.div
+                      key={index}
+                      className={`p-6 rounded-xl bg-gradient-to-br ${item.gradient} shadow-lg border border-gray-200 hover:border-blue-300 transition-all duration-300 group`}
+                      variants={fadeIn}
+                      whileHover={{ scale: 1.02, y: -5 }}
+                    >
+                      <div className="flex items-start space-x-4">
+                        <span className="text-3xl">{item.icon}</span>
+                        <div>
+                          <h4 className="text-lg font-bold text-blue-700 mb-2 group-hover:text-blue-800 transition-colors">
+                            {item.title}
+                          </h4>
+                          <p className="text-gray-700 text-sm leading-relaxed font-semibold">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div 
+                className="p-6 rounded-xl bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 shadow-lg"
+                variants={fadeIn}
+              >
+                <p className="text-lg text-gray-700 leading-relaxed font-semibold">
+                  You deserve more than just a pretty homepage. We deliver complete, scalable platforms tailored to your business goals.
+                </p>
+              </motion.div>
+            </motion.div>
+
             {/* Image Column */}
             <motion.div
-              className="lg:col-span-5 relative"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="lg:col-span-5 order-1 lg:order-2 sticky top-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl transform rotate-6 scale-95"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-purple-200 rounded-2xl blur-3xl transform -rotate-6 scale-95"></div>
                 <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src={require('../../public/assets/j13.png')}
-                    alt="Frequently Asked Questions"
+                    src={require('../../public/assets/r4.png')}
+                    alt="Partner with Leadzoro for Web Development"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transform hover:scale-105 transition-transform duration-700"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent"></div>
                 </div>
-              </div>
-            </motion.div>
-
-            {/* FAQ Content Column */}
-            <motion.div
-              className="lg:col-span-7 space-y-8"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <motion.h2 
-                className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600"
-                variants={fadeIn}
-              >
-                Frequently Asked Questions
-              </motion.h2>
-
-              <div className="space-y-4">
-                {/* FAQ Item 1 */}
-                <motion.div 
-                  className="rounded-xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 overflow-hidden"
-                  variants={fadeIn}
-                >
-                  <button 
-                    className="w-full p-6 text-left flex items-center justify-between group"
-                    onClick={(e) => {
-                      const answer = e.currentTarget.nextElementSibling;
-                      const arrow = e.currentTarget.querySelector('.arrow');
-                      if (answer && arrow) {
-                        answer.classList.toggle('max-h-0');
-                        answer.classList.toggle('max-h-[500px]');
-                        arrow.classList.toggle('rotate-180');
-                      }
-                    }}
-                  >
-                    <span className="text-xl font-semibold text-blue-300">How much do your social media packages cost?</span>
-                    <span className="arrow text-2xl transition-transform duration-300">▼</span>
-                  </button>
-                  <div className="max-h-0 overflow-hidden transition-all duration-300">
-                    <div className="p-6 pt-0 text-gray-300">
-                      Packages start at ₹9,999/month and scale based on platforms, post volume, and ad budget.
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* FAQ Item 2 */}
-                <motion.div 
-                  className="rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 overflow-hidden"
-                  variants={fadeIn}
-                >
-                  <button 
-                    className="w-full p-6 text-left flex items-center justify-between group"
-                    onClick={(e) => {
-                      const answer = e.currentTarget.nextElementSibling;
-                      const arrow = e.currentTarget.querySelector('.arrow');
-                      if (answer && arrow) {
-                        answer.classList.toggle('max-h-0');
-                        answer.classList.toggle('max-h-[500px]');
-                        arrow.classList.toggle('rotate-180');
-                      }
-                    }}
-                  >
-                    <span className="text-xl font-semibold text-purple-300">Can I hire a freelance social media manager through Leadzoro?</span>
-                    <span className="arrow text-2xl transition-transform duration-300">▼</span>
-                  </button>
-                  <div className="max-h-0 overflow-hidden transition-all duration-300">
-                    <div className="p-6 pt-0 text-gray-300">
-                      Yes! We provide Freelance Social Media Manager India options for startups and solopreneurs.
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* FAQ Item 3 */}
-                <motion.div 
-                  className="rounded-xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 overflow-hidden"
-                  variants={fadeIn}
-                >
-                  <button 
-                    className="w-full p-6 text-left flex items-center justify-between group"
-                    onClick={(e) => {
-                      const answer = e.currentTarget.nextElementSibling;
-                      const arrow = e.currentTarget.querySelector('.arrow');
-                      if (answer && arrow) {
-                        answer.classList.toggle('max-h-0');
-                        answer.classList.toggle('max-h-[500px]');
-                        arrow.classList.toggle('rotate-180');
-                      }
-                    }}
-                  >
-                    <span className="text-xl font-semibold text-pink-300">Do you offer Instagram-only plans?</span>
-                    <span className="arrow text-2xl transition-transform duration-300">▼</span>
-                  </button>
-                  <div className="max-h-0 overflow-hidden transition-all duration-300">
-                    <div className="p-6 pt-0 text-gray-300">
-                      Yes. Our Instagram Marketing Agency Pune team creates custom plans for IG-only growth.
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* FAQ Item 4 */}
-                <motion.div 
-                  className="rounded-xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 overflow-hidden"
-                  variants={fadeIn}
-                >
-                  <button 
-                    className="w-full p-6 text-left flex items-center justify-between group"
-                    onClick={(e) => {
-                      const answer = e.currentTarget.nextElementSibling;
-                      const arrow = e.currentTarget.querySelector('.arrow');
-                      if (answer && arrow) {
-                        answer.classList.toggle('max-h-0');
-                        answer.classList.toggle('max-h-[500px]');
-                        arrow.classList.toggle('rotate-180');
-                      }
-                    }}
-                  >
-                    <span className="text-xl font-semibold text-indigo-300">How soon can I see results?</span>
-                    <span className="arrow text-2xl transition-transform duration-300">▼</span>
-                  </button>
-                  <div className="max-h-0 overflow-hidden transition-all duration-300">
-                    <div className="p-6 pt-0 text-gray-300">
-                      Typically within 4–6 weeks. Ad campaigns may yield leads within days.
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* FAQ Item 5 */}
-                <motion.div 
-                  className="rounded-xl bg-gradient-to-br from-blue-900/50 to-purple-900/50 backdrop-blur-sm border border-blue-500/30 overflow-hidden"
-                  variants={fadeIn}
-                >
-                  <button 
-                    className="w-full p-6 text-left flex items-center justify-between group"
-                    onClick={(e) => {
-                      const answer = e.currentTarget.nextElementSibling;
-                      const arrow = e.currentTarget.querySelector('.arrow');
-                      if (answer && arrow) {
-                        answer.classList.toggle('max-h-0');
-                        answer.classList.toggle('max-h-[500px]');
-                        arrow.classList.toggle('rotate-180');
-                      }
-                    }}
-                  >
-                    <span className="text-xl font-semibold text-blue-300">Do you handle comment replies and DMs too?</span>
-                    <span className="arrow text-2xl transition-transform duration-300">▼</span>
-                  </button>
-                  <div className="max-h-0 overflow-hidden transition-all duration-300">
-                    <div className="p-6 pt-0 text-gray-300">
-                      Absolutely. We manage Facebook Page Management Services India with full engagement.
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* FAQ Item 6 */}
-                <motion.div 
-                  className="rounded-xl bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm border border-purple-500/30 overflow-hidden"
-                  variants={fadeIn}
-                >
-                  <button 
-                    className="w-full p-6 text-left flex items-center justify-between group"
-                    onClick={(e) => {
-                      const answer = e.currentTarget.nextElementSibling;
-                      const arrow = e.currentTarget.querySelector('.arrow');
-                      if (answer && arrow) {
-                        answer.classList.toggle('max-h-0');
-                        answer.classList.toggle('max-h-[500px]');
-                        arrow.classList.toggle('rotate-180');
-                      }
-                    }}
-                  >
-                    <span className="text-xl font-semibold text-purple-300">Can you create content for real estate or coaching brands?</span>
-                    <span className="arrow text-2xl transition-transform duration-300">▼</span>
-                  </button>
-                  <div className="max-h-0 overflow-hidden transition-all duration-300">
-                    <div className="p-6 pt-0 text-gray-300">
-                      Yes. We offer social media content creation services India tailored by industry.
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* FAQ Item 7 */}
-                <motion.div 
-                  className="rounded-xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 overflow-hidden"
-                  variants={fadeIn}
-                >
-                  <button 
-                    className="w-full p-6 text-left flex items-center justify-between group"
-                    onClick={(e) => {
-                      const answer = e.currentTarget.nextElementSibling;
-                      const arrow = e.currentTarget.querySelector('.arrow');
-                      if (answer && arrow) {
-                        answer.classList.toggle('max-h-0');
-                        answer.classList.toggle('max-h-[500px]');
-                        arrow.classList.toggle('rotate-180');
-                      }
-                    }}
-                  >
-                    <span className="text-xl font-semibold text-pink-300">Do I retain content ownership?</span>
-                    <span className="arrow text-2xl transition-transform duration-300">▼</span>
-                  </button>
-                  <div className="max-h-0 overflow-hidden transition-all duration-300">
-                    <div className="p-6 pt-0 text-gray-300">
-                      100% yes. All creatives and strategies belong to you.
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* FAQ Item 8 */}
-                <motion.div 
-                  className="rounded-xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 overflow-hidden"
-                  variants={fadeIn}
-                >
-                  <button 
-                    className="w-full p-6 text-left flex items-center justify-between group"
-                    onClick={(e) => {
-                      const answer = e.currentTarget.nextElementSibling;
-                      const arrow = e.currentTarget.querySelector('.arrow');
-                      if (answer && arrow) {
-                        answer.classList.toggle('max-h-0');
-                        answer.classList.toggle('max-h-[500px]');
-                        arrow.classList.toggle('rotate-180');
-                      }
-                    }}
-                  >
-                    <span className="text-xl font-semibold text-indigo-300">Is your content AI-generated?</span>
-                    <span className="arrow text-2xl transition-transform duration-300">▼</span>
-                  </button>
-                  <div className="max-h-0 overflow-hidden transition-all duration-300">
-                    <div className="p-6 pt-0 text-gray-300">
-                      No. Our content is 100% human-written, plagiarism-free, and passes AI detection tools. Your brand deserves real strategy, not copy-paste.
-                    </div>
-                  </div>
-                </motion.div>
               </div>
             </motion.div>
           </div>
         </motion.div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+      {/* Our Website Development Services Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-gray-50"></div>
         </div>
 
         <motion.div 
@@ -2110,63 +460,1290 @@ const Services5Page: React.FC = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
+          {/* Main Heading */}
           <motion.div
+            className="text-center mb-20"
+            variants={fadeIn}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold inline-block">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+                Our Website Development Services
+              </span>
+            </h2>
+            <div className="mt-4 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+          </motion.div>
+
+          {/* Static Website Development */}
+          <motion.div 
+            className="relative"
+            variants={staggerContainer}
+          >
+            {/* Background Card with Gradient Border */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-purple-100 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
+            
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                {/* Content Column */}
+                <motion.div
+                  className="p-8 lg:p-12 flex flex-col justify-center"
+                  variants={fadeIn}
+                >
+                  <div className="space-y-6">
+                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 shadow-sm">
+                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                        Static Website Development
+                      </h3>
+                    </div>
+                    
+                    <p className="text-lg text-gray-700 leading-relaxed font-semibold">
+                      Ideal for startups, consultants, or event landing pages — fast to build, simple to maintain, and beautifully structured.
+                    </p>
+
+                    <motion.button
+                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </motion.button>
+                  </div>
+                </motion.div>
+
+                {/* Image Column */}
+                <motion.div
+                  className="relative lg:h-auto"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="relative h-[300px] lg:h-full">
+                    <Image
+                      src={require('../../public/assets/r5.png')}
+                      alt="Static Website Development"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transform hover:scale-105 transition-transform duration-700"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-transparent lg:bg-gradient-to-l"></div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Dynamic Website Development */}
+          <motion.div 
+            className="relative mt-20"
+            variants={staggerContainer}
+          >
+            {/* Background Card with Gradient Border */}
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-100 to-pink-100 rounded-3xl blur-3xl opacity-20 transform rotate-1"></div>
+            
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                {/* Content Column */}
+                <motion.div
+                  className="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1"
+                  variants={fadeIn}
+                >
+                  <div className="space-y-6">
+                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 shadow-sm">
+                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+                        Dynamic Website Development
+                      </h3>
+                    </div>
+                    
+                    <p className="text-lg text-gray-700 leading-relaxed font-semibold">
+                      Need something robust? Whether it's appointment scheduling, dashboards, or customer portals — we build with flexibility and function in mind.
+                    </p>
+
+                    <motion.button
+                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 group"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </motion.button>
+                  </div>
+                </motion.div>
+
+                {/* Image Column */}
+                <motion.div
+                  className="relative lg:h-auto order-1 lg:order-2"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="relative h-[300px] lg:h-full">
+                    <Image
+                      src={require('../../public/assets/r6.png')}
+                      alt="Dynamic Website Development"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transform hover:scale-105 transition-transform duration-700"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-l from-white/60 via-transparent to-transparent lg:bg-gradient-to-r"></div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* WordPress Development Services */}
+          <motion.div 
+            className="relative mt-20"
+            variants={staggerContainer}
+          >
+            {/* Background Card with Gradient Border */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
+            
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                {/* Content Column */}
+                <motion.div
+                  className="p-8 lg:p-12 flex flex-col justify-center"
+                  variants={fadeIn}
+                >
+                  <div className="space-y-6">
+                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 shadow-sm">
+                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
+                        WordPress Development Services
+                      </h3>
+                    </div>
+                    
+                    <p className="text-lg text-gray-700 leading-relaxed font-semibold">
+                      Our WordPress developers in Pune create:
+                    </p>
+
+                    <ul className="space-y-4 text-gray-700">
+                      <li className="flex items-start space-x-3">
+                        <span className="text-blue-600 font-bold">✓</span>
+                        <span className="font-semibold">Fully responsive, branded themes</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-blue-600 font-bold">✓</span>
+                        <span className="font-semibold">WooCommerce stores for small and medium brands</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-blue-600 font-bold">✓</span>
+                        <span className="font-semibold">Lightweight and secure plugin setups</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-blue-600 font-bold">✓</span>
+                        <span className="font-semibold">Backend panels even beginners can manage</span>
+                      </li>
+                    </ul>
+
+                    <motion.button
+                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </motion.button>
+                  </div>
+                </motion.div>
+
+                {/* Image Column */}
+                <motion.div
+                  className="relative lg:h-auto"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="relative h-[300px] lg:h-full">
+                    <Image
+                      src={require('../../public/assets/r7.png')}
+                      alt="WordPress Development Services"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transform hover:scale-105 transition-transform duration-700"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-transparent lg:bg-gradient-to-l"></div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* E-commerce Website Development */}
+          <motion.div 
+            className="relative mt-20"
+            variants={staggerContainer}
+          >
+            {/* Background Card with Gradient Border */}
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-violet-100 rounded-3xl blur-3xl opacity-20 transform rotate-1"></div>
+            
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                {/* Content Column */}
+                <motion.div
+                  className="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1"
+                  variants={fadeIn}
+                >
+                  <div className="space-y-6">
+                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-indigo-50 to-violet-50 border border-indigo-200 shadow-sm">
+                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">
+                        E-commerce Website Development (Fashion, D2C, Retail)
+                      </h3>
+                    </div>
+                    
+                    <p className="text-lg text-gray-700 leading-relaxed font-semibold">
+                      Whether you're launching a boutique brand or managing a large catalog:
+                    </p>
+
+                    <ul className="space-y-4 text-gray-700">
+                      <li className="flex items-start space-x-3">
+                        <span className="text-indigo-600 font-bold">✓</span>
+                        <span className="font-semibold">Shopify with custom product logic & dynamic checkouts</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-indigo-600 font-bold">✓</span>
+                        <span className="font-semibold">WooCommerce for deep content and product control</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-indigo-600 font-bold">✓</span>
+                        <span className="font-semibold">Magento for high-volume B2B/B2C commerce</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-indigo-600 font-bold">✓</span>
+                        <span className="font-semibold">Mobile cart flows and trust-building payment integrations</span>
+                      </li>
+                    </ul>
+
+                    <motion.button
+                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-violet-600 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 group"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </motion.button>
+                  </div>
+                </motion.div>
+
+                {/* Image Column */}
+                <motion.div
+                  className="relative lg:h-auto order-1 lg:order-2"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="relative h-[300px] lg:h-full">
+                    <Image
+                      src={require('../../public/assets/r8.png')}
+                      alt="E-commerce Website Development"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transform hover:scale-105 transition-transform duration-700"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-l from-white/60 via-transparent to-transparent lg:bg-gradient-to-r"></div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Custom Website Development Solutions */}
+          <motion.div 
+            className="relative mt-20"
+            variants={staggerContainer}
+          >
+            {/* Background Card with Gradient Border */}
+            <div className="absolute inset-0 bg-gradient-to-r from-teal-100 to-emerald-100 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
+            
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                {/* Content Column */}
+                <motion.div
+                  className="p-8 lg:p-12 flex flex-col justify-center"
+                  variants={fadeIn}
+                >
+                  <div className="space-y-6">
+                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-teal-50 to-emerald-50 border border-teal-200 shadow-sm">
+                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-emerald-600">
+                        Custom Website Development Solutions
+                      </h3>
+                    </div>
+                    
+                    <p className="text-lg text-gray-700 leading-relaxed font-semibold">
+                      Need something unique? We build from scratch using:
+                    </p>
+
+                    <ul className="space-y-4 text-gray-700">
+                      <li className="flex items-start space-x-3">
+                        <span className="text-teal-600 font-bold">✓</span>
+                        <span className="font-semibold">HTML5 / CSS3 / JavaScript</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-teal-600 font-bold">✓</span>
+                        <span className="font-semibold">Laravel for secure backends</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-teal-600 font-bold">✓</span>
+                        <span className="font-semibold">React & Next.js for seamless app-like user journeys</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-teal-600 font-bold">✓</span>
+                        <span className="font-semibold">Tailwind & Bootstrap for modern UI frameworks</span>
+                      </li>
+                    </ul>
+
+                    <motion.button
+                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-teal-500 to-emerald-600 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 group"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </motion.button>
+                  </div>
+                </motion.div>
+
+                {/* Image Column */}
+                <motion.div
+                  className="relative lg:h-auto"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="relative h-[300px] lg:h-full">
+                    <Image
+                      src={require('../../public/assets/r9.png')}
+                      alt="Custom Website Development Solutions"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transform hover:scale-105 transition-transform duration-700"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-transparent lg:bg-gradient-to-l"></div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Website Redesign Services */}
+          <motion.div 
+            className="relative mt-20"
+            variants={staggerContainer}
+          >
+            {/* Background Card with Gradient Border */}
+            <div className="absolute inset-0 bg-gradient-to-r from-rose-100 to-pink-100 rounded-3xl blur-3xl opacity-20 transform rotate-1"></div>
+            
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                {/* Content Column */}
+                <motion.div
+                  className="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1"
+                  variants={fadeIn}
+                >
+                  <div className="space-y-6">
+                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-200 shadow-sm">
+                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600">
+                        Website Redesign Services
+                      </h3>
+                    </div>
+                    
+                    <p className="text-lg text-gray-700 leading-relaxed font-semibold">
+                      If your site is underperforming, it's time to revamp:
+                    </p>
+
+                    <ul className="space-y-4 text-gray-700">
+                      <li className="flex items-start space-x-3">
+                        <span className="text-rose-600 font-bold">✓</span>
+                        <span className="font-semibold">Update outdated visuals with modern, branded UI</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-rose-600 font-bold">✓</span>
+                        <span className="font-semibold">Reorganize content and navigation for better SEO</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <span className="text-rose-600 font-bold">✓</span>
+                        <span className="font-semibold">Streamline performance for faster loading and mobile use</span>
+                      </li>
+                    </ul>
+
+                    <motion.button
+                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-rose-500 to-pink-600 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-rose-500/25 group"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </motion.button>
+                  </div>
+                </motion.div>
+
+                {/* Image Column */}
+                <motion.div
+                  className="relative lg:h-auto order-1 lg:order-2"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="relative h-[300px] lg:h-full">
+                    <Image
+                      src={require('../../public/assets/r10.png')}
+                      alt="Website Redesign Services"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transform hover:scale-105 transition-transform duration-700"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-l from-white/60 via-transparent to-transparent lg:bg-gradient-to-r"></div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Tech Stack Section */}
+          <motion.div 
+            className="relative mt-20"
+            variants={staggerContainer}
+          >
+            {/* Background Card with Gradient Border */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-100 via-purple-100 to-indigo-100 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
+            
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-blue-200 p-8 lg:p-12 bg-white">
+              <div className="text-center mb-12">
+                <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 via-purple-50 to-indigo-50 border border-blue-200 shadow-sm">
+                  <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
+                    Tech Stack That Powers Leadzoro Websites
+                  </h3>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {/* Tech Cards */}
+                <div className="space-y-8 lg:col-span-2">
+                  {/* HTML/CSS/JS Card */}
+                  <motion.div 
+                    className="p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 shadow-lg border border-blue-200 hover:border-blue-400 transition-all duration-300 group"
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="flex items-center space-x-3 mb-3">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                        <span className="text-white text-xl font-bold">H</span>
+                      </div>
+                      <h4 className="text-xl font-bold text-blue-700 group-hover:text-blue-800">HTML / CSS / JS</h4>
+                    </div>
+                    <p className="text-blue-800 font-semibold">Best-in-class front-end technologies for fast, lightweight design execution.</p>
+                  </motion.div>
+
+                  {/* React/Next.js Card */}
+                  <motion.div 
+                    className="p-6 rounded-xl bg-gradient-to-br from-purple-50 to-indigo-50 shadow-lg border border-purple-200 hover:border-purple-400 transition-all duration-300 group"
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="flex items-center space-x-3 mb-3">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                        <span className="text-white text-xl font-bold">R</span>
+                      </div>
+                      <h4 className="text-xl font-bold text-purple-700 group-hover:text-purple-800">React / Next.js</h4>
+                    </div>
+                    <p className="text-purple-800 font-semibold">Perfect for SaaS, startups, and apps. Server-side rendering improves load speed and SEO rankings.</p>
+                  </motion.div>
+
+                  {/* PHP Stack Card */}
+                  <motion.div 
+                    className="p-6 rounded-xl bg-gradient-to-br from-indigo-50 to-blue-50 shadow-lg border border-indigo-200 hover:border-indigo-400 transition-all duration-300 group"
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="flex items-start space-x-3 mb-3">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center">
+                        <span className="text-white text-xl font-bold">P</span>
+                      </div>
+                      <h4 className="text-xl font-bold text-indigo-700 group-hover:text-indigo-800">PHP / WordPress / Laravel</h4>
+                    </div>
+                    <p className="text-indigo-800 font-semibold">From blogs to business platforms, these trusted tools power content-rich sites and powerful custom apps.</p>
+                  </motion.div>
+
+                  {/* E-commerce Stack Card */}
+                  <motion.div 
+                    className="p-6 rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 shadow-lg border border-blue-200 hover:border-purple-400 transition-all duration-300 group"
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="flex items-start space-x-3 mb-3">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <span className="text-white text-xl font-bold">E</span>
+                      </div>
+                      <h4 className="text-xl font-bold text-blue-700 group-hover:text-purple-800">Shopify / WooCommerce / Magento</h4>
+                    </div>
+                    <p className="text-blue-800 mb-4 font-semibold">We help brands build digital storefronts that convert — fast.</p>
+                    <ul className="space-y-2 text-blue-800">
+                      <li className="flex items-start space-x-2 font-semibold">
+                        <span className="text-blue-600">•</span>
+                        <span>Shopify: Rapid deployment and simplicity</span>
+                      </li>
+                      <li className="flex items-start space-x-2 font-semibold">
+                        <span className="text-blue-600">•</span>
+                        <span>WooCommerce: Complete WordPress eCommerce control</span>
+                      </li>
+                      <li className="flex items-start space-x-2 font-semibold">
+                        <span className="text-blue-600">•</span>
+                        <span>Magento: Ideal for enterprise-level commerce</span>
+                      </li>
+                    </ul>
+                  </motion.div>
+                </div>
+
+                {/* Image Column */}
+                <motion.div
+                  className="relative lg:col-span-1"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="relative h-[400px] rounded-2xl overflow-hidden">
+                    <Image
+                      src={require('../../public/assets/r11.png')}
+                      alt="Tech Stack"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transform hover:scale-105 transition-transform duration-700"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-200/60 via-purple-200/40 to-transparent"></div>
+                  </div>
+                </motion.div>
+              </div>
+
+              <div className="text-center mt-12">
+                <motion.button
+                  className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Learn More
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </motion.button>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* Industry-Specific Website Solutions */}
+      <motion.div 
+        className="relative mt-20"
+        variants={staggerContainer}
+      >
+        {/* Background Card with Gradient Border */}
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-100 via-orange-100 to-red-100 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
+        
+        <div className="relative rounded-3xl overflow-hidden shadow-lg border border-amber-200 p-8 lg:p-12 bg-white">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Content Column */}
+            <motion.div
+              className="space-y-8"
+              variants={fadeIn}
+            >
+              <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-amber-50 via-orange-50 to-red-50 border border-amber-200 shadow-sm">
+                <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-600 via-orange-600 to-red-600">
+                  Industry-Specific Website Solutions
+                </h3>
+              </div>
+
+              <p className="text-lg text-amber-800 leading-relaxed font-semibold">
+                Tailored solutions for your industry's unique needs and challenges.
+              </p>
+
+              <div className="space-y-8">
+                {/* Real Estate Firms */}
+                <motion.div 
+                  className="p-6 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 shadow-lg border border-amber-200 hover:border-amber-400 transition-all duration-300 group"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-start space-x-3 mb-3">
+                    <span className="text-2xl">🏢</span>
+                    <h4 className="text-xl font-bold text-amber-700 group-hover:text-amber-800">Real Estate Firms</h4>
+                  </div>
+                  <ul className="space-y-2 text-amber-800">
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-amber-600">•</span>
+                      <span>Property listings with image carousels and smart filters</span>
+                    </li>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-amber-600">•</span>
+                      <span>Contact integrations with WhatsApp & CRM tools</span>
+                    </li>
+                  </ul>
+                </motion.div>
+
+                {/* Clinics & Health Professionals */}
+                <motion.div 
+                  className="p-6 rounded-xl bg-gradient-to-br from-orange-50 to-red-50 shadow-lg border border-orange-200 hover:border-orange-400 transition-all duration-300 group"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-start space-x-3 mb-3">
+                    <span className="text-2xl">🏥</span>
+                    <h4 className="text-xl font-bold text-orange-700 group-hover:text-orange-800">Clinics & Health Professionals</h4>
+                  </div>
+                  <ul className="space-y-2 text-orange-800">
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-orange-600">•</span>
+                      <span>Appointment scheduling, patient intake forms</span>
+                    </li>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-orange-600">•</span>
+                      <span>Gallery for services & client testimonials</span>
+                    </li>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-orange-600">•</span>
+                      <span>Secure health info pages + blog</span>
+                    </li>
+                  </ul>
+                </motion.div>
+
+                {/* Coaches & Educators */}
+                <motion.div 
+                  className="p-6 rounded-xl bg-gradient-to-br from-red-50 to-amber-50 shadow-lg border border-red-200 hover:border-red-400 transition-all duration-300 group"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-start space-x-3 mb-3">
+                    <span className="text-2xl">👨‍🏫</span>
+                    <h4 className="text-xl font-bold text-red-700 group-hover:text-red-800">Coaches & Educators</h4>
+                  </div>
+                  <ul className="space-y-2 text-red-800">
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-red-600">•</span>
+                      <span>LMS platforms (Thinkific, custom LMS)</span>
+                    </li>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-red-600">•</span>
+                      <span>Recorded sessions + live class integration</span>
+                    </li>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-red-600">•</span>
+                      <span>Lead magnet setups + email automation tools</span>
+                    </li>
+                  </ul>
+                </motion.div>
+
+                {/* Local Businesses */}
+                <motion.div 
+                  className="p-6 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 shadow-lg border border-amber-200 hover:border-amber-400 transition-all duration-300 group"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-start space-x-3 mb-3">
+                    <span className="text-2xl">🏪</span>
+                    <h4 className="text-xl font-bold text-amber-700 group-hover:text-amber-800">Local Businesses (Restaurants, Salons, Gyms)</h4>
+                  </div>
+                  <ul className="space-y-2 text-amber-800">
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-amber-600">•</span>
+                      <span>Booking slots synced with your calendar</span>
+                    </li>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-amber-600">•</span>
+                      <span>Google Maps and review integrations</span>
+                    </li>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-amber-600">•</span>
+                      <span>Promo pages for offers and events</span>
+                    </li>
+                  </ul>
+                </motion.div>
+
+                {/* SaaS / Tech Products */}
+                <motion.div 
+                  className="p-6 rounded-xl bg-gradient-to-br from-orange-50 to-red-50 shadow-lg border border-orange-200 hover:border-orange-400 transition-all duration-300 group"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-start space-x-3 mb-3">
+                    <span className="text-2xl">💻</span>
+                    <h4 className="text-xl font-bold text-orange-700 group-hover:text-orange-800">SaaS / Tech Products</h4>
+                  </div>
+                  <ul className="space-y-2 text-orange-800">
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-orange-600">•</span>
+                      <span>API documentation + changelog sections</span>
+                    </li>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-orange-600">•</span>
+                      <span>Pricing tables, comparison charts</span>
+                    </li>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-orange-600">•</span>
+                      <span>Feature explanation using micro-animations</span>
+                    </li>
+                  </ul>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* Image Column */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative h-[600px] rounded-2xl overflow-hidden">
+                <Image
+                  src={require('../../public/assets/r12.png')}
+                  alt="Industry-Specific Website Solutions"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transform hover:scale-105 transition-transform duration-700"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-amber-200/60 via-orange-200/40 to-transparent"></div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* 5-Step Web Development Framework */}
+      <section className="py-20 px-4 bg-gradient-to-b from-emerald-50 to-teal-50 relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl"></div>
+        </div>
+
+        <motion.div 
+          className="container mx-auto max-w-6xl relative z-10"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-800"
+            variants={fadeIn}
+          >
+            Our 5-Step Web Development Framework
+          </motion.h2>
+
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Steps Column - Left */}
+            <motion.div
+              className="lg:w-1/2 space-y-6"
+              variants={fadeIn}
+            >
+              {/* Step 1 */}
+              <motion.div 
+                className="p-6 rounded-xl bg-gradient-to-br from-indigo-50 to-purple-50 shadow-lg border border-indigo-200 hover:border-indigo-400 transition-all duration-300 group"
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl">
+                    1
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-indigo-700 group-hover:text-indigo-800 mb-2">Discovery & Planning</h4>
+                    <p className="text-indigo-800 font-semibold">
+                      We understand your audience, brand, and goals. Then we plan the sitemap, features, and structure.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Step 2 */}
+              <motion.div 
+                className="p-6 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg border border-purple-200 hover:border-purple-400 transition-all duration-300 group"
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl">
+                    2
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-purple-700 group-hover:text-purple-800 mb-2">UI/UX Design Mockups</h4>
+                    <p className="text-purple-800 font-semibold">
+                      Designers create wireframes and visuals. You'll see your future site before we write a line of code.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Image Column - Middle */}
+            <motion.div
+              className="lg:w-1/2 relative"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="sticky top-8">
+                <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src={require('../../public/assets/r14.png')}
+                    alt="5-Step Web Development Framework"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transform hover:scale-105 transition-transform duration-700"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-indigo-200/60 via-purple-200/40 to-transparent"></div>
+                </div>
+              </div>
+
+              {/* Step 3 - Below Image */}
+              <motion.div 
+                className="mt-8 p-6 rounded-xl bg-gradient-to-br from-pink-50 to-indigo-50 shadow-lg border border-pink-200 hover:border-pink-400 transition-all duration-300 group"
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-indigo-500 flex items-center justify-center text-white font-bold text-xl">
+                    3
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-pink-700 group-hover:text-pink-800 mb-2">Development</h4>
+                    <p className="text-pink-800 font-semibold">
+                      We write clean code, build custom logic, and integrate third-party tools. CMS or fully coded? You choose.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Steps Column - Right */}
+            <motion.div
+              className="lg:w-1/2 space-y-6"
+              variants={fadeIn}
+            >
+              {/* Step 4 */}
+              <motion.div 
+                className="p-6 rounded-xl bg-gradient-to-br from-indigo-50 to-purple-50 shadow-lg border border-indigo-200 hover:border-indigo-400 transition-all duration-300 group"
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl">
+                    4
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-indigo-700 group-hover:text-indigo-800 mb-2">QA & Performance Optimization</h4>
+                    <p className="text-indigo-800 mb-2 font-semibold">
+                      Each page is tested on major browsers, devices, and load times. We ensure:
+                    </p>
+                    <ul className="space-y-1 text-indigo-800">
+                      <li className="flex items-start space-x-2 font-semibold">
+                        <span className="text-indigo-600">•</span>
+                        <span>Lazy loading for images</span>
+                      </li>
+                      <li className="flex items-start space-x-2 font-semibold">
+                        <span className="text-indigo-600">•</span>
+                        <span>Clean code hierarchy</span>
+                      </li>
+                      <li className="flex items-start space-x-2 font-semibold">
+                        <span className="text-indigo-600">•</span>
+                        <span>Fast database queries</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Step 5 */}
+              <motion.div 
+                className="p-6 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg border border-purple-200 hover:border-purple-400 transition-all duration-300 group"
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl">
+                    5
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-purple-700 group-hover:text-purple-800 mb-2">Launch + Post-Launch Support</h4>
+                    <p className="text-purple-800 font-semibold">
+                      We deploy your site and offer 30 days of free support for tweaks, bug fixes, and feedback implementation.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Who We Work With Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl"></div>
+        </div>
+
+        <motion.div 
+          className="container mx-auto max-w-6xl relative z-10"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-800"
+            variants={fadeIn}
+          >
+            Who We Work With
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Service-Based Small Businesses */}
+            <motion.div 
+              className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 shadow-lg border border-blue-200 hover:border-blue-400 transition-all duration-300 group"
+              variants={fadeIn}
+              whileHover={{ y: -5, scale: 1.02 }}
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center">
+                  <span className="text-2xl">🏢</span>
+                </div>
+                <h3 className="text-xl font-bold text-blue-700 group-hover:text-blue-800">Service-Based Small Businesses</h3>
+              </div>
+            </motion.div>
+
+            {/* Product Startups & D2C Brands */}
+            <motion.div 
+              className="p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg border border-purple-200 hover:border-purple-400 transition-all duration-300 group"
+              variants={fadeIn}
+              whileHover={{ y: -5, scale: 1.02 }}
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h3 className="text-xl font-bold text-purple-700 group-hover:text-purple-800">Product Startups & D2C Brands</h3>
+              </div>
+            </motion.div>
+
+            {/* Realtors, Developers, Brokers */}
+            <motion.div 
+              className="p-6 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-50 shadow-lg border border-pink-200 hover:border-pink-400 transition-all duration-300 group"
+              variants={fadeIn}
+              whileHover={{ y: -5, scale: 1.02 }}
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center">
+                  <span className="text-2xl">🏠</span>
+                </div>
+                <h3 className="text-xl font-bold text-pink-700 group-hover:text-pink-800">Realtors, Developers, Brokers</h3>
+              </div>
+            </motion.div>
+
+            {/* Doctors, Clinics, and Hospitals */}
+            <motion.div 
+              className="p-6 rounded-2xl bg-gradient-to-br from-indigo-50 to-blue-50 shadow-lg border border-indigo-200 hover:border-indigo-400 transition-all duration-300 group"
+              variants={fadeIn}
+              whileHover={{ y: -5, scale: 1.02 }}
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center">
+                  <span className="text-2xl">🏥</span>
+                </div>
+                <h3 className="text-xl font-bold text-indigo-700 group-hover:text-indigo-800">Doctors, Clinics, and Hospitals</h3>
+              </div>
+            </motion.div>
+
+            {/* Trainers, Coaches, Educators */}
+            <motion.div 
+              className="p-6 rounded-2xl bg-gradient-to-br from-cyan-50 to-teal-50 shadow-lg border border-cyan-200 hover:border-cyan-400 transition-all duration-300 group"
+              variants={fadeIn}
+              whileHover={{ y: -5, scale: 1.02 }}
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center">
+                  <span className="text-2xl">👨‍🏫</span>
+                </div>
+                <h3 className="text-xl font-bold text-cyan-700 group-hover:text-cyan-800">Trainers, Coaches, Educators</h3>
+              </div>
+            </motion.div>
+
+            {/* Local Retailers & Restaurants */}
+            <motion.div 
+              className="p-6 rounded-2xl bg-gradient-to-br from-emerald-50 to-green-50 shadow-lg border border-emerald-200 hover:border-emerald-400 transition-all duration-300 group"
+              variants={fadeIn}
+              whileHover={{ y: -5, scale: 1.02 }}
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center">
+                  <span className="text-2xl">🏪</span>
+                </div>
+                <h3 className="text-xl font-bold text-emerald-700 group-hover:text-emerald-800">Local Retailers & Restaurants</h3>
+              </div>
+            </motion.div>
+
+            {/* Legal & Accounting Firms */}
+            <motion.div 
+              className="p-6 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 shadow-lg border border-amber-200 hover:border-amber-400 transition-all duration-300 group"
+              variants={fadeIn}
+              whileHover={{ y: -5, scale: 1.02 }}
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center">
+                  <span className="text-2xl">⚖️</span>
+                </div>
+                <h3 className="text-xl font-bold text-amber-700 group-hover:text-amber-800">Legal & Accounting Firms</h3>
+              </div>
+            </motion.div>
+
+            {/* SaaS Founders & App Creators */}
+            <motion.div 
+              className="p-6 rounded-2xl bg-gradient-to-br from-violet-50 to-fuchsia-50 shadow-lg border border-violet-200 hover:border-violet-400 transition-all duration-300 group"
+              variants={fadeIn}
+              whileHover={{ y: -5, scale: 1.02 }}
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
+                  <span className="text-2xl">💻</span>
+                </div>
+                <h3 className="text-xl font-bold text-violet-700 group-hover:text-violet-800">SaaS Founders & App Creators</h3>
+              </div>
+            </motion.div>
+
+            {/* NGOs & Purpose-Driven Brands */}
+            <motion.div 
+              className="p-6 rounded-2xl bg-gradient-to-br from-rose-50 to-red-50 shadow-lg border border-rose-200 hover:border-rose-400 transition-all duration-300 group"
+              variants={fadeIn}
+              whileHover={{ y: -5, scale: 1.02 }}
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-red-500 flex items-center justify-center">
+                  <span className="text-2xl">🌍</span>
+                </div>
+                <h3 className="text-xl font-bold text-rose-700 group-hover:text-rose-800">NGOs & Purpose-Driven Brands</h3>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* FAQs Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl"></div>
+        </div>
+
+        <motion.div 
+          className="container mx-auto max-w-6xl relative z-10"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          {/* Headline */}
+          <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            variants={fadeIn}
           >
             <motion.h2 
-              className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 mb-6"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-700 to-pink-800"
               variants={fadeIn}
             >
-              Ready to Grow? Let's Make You Unforgettable Online
+              FAQs About Website Development
+            </motion.h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            {/* Image Column */}
+            <motion.div
+              className="lg:col-span-5 relative"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="sticky top-8">
+                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src={require('../../public/assets/r15.png')}
+                    alt="FAQs About Website Development"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transform hover:scale-105 transition-transform duration-700"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent"></div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* FAQ Content Column */}
+            <motion.div
+              className="lg:col-span-7 space-y-4"
+              variants={fadeIn}
+            >
+              {/* FAQ Item 1 */}
+              <motion.div 
+                className="p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 shadow-lg border border-blue-200 hover:border-blue-400 transition-all duration-300 group"
+                variants={fadeIn}
+                whileHover={{ y: -2 }}
+              >
+                <h3 className="text-xl font-bold text-blue-700 group-hover:text-blue-800 mb-2">What's the typical website build time?</h3>
+                <p className="text-blue-800 font-semibold">5 to 30 days based on scope and features.</p>
+              </motion.div>
+
+              {/* FAQ Item 2 */}
+              <motion.div 
+                className="p-6 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg border border-purple-200 hover:border-purple-400 transition-all duration-300 group"
+                variants={fadeIn}
+                whileHover={{ y: -2 }}
+              >
+                <h3 className="text-xl font-bold text-purple-700 group-hover:text-purple-800 mb-2">What platforms do you offer?</h3>
+                <p className="text-purple-800 font-semibold">We specialize in WordPress, Shopify, Laravel, HTML/CSS, and React-based frameworks.</p>
+              </motion.div>
+
+              {/* FAQ Item 3 */}
+              <motion.div 
+                className="p-6 rounded-xl bg-gradient-to-br from-pink-50 to-rose-50 shadow-lg border border-pink-200 hover:border-pink-400 transition-all duration-300 group"
+                variants={fadeIn}
+                whileHover={{ y: -2 }}
+              >
+                <h3 className="text-xl font-bold text-pink-700 group-hover:text-pink-800 mb-2">Will my website be SEO-friendly?</h3>
+                <p className="text-pink-800 font-semibold">Yes. All sites include metadata, schema markup, fast loads, and crawl-friendly structure.</p>
+              </motion.div>
+
+              {/* FAQ Item 4 */}
+              <motion.div 
+                className="p-6 rounded-xl bg-gradient-to-br from-indigo-50 to-blue-50 shadow-lg border border-indigo-200 hover:border-indigo-400 transition-all duration-300 group"
+                variants={fadeIn}
+                whileHover={{ y: -2 }}
+              >
+                <h3 className="text-xl font-bold text-indigo-700 group-hover:text-indigo-800 mb-2">Can I manage the site myself later?</h3>
+                <p className="text-indigo-800 font-semibold">Absolutely. We provide admin access and guidance.</p>
+              </motion.div>
+
+              {/* FAQ Item 5 */}
+              <motion.div 
+                className="p-6 rounded-xl bg-gradient-to-br from-cyan-50 to-teal-50 shadow-lg border border-cyan-200 hover:border-cyan-400 transition-all duration-300 group"
+                variants={fadeIn}
+                whileHover={{ y: -2 }}
+              >
+                <h3 className="text-xl font-bold text-cyan-700 group-hover:text-cyan-800 mb-2">Do you handle domain/hosting too?</h3>
+                <p className="text-cyan-800 font-semibold">Yes — we help you choose, purchase, and connect your hosting.</p>
+              </motion.div>
+
+              {/* FAQ Item 6 */}
+              <motion.div 
+                className="p-6 rounded-xl bg-gradient-to-br from-emerald-50 to-green-50 shadow-lg border border-emerald-200 hover:border-emerald-400 transition-all duration-300 group"
+                variants={fadeIn}
+                whileHover={{ y: -2 }}
+              >
+                <h3 className="text-xl font-bold text-emerald-700 group-hover:text-emerald-800 mb-2">Do you offer redesigns of existing websites?</h3>
+                <p className="text-emerald-800 font-semibold">Yes. We can modernize your site without losing SEO value or branding.</p>
+              </motion.div>
+
+              {/* FAQ Item 7 */}
+              <motion.div 
+                className="p-6 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 shadow-lg border border-amber-200 hover:border-amber-400 transition-all duration-300 group"
+                variants={fadeIn}
+                whileHover={{ y: -2 }}
+              >
+                <h3 className="text-xl font-bold text-amber-700 group-hover:text-amber-800 mb-2">What happens after launch?</h3>
+                <p className="text-amber-800 font-semibold">We offer 30-day support and optional maintenance packages for updates, monitoring, and more.</p>
+              </motion.div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(168,85,247,0.1),transparent_70%)]"></div>
+        </div>
+
+        <motion.div 
+          className="container mx-auto max-w-3xl px-4 relative z-10"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <div className="text-center mb-12">
+            <motion.h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-700 to-pink-800 flex items-center justify-center space-x-4"
+              variants={fadeIn}
+            >
+              <FaCalendarAlt className="text-4xl md:text-5xl lg:text-6xl text-blue-600 transform hover:scale-110 transition-transform duration-300" />
+              <span>Book a Free Website Strategy Call</span>
             </motion.h2>
             <motion.p 
-              className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12"
+              className="text-xl text-gray-700 mb-8 font-semibold"
               variants={fadeIn}
             >
-              Social media isn't just about being visible — it's about being valuable. With Leadzoro, you're not hiring an agency; you're gaining a strategic partner invested in your long-term growth.
+              Let's build something remarkable together.
             </motion.p>
+          </div>
 
-            <motion.div 
-              className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12"
-              variants={fadeIn}
-            >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+          <motion.div 
+            className="p-8 md:p-12 rounded-3xl bg-white shadow-2xl border border-gray-200"
+            variants={fadeIn}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Content Column */}
+              <motion.div
+                className="space-y-6"
+                variants={fadeIn}
               >
-                💼 Let's build something scroll-stopping
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                👉 Book your free strategy call now
-              </motion.button>
-            </motion.div>
+                <p className="text-lg text-gray-700 leading-relaxed font-semibold">
+                  Whether you're launching your first business site or revamping your existing digital presence, Leadzoro has the tools, creativity, and expertise to make it happen.
+                </p>
+                <div className="flex items-center space-x-4 text-blue-600">
+                  <span className="text-2xl">📞</span>
+                  <p className="text-lg font-bold">Call or WhatsApp us now — or book your free website strategy session below:</p>
+                </div>
+              </motion.div>
 
-            <motion.div 
-              className="flex flex-col md:flex-row items-center justify-center gap-8 text-gray-300"
-              variants={fadeIn}
-            >
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">📱</span>
-                <span>+91-8789462971</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">✉️</span>
-                <span>hello@leadzoro.com</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">🔗</span>
-                <span>www.leadzoro.com</span>
-              </div>
-            </motion.div>
+              {/* Button Column */}
+              <motion.div
+                className="flex justify-center md:justify-end"
+                variants={fadeIn}
+              >
+                <motion.button
+                  className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-600 text-white font-bold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-purple-500/25 transition-all duration-300 group"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="flex items-center space-x-2">
+                    <span>👉 Book Free Consultation</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </span>
+                </motion.button>
+              </motion.div>
+            </div>
           </motion.div>
         </motion.div>
       </section>
@@ -2176,4 +1753,4 @@ const Services5Page: React.FC = () => {
   );
 };
 
-export default Services5Page;
+export default Services4Page;

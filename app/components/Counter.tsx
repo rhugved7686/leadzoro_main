@@ -64,7 +64,7 @@ const AnimatedCounter = ({ value, text }: { value: number; text: string }) => {
             delay: 0.2
           }
         } : {}}
-        className="text-gray-300 text-lg"
+        className="text-gray-600 text-lg"
       >
         {text}
       </motion.p>
@@ -82,9 +82,9 @@ const Counter = () => {
     <div className="py-20 relative">
       {/* Decorative background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 via-secondary-500/10 to-primary-500/10" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full filter blur-3xl animate-float" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-500/20 rounded-full filter blur-3xl animate-float" 
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-100/30 via-secondary-100/30 to-primary-100/30" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-200/30 rounded-full filter blur-3xl animate-float" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-200/30 rounded-full filter blur-3xl animate-float" 
              style={{ animationDelay: '-5s' }} />
       </div>
 

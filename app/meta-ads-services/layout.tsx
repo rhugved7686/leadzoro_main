@@ -5,6 +5,8 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+export const revalidate = 86400; // Revalidate every 24 hours for ISR
+
 export const metadata: Metadata = {
   title: 'Meta Ads Services in Pune & India | Leadzoro',
   description: 'Leadzoro offers ROI-driven Meta Ads services for Facebook & Instagram marketing. Grow your brand across Pune and India with targeted campaigns.',

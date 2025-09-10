@@ -67,19 +67,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-b from-transparent to-black/50 pt-20 pb-6">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full filter blur-3xl animate-float" />
-        <div
-          className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-500/10 rounded-full filter blur-3xl animate-float"
-          style={{ animationDelay: '-5s' }}
-        />
+    <footer className="relative bg-neutral-900 pt-20 pb-6 text-gray-300">
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="stars opacity-80" />
+        <div className="stars2 opacity-60" />
+        <div className="stars3 opacity-40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
       </div>
 
       <motion.div
         ref={ref}
-        className="max-w-7xl mx-auto px-4"
+        className="relative z-10 max-w-7xl mx-auto px-4"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
@@ -100,7 +98,7 @@ const Footer = () => {
                 <motion.a
                   key={social.label}
                   href={social.href}
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                  className="text-gray-400 hover:text-primary-300 transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
@@ -121,7 +119,7 @@ const Footer = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 + sectionIndex * 0.1 }}
             >
-              <h3 className="text-lg font-semibold text-white mb-6">{section.title}</h3>
+              <h3 className="text-lg font-semibold text-gray-100 mb-6">{section.title}</h3>
               <ul className="space-y-3">
                 {section.links.map((link, index) => (
                   <motion.li
@@ -132,7 +130,7 @@ const Footer = () => {
                   >
                     <Link
                       href={link.href}
-                      className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                      className="text-gray-300 hover:text-primary-300 transition-colors duration-300"
                     >
                       {link.name}
                     </Link>
@@ -154,7 +152,7 @@ const Footer = () => {
             <motion.a
               key={info.text}
               href={info.href}
-              className="flex items-center justify-center md:justify-start gap-2 text-gray-400 hover:text-primary-400 transition-colors duration-300"
+              className="flex items-center justify-center md:justify-start gap-2 text-gray-300 hover:text-primary-300 transition-colors duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.7 + index * 0.1 }}

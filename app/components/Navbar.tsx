@@ -23,7 +23,7 @@ const ServiceDropdown = ({ isOpen }: { isOpen: boolean }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
-          className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 rounded-xl bg-black/90 backdrop-blur-lg border border-gray-800 shadow-2xl"
+          className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 rounded-xl bg-white/95 backdrop-blur-lg border border-gray-200 shadow-2xl"
         >
           <div className="py-2">
             {services.map((service, index) => (
@@ -35,7 +35,7 @@ const ServiceDropdown = ({ isOpen }: { isOpen: boolean }) => {
               >
                 <Link
                   href={service.href}
-                  className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gradient-to-r from-primary-500/20 to-secondary-500/20 transition-all duration-300"
+                  className="block px-4 py-3 text-gray-700 hover:text-gray-900 hover:bg-gradient-to-r from-primary-100/50 to-secondary-100/50 transition-all duration-300"
                 >
                   <span className="relative group">
                     {service.name}
@@ -77,7 +77,7 @@ const Navbar = () => {
     <>
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-black/90 backdrop-blur-lg shadow-lg' : 'bg-black/90 backdrop-blur-lg'
+          isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg border-b border-gray-200' : 'bg-white/90 backdrop-blur-lg'
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -112,7 +112,7 @@ const Navbar = () => {
                   >
                     <Link
                       href={item.href}
-                      className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium relative group"
+                      className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium relative group"
                       onClick={(e) => item.hasDropdown && e.preventDefault()}
                     >
                       {item.name}
@@ -136,7 +136,7 @@ const Navbar = () => {
             >
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-gray-300 hover:text-white p-2"
+                className="text-gray-700 hover:text-gray-900 p-2"
               >
                 {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
               </button>
@@ -148,7 +148,7 @@ const Navbar = () => {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              className="md:hidden bg-black/95 backdrop-blur-lg"
+              className="md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-200"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -164,29 +164,29 @@ const Navbar = () => {
                   >
                     <Link
                       href={item.href}
-                      className="text-gray-300 hover:text-white block px-3 py-4 text-base font-medium border-b border-white/10"
+                      className="text-gray-700 hover:text-gray-900 block px-3 py-4 text-base font-medium border-b border-gray-200"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.name}
                     </Link>
                     {item.hasDropdown && isMobileMenuOpen && (
-                      <div className="pl-6 py-2 space-y-2 bg-gray-900/50">
-                        <Link href="/meta-ads-services" className="block px-3 py-2 text-sm text-gray-300 hover:text-white">
+                      <div className="pl-6 py-2 space-y-2 bg-gray-50">
+                        <Link href="/meta-ads-services" className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">
                           Meta Ads
                         </Link>
-                        <Link href="/google-ads-services" className="block px-3 py-2 text-sm text-gray-300 hover:text-white">
+                        <Link href="/google-ads-services" className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">
                           Google Ads
                         </Link>
-                        <Link href="/seo-services" className="block px-3 py-2 text-sm text-gray-300 hover:text-white">
+                        <Link href="/seo-services" className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">
                           SEO
                         </Link>
-                        <Link href="/website-development-services" className="block px-3 py-2 text-sm text-gray-300 hover:text-white">
+                        <Link href="/website-development-services" className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">
                           Website Development
                         </Link>
-                        <Link href="/social-media-management-services" className="block px-3 py-2 text-sm text-gray-300 hover:text-white">
+                        <Link href="/social-media-management-services" className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">
                           Social Media Management
                         </Link>
-                        <Link href="/gmb-optimization-services" className="block px-3 py-2 text-sm text-gray-300 hover:text-white">
+                        <Link href="/gmb-optimization-services" className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">
                           Google My Business
                         </Link>
                       </div>
@@ -205,4 +205,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar 
+export default Navbar

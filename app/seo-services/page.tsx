@@ -20,11 +20,10 @@ import s11 from '../../public/assets/s11.png';
 import s12 from '../../public/assets/s12.png';
 import s13 from '../../public/assets/s13.png';
 
-
 // Loading skeleton component
 const LoadingSkeleton = () => (
   <div className="animate-pulse">
-    <div className="h-[400px] w-full bg-gray-800 rounded-2xl" />
+    <div className="h-[400px] w-full bg-gray-200 rounded-2xl" />
   </div>
 );
 
@@ -73,15 +72,15 @@ export default function SEOServicesPage() {
 
   return (
     <LazyMotion features={domAnimation}>
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white overflow-x-hidden">
+      <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 text-gray-900 overflow-x-hidden">
         <Navbar />
         {/* First Hero Section */}
         <div className="container mx-auto px-4 py-16 relative">
           {/* Background Elements */}
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-500/10 to-secondary-500/10" />
-            <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/10 rounded-full filter blur-3xl animate-float" />
-            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary-500/10 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '-2s' }} />
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50 to-cyan-50" />
+            <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl animate-float" />
+            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-cyan-100 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '-2s' }} />
           </div>
 
           <motion.div 
@@ -94,7 +93,7 @@ export default function SEOServicesPage() {
             {/* Text Content */}
             <div className="lg:w-1/2 space-y-8">
               <motion.h1 
-                className="text-4xl md:text-5xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+                className="text-4xl md:text-5xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-700"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -103,28 +102,28 @@ export default function SEOServicesPage() {
               </motion.h1>
               
               <motion.div 
-                className="space-y-6 text-lg text-gray-300"
+                className="space-y-6 text-lg text-gray-700"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <p className="font-semibold text-xl text-blue-300">
+                <p className="font-bold text-xl text-blue-700">
                   Are you tired of watching your competitors appear on top of Google while your website stays buried on page 3?
                 </p>
                 
-                <p className="text-2xl font-bold text-primary-400">
+                <p className="text-2xl font-bold text-primary-600">
                   You're not alone.
                 </p>
                 
-                <p className="font-semibold">
+                <p className="font-bold">
                   In 2025, visibility is currency, and SEO is how you earn it.
                 </p>
                 
-                <p>
+                <p className="font-semibold">
                   At Leadzoro, we help ambitious Indian businesses — from real estate consultants in Pune to e-commerce founders in Bangalore — turn their websites into lead-generating powerhouses through strategic, industry-smart, and ROI-driven SEO Services.
                 </p>
                 
-                <p className="text-2xl font-bold text-primary-400">
+                <p className="text-2xl font-bold text-primary-600">
                   Let's take your digital presence from invisible to unmissable.
                 </p>
               </motion.div>
@@ -169,9 +168,9 @@ export default function SEOServicesPage() {
         <section className="py-20 relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-800/50 to-gray-900/50" />
-            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '-3s' }} />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '-1s' }} />
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-50 to-white" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '-3s' }} />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '-1s' }} />
           </div>
 
           <motion.div
@@ -190,7 +189,7 @@ export default function SEOServicesPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 via-transparent to-purple-500/20 z-10" />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/50 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/50 z-10" />
                 <Suspense fallback={<LoadingSkeleton />}>
                   <OptimizedImage
                     src={s2.src}
@@ -208,16 +207,16 @@ export default function SEOServicesPage() {
                 animate={secondInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-700">
                   What is SEO & Why It's a Game-Changer in 2025?
                 </h2>
 
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                   Search Engine Optimization (SEO) is the art and science of improving your website's position on search engines like Google — so that when someone types a relevant keyword, your brand shows up before your competitors.
                 </p>
 
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-blue-300">
+                  <h3 className="text-2xl font-bold text-blue-700">
                     There are 4 key pillars of SEO that matter in 2025:
                   </h3>
 
@@ -242,23 +241,23 @@ export default function SEOServicesPage() {
                     ].map((pillar, index) => (
                       <motion.div
                         key={pillar.title}
-                        className="p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-blue-500/30 transition-all duration-300"
+                        className="p-6 rounded-xl bg-white shadow-lg border border-gray-200 hover:border-blue-300 transition-all duration-300"
                         initial={{ opacity: 0, y: 20 }}
                         animate={secondInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                       >
-                        <h4 className="text-xl font-semibold text-blue-400 mb-2">{pillar.title}</h4>
-                        <p className="text-gray-300">{pillar.description}</p>
+                        <h4 className="text-xl font-bold text-blue-600 mb-2">{pillar.title}</h4>
+                        <p className="text-gray-700 font-semibold">{pillar.description}</p>
                       </motion.div>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20">
-                  <p className="text-lg text-blue-300 font-semibold">
+                <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200">
+                  <p className="text-lg text-blue-700 font-bold">
                     🧠 Fact: Over 91% of Indian customers use Google before making a purchase decision.
                   </p>
-                  <p className="text-xl text-white font-bold mt-2">
+                  <p className="text-xl text-gray-900 font-bold mt-2">
                     If you're not on Page 1, you're not even in the game.
                   </p>
                 </div>
@@ -271,7 +270,7 @@ export default function SEOServicesPage() {
         <section className="py-20 relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-500/5 via-transparent to-secondary-500/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50" />
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-secondary-500" />
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-secondary-500 to-primary-500" />
           </div>
@@ -293,7 +292,7 @@ export default function SEOServicesPage() {
               >
                 <div className="relative h-[500px] w-full rounded-3xl overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 via-transparent to-secondary-500/20 z-10" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/50 z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/50 z-10" />
                   <Suspense fallback={<LoadingSkeleton />}>
                     <OptimizedImage
                       src={s3.src}
@@ -313,19 +312,19 @@ export default function SEOServicesPage() {
                 animate={thirdInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <div className="inline-flex items-center space-x-2 text-primary-400 mb-4">
+                <div className="inline-flex items-center space-x-2 text-primary-600 mb-4">
                   <span className="text-2xl">🇮🇳</span>
-                  <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-400">
+                  <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600">
                     Why Indian Businesses (Especially in Pune) Can't Ignore SEO
                   </h2>
                 </div>
 
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                   Whether you're a local gym in Kharadi, a doctor in Viman Nagar, or an e-commerce brand selling across India — your target audience is searching online right now.
                 </p>
 
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-primary-300">
+                  <h3 className="text-2xl font-bold text-primary-700">
                     Here's what the data says:
                   </h3>
 
@@ -346,25 +345,25 @@ export default function SEOServicesPage() {
                     ].map((stat, index) => (
                       <motion.div
                         key={stat.text}
-                        className="flex items-start space-x-4 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-primary-500/30 transition-all duration-300"
+                        className="flex items-start space-x-4 p-4 rounded-xl bg-white shadow-md border border-gray-200 hover:border-primary-300 transition-all duration-300"
                         initial={{ opacity: 0, y: 20 }}
                         animate={thirdInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                       >
                         <span className="text-2xl">{stat.icon}</span>
-                        <p className="text-lg text-gray-300">{stat.text}</p>
+                        <p className="text-lg text-gray-700 font-semibold">{stat.text}</p>
                       </motion.div>
                     ))}
                   </div>
                 </div>
 
                 <motion.div
-                  className="mt-8 p-6 rounded-xl bg-gradient-to-r from-primary-500/10 to-secondary-500/10 border border-primary-500/20"
+                  className="mt-8 p-6 rounded-xl bg-gradient-to-r from-primary-50 to-secondary-50 border border-primary-200"
                   initial={{ opacity: 0, y: 20 }}
                   animate={thirdInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.7 }}
                 >
-                  <p className="text-xl font-bold text-white">
+                  <p className="text-xl font-bold text-gray-900">
                     Don't just compete — dominate. With Leadzoro's SEO Services in Pune and across India, we'll make sure your brand is found where it matters most.
                   </p>
                 </motion.div>
@@ -377,7 +376,7 @@ export default function SEOServicesPage() {
         <section className="py-20 relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-primary-500/5 via-secondary-500/5 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white" />
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500" />
           </div>
 
@@ -390,7 +389,7 @@ export default function SEOServicesPage() {
           >
             <div className="max-w-4xl mx-auto text-center mb-16">
               <motion.h2
-                className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-400"
+                className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600"
                 initial={{ opacity: 0, y: 20 }}
                 animate={fourthInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -399,7 +398,7 @@ export default function SEOServicesPage() {
               </motion.h2>
 
               <motion.p
-                className="text-xl text-gray-300"
+                className="text-xl text-gray-700 font-semibold"
                 initial={{ opacity: 0, y: 20 }}
                 animate={fourthInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -438,7 +437,7 @@ export default function SEOServicesPage() {
               ].map((feature, index) => (
                 <motion.div
                   key={feature.title}
-                  className="p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-primary-500/30 transition-all duration-300 group"
+                  className="p-6 rounded-2xl bg-white shadow-lg border border-gray-200 hover:border-primary-300 transition-all duration-300 group"
                   initial={{ opacity: 0, y: 20 }}
                   animate={fourthInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
@@ -447,21 +446,21 @@ export default function SEOServicesPage() {
                     <div className="text-4xl transform group-hover:scale-110 transition-transform duration-300">
                       {feature.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-primary-400 group-hover:text-primary-300 transition-colors">
+                    <h3 className="text-xl font-bold text-primary-600 group-hover:text-primary-700 transition-colors">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-300">{feature.description}</p>
+                    <p className="text-gray-700 font-semibold">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
 
               <motion.div
-                className="md:col-span-2 lg:col-span-3 p-8 rounded-2xl bg-gradient-to-r from-primary-500/10 to-secondary-500/10 border border-primary-500/20"
+                className="md:col-span-2 lg:col-span-3 p-8 rounded-2xl bg-gradient-to-r from-primary-50 to-secondary-50 border border-primary-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={fourthInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.9 }}
               >
-                <p className="text-xl font-bold text-white text-center">
+                <p className="text-xl font-bold text-gray-900 text-center">
                   We know what works in Indian markets — and we've got the case studies to prove it.
                 </p>
               </motion.div>
@@ -473,7 +472,7 @@ export default function SEOServicesPage() {
         <section className="py-20 relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-500/5 via-transparent to-secondary-500/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50" />
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500" />
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-secondary-500 via-primary-500 to-secondary-500" />
           </div>
@@ -491,7 +490,7 @@ export default function SEOServicesPage() {
               animate={fifthInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-400">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600">
                 Our Core SEO Services
               </h2>
             </motion.div>
@@ -505,16 +504,16 @@ export default function SEOServicesPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
                 <div className="space-y-6">
-                  <h3 className="text-3xl font-bold text-primary-300">
+                  <h3 className="text-3xl font-bold text-primary-700">
                     On-Page SEO Services
                   </h3>
                   
-                  <p className="text-lg text-gray-300 leading-relaxed">
+                  <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                     We optimize everything that lives on your site — the words, structure, images, and code — so Google clearly understands what you do.
                   </p>
 
                   <div className="space-y-4">
-                    <h4 className="text-xl font-semibold text-blue-300">
+                    <h4 className="text-xl font-bold text-blue-700">
                       What's included:
                     </h4>
 
@@ -528,13 +527,13 @@ export default function SEOServicesPage() {
                       ].map((item, index) => (
                         <motion.div
                           key={item}
-                          className="flex items-start space-x-3 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-primary-500/30 transition-all duration-300"
+                          className="flex items-start space-x-3 p-4 rounded-xl bg-white shadow-md border border-gray-200 hover:border-primary-300 transition-all duration-300"
                           initial={{ opacity: 0, y: 20 }}
                           animate={fifthInView ? { opacity: 1, y: 0 } : {}}
                           transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                         >
-                          <span className="text-primary-400">✓</span>
-                          <p className="text-gray-300">{item}</p>
+                          <span className="text-primary-600 font-bold">✓</span>
+                          <p className="text-gray-700 font-semibold">{item}</p>
                         </motion.div>
                       ))}
                     </div>
@@ -542,23 +541,23 @@ export default function SEOServicesPage() {
 
                   <div className="flex flex-wrap gap-4 mt-8">
                     <motion.div
-                      className="flex items-center space-x-2 p-3 rounded-lg bg-primary-500/10 border border-primary-500/20"
+                      className="flex items-center space-x-2 p-3 rounded-lg bg-primary-50 border border-primary-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={fifthInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: 0.9 }}
                     >
                       <span className="text-xl">📍</span>
-                      <span className="text-gray-300">Best for: Service providers, coaches, educational sites</span>
+                      <span className="text-gray-700 font-semibold">Best for: Service providers, coaches, educational sites</span>
                     </motion.div>
 
                     <motion.div
-                      className="flex items-center space-x-2 p-3 rounded-lg bg-secondary-500/10 border border-secondary-500/20"
+                      className="flex items-center space-x-2 p-3 rounded-lg bg-secondary-50 border border-secondary-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={fifthInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: 1 }}
                     >
                       <span className="text-xl">🔎</span>
-                      <span className="text-gray-300">Keywords: On-Page SEO Services Pune, On-Page SEO India</span>
+                      <span className="text-gray-700 font-semibold">Keywords: On-Page SEO Services Pune, On-Page SEO India</span>
                     </motion.div>
                   </div>
                 </div>
@@ -572,7 +571,7 @@ export default function SEOServicesPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 via-transparent to-secondary-500/20 z-10" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-500/10 via-transparent to-secondary-500/10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50" />
                 <Suspense fallback={<LoadingSkeleton />}>
                   <OptimizedImage
                     src={s4.src}
@@ -590,7 +589,7 @@ export default function SEOServicesPage() {
         {/* Sixth Section - Off-Page SEO */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-primary-500/5 via-transparent to-secondary-500/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white" />
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500" />
           </div>
 
@@ -610,7 +609,7 @@ export default function SEOServicesPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 via-transparent to-secondary-500/20 z-10" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-500/10 via-transparent to-secondary-500/10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50" />
                 <Suspense fallback={<LoadingSkeleton />}>
                   <OptimizedImage
                     src={s5.src}
@@ -630,16 +629,16 @@ export default function SEOServicesPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
                 <div className="space-y-6">
-                  <h3 className="text-3xl font-bold text-primary-300">
+                  <h3 className="text-3xl font-bold text-primary-700">
                     2️⃣ Off-Page SEO Services
                   </h3>
                   
-                  <p className="text-lg text-gray-300 leading-relaxed">
+                  <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                     Think of this as your brand's online reputation. We help Google trust your site by building quality links and mentions across the web.
                   </p>
 
                   <div className="space-y-4">
-                    <h4 className="text-xl font-semibold text-blue-300">
+                    <h4 className="text-xl font-bold text-blue-700">
                       What we do:
                     </h4>
 
@@ -652,13 +651,13 @@ export default function SEOServicesPage() {
                       ].map((item, index) => (
                         <motion.div
                           key={item}
-                          className="flex items-start space-x-3 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-primary-500/30 transition-all duration-300"
+                          className="flex items-start space-x-3 p-4 rounded-xl bg-white shadow-md border border-gray-200 hover:border-primary-300 transition-all duration-300"
                           initial={{ opacity: 0, y: 20 }}
                           animate={sixthInView ? { opacity: 1, y: 0 } : {}}
                           transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                         >
-                          <span className="text-primary-400">✓</span>
-                          <p className="text-gray-300">{item}</p>
+                          <span className="text-primary-600 font-bold">✓</span>
+                          <p className="text-gray-700 font-semibold">{item}</p>
                         </motion.div>
                       ))}
                     </div>
@@ -666,23 +665,23 @@ export default function SEOServicesPage() {
 
                   <div className="flex flex-wrap gap-4 mt-8">
                     <motion.div
-                      className="flex items-center space-x-2 p-3 rounded-lg bg-primary-500/10 border border-primary-500/20"
+                      className="flex items-center space-x-2 p-3 rounded-lg bg-primary-50 border border-primary-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={sixthInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: 0.9 }}
                     >
                       <span className="text-xl">📍</span>
-                      <span className="text-gray-300">Best for: Startups, SaaS, e-commerce, personal brands</span>
+                      <span className="text-gray-700 font-semibold">Best for: Startups, SaaS, e-commerce, personal brands</span>
                     </motion.div>
 
                     <motion.div
-                      className="flex items-center space-x-2 p-3 rounded-lg bg-secondary-500/10 border border-secondary-500/20"
+                      className="flex items-center space-x-2 p-3 rounded-lg bg-secondary-50 border border-secondary-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={sixthInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: 1 }}
                     >
                       <span className="text-xl">🔎</span>
-                      <span className="text-gray-300">Keywords: Off-Page SEO India, SEO Expert Pune, Link Building Services</span>
+                      <span className="text-gray-700 font-semibold">Keywords: Off-Page SEO India, SEO Expert Pune, Link Building Services</span>
                     </motion.div>
                   </div>
                 </div>
@@ -694,7 +693,7 @@ export default function SEOServicesPage() {
         {/* Seventh Section - Local SEO */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-500/5 via-transparent to-secondary-500/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50" />
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-secondary-500 via-primary-500 to-secondary-500" />
           </div>
 
@@ -714,16 +713,16 @@ export default function SEOServicesPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
                 <div className="space-y-6">
-                  <h3 className="text-3xl font-bold text-primary-300">
+                  <h3 className="text-3xl font-bold text-primary-700">
                     3️⃣ Local SEO Services
                   </h3>
                   
-                  <p className="text-lg text-gray-300 leading-relaxed">
+                  <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                     Want to appear when someone searches "salon near me" or "best clinic in Pune"? That's what Local SEO does — and we do it better than anyone.
                   </p>
 
                   <div className="space-y-4">
-                    <h4 className="text-xl font-semibold text-blue-300">
+                    <h4 className="text-xl font-bold text-blue-700">
                       Our focus:
                     </h4>
 
@@ -737,13 +736,13 @@ export default function SEOServicesPage() {
                       ].map((item, index) => (
                         <motion.div
                           key={item}
-                          className="flex items-start space-x-3 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-primary-500/30 transition-all duration-300"
+                          className="flex items-start space-x-3 p-4 rounded-xl bg-white shadow-md border border-gray-200 hover:border-primary-300 transition-all duration-300"
                           initial={{ opacity: 0, y: 20 }}
                           animate={seventhInView ? { opacity: 1, y: 0 } : {}}
                           transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                         >
-                          <span className="text-primary-400">✓</span>
-                          <p className="text-gray-300">{item}</p>
+                          <span className="text-primary-600 font-bold">✓</span>
+                          <p className="text-gray-700 font-semibold">{item}</p>
                         </motion.div>
                       ))}
                     </div>
@@ -751,23 +750,23 @@ export default function SEOServicesPage() {
 
                   <div className="flex flex-wrap gap-4 mt-8">
                     <motion.div
-                      className="flex items-center space-x-2 p-3 rounded-lg bg-primary-500/10 border border-primary-500/20"
+                      className="flex items-center space-x-2 p-3 rounded-lg bg-primary-50 border border-primary-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={seventhInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: 0.9 }}
                     >
                       <span className="text-xl">📍</span>
-                      <span className="text-gray-300">Best for: Clinics, salons, gyms, real estate</span>
+                      <span className="text-gray-700 font-semibold">Best for: Clinics, salons, gyms, real estate</span>
                     </motion.div>
 
                     <motion.div
-                      className="flex items-center space-x-2 p-3 rounded-lg bg-secondary-500/10 border border-secondary-500/20"
+                      className="flex items-center space-x-2 p-3 rounded-lg bg-secondary-50 border border-secondary-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={seventhInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: 1 }}
                     >
                       <span className="text-xl">🔎</span>
-                      <span className="text-gray-300">Keywords: Local SEO Services Pune, Local SEO India, SEO for Clinics Pune</span>
+                      <span className="text-gray-700 font-semibold">Keywords: Local SEO Services Pune, Local SEO India, SEO for Clinics Pune</span>
                     </motion.div>
                   </div>
                 </div>
@@ -781,7 +780,7 @@ export default function SEOServicesPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 via-transparent to-secondary-500/20 z-10" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-500/10 via-transparent to-secondary-500/10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50" />
                 <Suspense fallback={<LoadingSkeleton />}>
                   <OptimizedImage
                     src={s6.src}
@@ -799,7 +798,7 @@ export default function SEOServicesPage() {
         {/* Eighth Section - E-commerce SEO */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-primary-500/5 via-transparent to-secondary-500/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white" />
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500" />
           </div>
 
@@ -819,16 +818,16 @@ export default function SEOServicesPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
                 <div className="space-y-6">
-                  <h3 className="text-3xl font-bold text-primary-300">
+                  <h3 className="text-3xl font-bold text-primary-700">
                     4️⃣ E-commerce SEO Services
                   </h3>
                   
-                  <p className="text-lg text-gray-300 leading-relaxed">
+                  <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                     Online stores need more than pretty product pages. We turn your e-commerce website into a traffic magnet that converts clicks into sales.
                   </p>
 
                   <div className="space-y-4">
-                    <h4 className="text-xl font-semibold text-blue-300">
+                    <h4 className="text-xl font-bold text-blue-700">
                       Ecom SEO checklist:
                     </h4>
 
@@ -842,13 +841,13 @@ export default function SEOServicesPage() {
                       ].map((item, index) => (
                         <motion.div
                           key={item}
-                          className="flex items-start space-x-3 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-primary-500/30 transition-all duration-300"
+                          className="flex items-start space-x-3 p-4 rounded-xl bg-white shadow-md border border-gray-200 hover:border-primary-300 transition-all duration-300"
                           initial={{ opacity: 0, y: 20 }}
                           animate={eighthInView ? { opacity: 1, y: 0 } : {}}
                           transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                         >
-                          <span className="text-primary-400">✓</span>
-                          <p className="text-gray-300">{item}</p>
+                          <span className="text-primary-600 font-bold">✓</span>
+                          <p className="text-gray-700 font-semibold">{item}</p>
                         </motion.div>
                       ))}
                     </div>
@@ -856,23 +855,23 @@ export default function SEOServicesPage() {
 
                   <div className="flex flex-wrap gap-4 mt-8">
                     <motion.div
-                      className="flex items-center space-x-2 p-3 rounded-lg bg-primary-500/10 border border-primary-500/20"
+                      className="flex items-center space-x-2 p-3 rounded-lg bg-primary-50 border border-primary-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={eighthInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: 0.9 }}
                     >
                       <span className="text-xl">📍</span>
-                      <span className="text-gray-300">Best for: Shopify, WooCommerce, Magento, D2C brands</span>
+                      <span className="text-gray-700 font-semibold">Best for: Shopify, WooCommerce, Magento, D2C brands</span>
                     </motion.div>
 
                     <motion.div
-                      className="flex items-center space-x-2 p-3 rounded-lg bg-secondary-500/10 border border-secondary-500/20"
+                      className="flex items-center space-x-2 p-3 rounded-lg bg-secondary-50 border border-secondary-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={eighthInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: 1 }}
                     >
                       <span className="text-xl">🔎</span>
-                      <span className="text-gray-300">Keywords: E-commerce SEO Services India, Product SEO in Pune</span>
+                      <span className="text-gray-700 font-semibold">Keywords: E-commerce SEO Services India, Product SEO in Pune</span>
                     </motion.div>
                   </div>
                 </div>
@@ -886,7 +885,7 @@ export default function SEOServicesPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 via-transparent to-secondary-500/20 z-10" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-500/10 via-transparent to-secondary-500/10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50" />
                 <Suspense fallback={<LoadingSkeleton />}>
                   <OptimizedImage
                     src={s7.src}
@@ -904,7 +903,7 @@ export default function SEOServicesPage() {
         {/* Ninth Section - Technical SEO */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-500/5 via-transparent to-secondary-500/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50" />
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-secondary-500 via-primary-500 to-secondary-500" />
           </div>
 
@@ -924,7 +923,7 @@ export default function SEOServicesPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 via-transparent to-secondary-500/20 z-10" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-500/10 via-transparent to-secondary-500/10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50" />
                 <Suspense fallback={<LoadingSkeleton />}>
                   <OptimizedImage
                     src={s8.src}
@@ -944,16 +943,16 @@ export default function SEOServicesPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
                 <div className="space-y-6">
-                  <h3 className="text-3xl font-bold text-primary-300">
+                  <h3 className="text-3xl font-bold text-primary-700">
                     5️⃣ Technical SEO + SEO Audits
                   </h3>
                   
-                  <p className="text-lg text-gray-300 leading-relaxed">
+                  <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                     Behind-the-scenes work that powers everything. Technical SEO ensures Google crawls, indexes, and ranks your site the way it should.
                   </p>
 
                   <div className="space-y-4">
-                    <h4 className="text-xl font-semibold text-blue-300">
+                    <h4 className="text-xl font-bold text-blue-700">
                       We handle:
                     </h4>
 
@@ -967,13 +966,13 @@ export default function SEOServicesPage() {
                       ].map((item, index) => (
                         <motion.div
                           key={item}
-                          className="flex items-start space-x-3 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-primary-500/30 transition-all duration-300"
+                          className="flex items-start space-x-3 p-4 rounded-xl bg-white shadow-md border border-gray-200 hover:border-primary-300 transition-all duration-300"
                           initial={{ opacity: 0, y: 20 }}
                           animate={ninthInView ? { opacity: 1, y: 0 } : {}}
                           transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                         >
-                          <span className="text-primary-400">✓</span>
-                          <p className="text-gray-300">{item}</p>
+                          <span className="text-primary-600 font-bold">✓</span>
+                          <p className="text-gray-700 font-semibold">{item}</p>
                         </motion.div>
                       ))}
                     </div>
@@ -981,23 +980,23 @@ export default function SEOServicesPage() {
 
                   <div className="flex flex-wrap gap-4 mt-8">
                     <motion.div
-                      className="flex items-center space-x-2 p-3 rounded-lg bg-primary-500/10 border border-primary-500/20"
+                      className="flex items-center space-x-2 p-3 rounded-lg bg-primary-50 border border-primary-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={ninthInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: 0.9 }}
                     >
                       <span className="text-xl">📍</span>
-                      <span className="text-gray-300">Best for: Medium to large websites with 50+ pages</span>
+                      <span className="text-gray-700 font-semibold">Best for: Medium to large websites with 50+ pages</span>
                     </motion.div>
 
                     <motion.div
-                      className="flex items-center space-x-2 p-3 rounded-lg bg-secondary-500/10 border border-secondary-500/20"
+                      className="flex items-center space-x-2 p-3 rounded-lg bg-secondary-50 border border-secondary-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={ninthInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: 1 }}
                     >
                       <span className="text-xl">🔎</span>
-                      <span className="text-gray-300">Keywords: Technical SEO India, SEO Audit Company Pune</span>
+                      <span className="text-gray-700 font-semibold">Keywords: Technical SEO India, SEO Audit Company Pune</span>
                     </motion.div>
                   </div>
                 </div>
@@ -1009,7 +1008,7 @@ export default function SEOServicesPage() {
         {/* Eleventh Section - SEO Growth Process */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-500/5 via-transparent to-secondary-500/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white" />
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500" />
           </div>
 
@@ -1032,11 +1031,11 @@ export default function SEOServicesPage() {
                   className="object-cover w-full h-full"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/50 to-transparent" />
               </motion.div>
               
               <motion.h2
-                className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-400"
+                className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600"
                 initial={{ opacity: 0, y: 20 }}
                 animate={ninthInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -1044,7 +1043,7 @@ export default function SEOServicesPage() {
                 Our Proven 6-Step SEO Growth Process
               </motion.h2>
               <motion.p
-                className="text-xl text-gray-300 max-w-3xl mx-auto"
+                className="text-xl text-gray-700 max-w-3xl mx-auto font-semibold"
                 initial={{ opacity: 0, y: 20 }}
                 animate={ninthInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.4 }}
@@ -1060,47 +1059,47 @@ export default function SEOServicesPage() {
                   title: "Free Website Audit",
                   description: "Spot issues and opportunities",
                   icon: "🔍",
-                  gradient: "from-blue-500/10 to-indigo-500/10"
+                  gradient: "from-blue-50 to-indigo-50"
                 },
                 {
                   step: "2",
                   title: "Keyword Planning",
                   description: "Target only what brings ROI",
                   icon: "🎯",
-                  gradient: "from-purple-500/10 to-pink-500/10"
+                  gradient: "from-purple-50 to-pink-50"
                 },
                 {
                   step: "3",
                   title: "On-Page Optimization",
                   description: "Fix your foundation",
                   icon: "⚙️",
-                  gradient: "from-green-500/10 to-emerald-500/10"
+                  gradient: "from-green-50 to-emerald-50"
                 },
                 {
                   step: "4",
                   title: "Authority Building",
                   description: "Boost trust & domain power",
                   icon: "🏆",
-                  gradient: "from-yellow-500/10 to-amber-500/10"
+                  gradient: "from-yellow-50 to-amber-50"
                 },
                 {
                   step: "5",
                   title: "Local SEO Setup",
                   description: "Win your city, then the nation",
                   icon: "📍",
-                  gradient: "from-red-500/10 to-orange-500/10"
+                  gradient: "from-red-50 to-orange-50"
                 },
                 {
                   step: "6",
                   title: "Transparent Reporting",
                   description: "Monthly updates, no jargon",
                   icon: "📊",
-                  gradient: "from-cyan-500/10 to-blue-500/10"
+                  gradient: "from-cyan-50 to-blue-50"
                 }
               ].map((process, index) => (
                 <motion.div
                   key={process.step}
-                  className={`p-6 rounded-2xl bg-gradient-to-r ${process.gradient} backdrop-blur-sm border border-gray-700/30 hover:border-primary-500/30 transition-all duration-300 group`}
+                  className={`p-6 rounded-2xl bg-gradient-to-r ${process.gradient} shadow-lg border border-gray-200 hover:border-primary-300 transition-all duration-300 group`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={ninthInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
@@ -1110,15 +1109,15 @@ export default function SEOServicesPage() {
                       <div className="text-4xl transform group-hover:scale-110 transition-transform duration-300">
                         {process.icon}
                       </div>
-                      <div className="mt-2 text-2xl font-bold text-primary-300 group-hover:text-white transition-colors">
+                      <div className="mt-2 text-2xl font-bold text-primary-700 group-hover:text-primary-800 transition-colors">
                         {process.step}
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-primary-300 mb-2 group-hover:text-white transition-colors">
+                      <h3 className="text-xl font-bold text-primary-700 mb-2 group-hover:text-primary-800 transition-colors">
                         {process.title}
                       </h3>
-                      <p className="text-gray-300 group-hover:text-gray-200 transition-colors">
+                      <p className="text-gray-700 group-hover:text-gray-800 transition-colors font-semibold">
                         {process.description}
                       </p>
                     </div>
@@ -1133,7 +1132,7 @@ export default function SEOServicesPage() {
               animate={ninthInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-700 mb-8 font-semibold">
                 No confusing reports. No ghosting. Just results.
               </p>
               <Button className="btn-primary text-lg px-8 py-6">
@@ -1146,7 +1145,7 @@ export default function SEOServicesPage() {
         {/* Twelfth Section - Real SEO Results */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-primary-500/5 via-secondary-500/5 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50" />
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-transparent" />
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500" />
           </div>
@@ -1183,10 +1182,10 @@ export default function SEOServicesPage() {
                 animate={ninthInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-400">
+                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600">
                   Real SEO Results Delivered by Leadzoro
                 </h2>
-                <p className="text-xl text-gray-300">
+                <p className="text-xl text-gray-700 font-semibold">
                   See how we've transformed businesses across industries with our proven SEO strategies
                 </p>
               </motion.div>
@@ -1225,19 +1224,19 @@ export default function SEOServicesPage() {
               ].map((caseStudy, index) => (
                 <motion.div
                   key={caseStudy.title}
-                  className="relative p-8 rounded-2xl overflow-hidden group"
+                  className="relative p-8 rounded-2xl overflow-hidden group bg-white shadow-lg border border-gray-200"
                   initial={{ opacity: 0, y: 20 }}
                   animate={ninthInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br from-${caseStudy.color}-500/10 to-${caseStudy.color}-900/10 backdrop-blur-sm`} />
-                  <div className={`absolute inset-0 border-2 border-${caseStudy.color}-500/20 group-hover:border-${caseStudy.color}-500/40 transition-colors duration-300`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br from-${caseStudy.color}-50 to-${caseStudy.color}-100`} />
+                  <div className={`absolute inset-0 border-2 border-${caseStudy.color}-200 group-hover:border-${caseStudy.color}-300 transition-colors duration-300`} />
                   <div className="relative z-10">
                     <div className="flex items-center space-x-4 mb-6">
-                      <div className={`text-4xl transform group-hover:scale-110 transition-transform duration-300 bg-${caseStudy.color}-500/20 p-3 rounded-xl`}>
+                      <div className={`text-4xl transform group-hover:scale-110 transition-transform duration-300 bg-${caseStudy.color}-100 p-3 rounded-xl`}>
                         {caseStudy.icon}
                       </div>
-                      <h3 className={`text-2xl font-bold text-${caseStudy.color}-300 group-hover:text-white transition-colors`}>
+                      <h3 className={`text-2xl font-bold text-${caseStudy.color}-700 group-hover:text-${caseStudy.color}-800 transition-colors`}>
                         {caseStudy.title}
                       </h3>
                     </div>
@@ -1245,7 +1244,7 @@ export default function SEOServicesPage() {
                       {caseStudy.results.map((result, idx) => (
                         <motion.li
                           key={idx}
-                          className={`text-gray-300 group-hover:text-gray-200 transition-colors flex items-center space-x-3`}
+                          className={`text-gray-700 group-hover:text-gray-800 transition-colors flex items-center space-x-3 font-semibold`}
                           initial={{ opacity: 0, x: -20 }}
                           animate={ninthInView ? { opacity: 1, x: 0 } : {}}
                           transition={{ duration: 0.5, delay: 0.6 + index * 0.1 + idx * 0.1 }}
@@ -1266,7 +1265,7 @@ export default function SEOServicesPage() {
               animate={ninthInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-700 mb-8 font-semibold">
                 Ready to see these kinds of results for your business?
               </p>
               <Button className="btn-primary text-lg px-8 py-6">
@@ -1279,7 +1278,7 @@ export default function SEOServicesPage() {
         {/* Thirteenth Section - Who Do We Serve */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-500/5 via-transparent to-secondary-500/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white" />
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500" />
           </div>
 
@@ -1314,13 +1313,13 @@ export default function SEOServicesPage() {
                 animate={ninthInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-400">
+                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600">
                   Who Do We Serve?
                 </h2>
-                <p className="text-xl text-gray-300">
+                <p className="text-xl text-gray-700 font-semibold">
                   Leadzoro is the SEO agency India's growth-stage businesses trust.
                 </p>
-                <p className="text-lg text-gray-300 font-semibold">
+                <p className="text-lg text-gray-700 font-bold">
                   We work with:
                 </p>
               </motion.div>
@@ -1366,7 +1365,7 @@ export default function SEOServicesPage() {
               ].map((service, index) => (
                 <motion.div
                   key={service.title}
-                  className="p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-primary-500/30 transition-all duration-300 group"
+                  className="p-6 rounded-2xl bg-white shadow-lg border border-gray-200 hover:border-primary-300 transition-all duration-300 group"
                   initial={{ opacity: 0, y: 20 }}
                   animate={ninthInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
@@ -1376,10 +1375,10 @@ export default function SEOServicesPage() {
                       {service.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-primary-300 group-hover:text-white transition-colors">
+                      <h3 className="text-xl font-bold text-primary-700 group-hover:text-primary-800 transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-gray-300 group-hover:text-gray-200 transition-colors">
+                      <p className="text-gray-700 group-hover:text-gray-800 transition-colors font-semibold">
                         {service.description}
                       </p>
                     </div>
@@ -1394,7 +1393,7 @@ export default function SEOServicesPage() {
               animate={ninthInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-700 mb-8 font-semibold">
                 No matter your niche — we help you rank, scale, and grow.
               </p>
               <Button className="btn-primary text-lg px-8 py-6">
@@ -1407,7 +1406,7 @@ export default function SEOServicesPage() {
         {/* Fourteenth Section - SEO FAQs */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-primary-500/5 via-secondary-500/5 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50" />
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500" />
           </div>
 
@@ -1442,7 +1441,7 @@ export default function SEOServicesPage() {
                 animate={ninthInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-400">
+                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600">
                   SEO FAQs — Answering Your Doubts
                 </h2>
               </motion.div>
@@ -1484,7 +1483,7 @@ export default function SEOServicesPage() {
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 >
                   <button
-                    className="w-full p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-primary-500/30 transition-all duration-300 text-left"
+                    className="w-full p-6 rounded-xl bg-white shadow-lg border border-gray-200 hover:border-primary-300 transition-all duration-300 text-left"
                     onClick={(e) => {
                       const answer = e.currentTarget.nextElementSibling;
                       answer?.classList.toggle('max-h-0');
@@ -1495,12 +1494,12 @@ export default function SEOServicesPage() {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
                         <span className="text-2xl">{faq.icon}</span>
-                        <h3 className="text-xl font-bold text-primary-300 group-hover:text-white transition-colors">
+                        <h3 className="text-xl font-bold text-primary-700 group-hover:text-primary-800 transition-colors">
                           {faq.question}
                         </h3>
                       </div>
                       <svg
-                        className="arrow w-6 h-6 text-primary-300 transform transition-transform duration-300"
+                        className="arrow w-6 h-6 text-primary-700 transform transition-transform duration-300"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -1515,8 +1514,8 @@ export default function SEOServicesPage() {
                     </div>
                   </button>
                   <div className="max-h-0 overflow-hidden transition-all duration-300">
-                    <div className="p-6 bg-gray-800/30 rounded-xl border border-gray-700/30">
-                      <p className="text-gray-300">{faq.answer}</p>
+                    <div className="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                      <p className="text-gray-700 font-semibold">{faq.answer}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -1529,7 +1528,7 @@ export default function SEOServicesPage() {
               animate={ninthInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-700 mb-8 font-semibold">
                 Still have questions? We're here to help!
               </p>
               <Button className="btn-primary text-lg px-8 py-6">
@@ -1542,7 +1541,7 @@ export default function SEOServicesPage() {
         {/* Fifteenth Section - Call to Action */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-primary-500/5 via-secondary-500/5 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500"></div>
           </div>
 
@@ -1577,71 +1576,71 @@ export default function SEOServicesPage() {
                 animate={ninthInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-400">
+                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600">
                   Ready to Dominate Google Search in 2025?
                 </h2>
 
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-primary-300">
+                  <h3 className="text-2xl font-bold text-primary-700">
                     Book Your Free SEO Audit Today!
                   </h3>
                   
-                  <p className="text-xl text-gray-300">
+                  <p className="text-xl text-gray-700 font-semibold">
                     Let's identify your SEO gaps and build a winning roadmap — together.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="p-6 rounded-2xl bg-gradient-to-br from-primary-500/10 to-secondary-500/10 backdrop-blur-sm border border-primary-500/20">
+                    <div className="p-6 rounded-2xl bg-gradient-to-br from-primary-50 to-secondary-50 shadow-lg border border-primary-200">
                       <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary-500/20 flex items-center justify-center text-2xl">
+                        <div className="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-2xl">
                           ✅
                         </div>
                         <div>
-                          <h4 className="text-lg font-semibold text-primary-300">WhatsApp Support</h4>
-                          <p className="text-gray-300">Instant communication</p>
+                          <h4 className="text-lg font-bold text-primary-700">WhatsApp Support</h4>
+                          <p className="text-gray-700 font-semibold">Instant communication</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="p-6 rounded-2xl bg-gradient-to-br from-secondary-500/10 to-primary-500/10 backdrop-blur-sm border border-secondary-500/20">
+                    <div className="p-6 rounded-2xl bg-gradient-to-br from-secondary-50 to-primary-50 shadow-lg border border-secondary-200">
                       <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 rounded-xl bg-secondary-500/20 flex items-center justify-center text-2xl">
+                        <div className="w-12 h-12 rounded-xl bg-secondary-100 flex items-center justify-center text-2xl">
                           🔎
                         </div>
                         <div>
-                          <h4 className="text-lg font-semibold text-secondary-300">Transparent Reports</h4>
-                          <p className="text-gray-300">Clear progress tracking</p>
+                          <h4 className="text-lg font-bold text-secondary-700">Transparent Reports</h4>
+                          <p className="text-gray-700 font-semibold">Clear progress tracking</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="p-6 rounded-2xl bg-gradient-to-br from-primary-500/10 to-secondary-500/10 backdrop-blur-sm border border-primary-500/20">
+                    <div className="p-6 rounded-2xl bg-gradient-to-br from-primary-50 to-secondary-50 shadow-lg border border-primary-200">
                       <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary-500/20 flex items-center justify-center text-2xl">
+                        <div className="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-2xl">
                           💼
                         </div>
                         <div>
-                          <h4 className="text-lg font-semibold text-primary-300">Industry-Specific SEO</h4>
-                          <p className="text-gray-300">Tailored strategies</p>
+                          <h4 className="text-lg font-bold text-primary-700">Industry-Specific SEO</h4>
+                          <p className="text-gray-700 font-semibold">Tailored strategies</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="p-6 rounded-2xl bg-gradient-to-br from-secondary-500/10 to-primary-500/10 backdrop-blur-sm border border-secondary-500/20">
+                    <div className="p-6 rounded-2xl bg-gradient-to-br from-secondary-50 to-primary-50 shadow-lg border border-secondary-200">
                       <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 rounded-xl bg-secondary-500/20 flex items-center justify-center text-2xl">
+                        <div className="w-12 h-12 rounded-xl bg-secondary-100 flex items-center justify-center text-2xl">
                           📍
                         </div>
                         <div>
-                          <h4 className="text-lg font-semibold text-secondary-300">Pune Based</h4>
-                          <p className="text-gray-300">Serving All of India</p>
+                          <h4 className="text-lg font-bold text-secondary-700">Pune Based</h4>
+                          <p className="text-gray-700 font-semibold">Serving All of India</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-2xl bg-gradient-to-r from-primary-500/10 to-secondary-500/10 backdrop-blur-sm border border-primary-500/20">
-                    <p className="text-xl font-bold text-white text-center">
+                  <div className="p-6 rounded-2xl bg-gradient-to-r from-primary-50 to-secondary-50 shadow-lg border border-primary-200">
+                    <p className="text-xl font-bold text-gray-900 text-center">
                       100+ Clients Across Sectors
                     </p>
                   </div>

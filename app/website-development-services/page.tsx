@@ -36,7 +36,7 @@ const ServiceCard = ({ title, content, icon: Icon, delay = 0 }: ServiceCardProps
 
 const Services4Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 text-gray-900">
       <Navbar />
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
@@ -45,10 +45,10 @@ const Services4Page = () => {
             src={r1}
             alt="Website Development Services"
             fill
-            className="object-cover opacity-40"
+            className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-gray-100/80"></div>
         </div>
         
         <motion.div 
@@ -57,13 +57,13 @@ const Services4Page = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-800">
             Website Development Services India | Custom Website Design Company in Pune
           </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-blue-300">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-blue-700">
             Crafting Digital Experiences That Convert
           </h2>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300">
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-700 font-semibold">
             Transform your digital presence with cutting-edge web solutions
           </p>
         </motion.div>
@@ -79,21 +79,21 @@ const Services4Page = () => {
           viewport={{ once: true }}
         >
           <motion.p 
-            className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
+            className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed font-semibold"
             variants={fadeIn}
           >
             In today's fast-moving digital economy, your website isn't just another box to tick — it's your brand's handshake, digital showroom, and conversation starter rolled into one.
           </motion.p>
           
           <motion.p 
-            className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
+            className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed font-semibold"
             variants={fadeIn}
           >
             Whether you're an ambitious startup in Delhi or a fitness hub in Pune, your website often sets the tone for how the world sees you.
           </motion.p>
 
           <motion.p 
-            className="text-xl md:text-2xl font-semibold text-blue-400 mb-12"
+            className="text-xl md:text-2xl font-bold text-blue-600 mb-12"
             variants={fadeIn}
           >
             Welcome to Leadzoro — where innovation meets craftsmanship. As a top website development company in Pune and India, we empower businesses with dynamic, conversion-focused websites that drive growth and elevate brand perception.
@@ -102,11 +102,11 @@ const Services4Page = () => {
       </section>
 
       {/* Why Website Development Still Dominates Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-800 to-gray-900 relative overflow-hidden">
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         {/* Decorative background elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl"></div>
         </div>
 
         <motion.div 
@@ -117,7 +117,7 @@ const Services4Page = () => {
           viewport={{ once: true }}
         >
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-800"
             variants={fadeIn}
           >
             Why Website Development Still Dominates in 2025
@@ -141,7 +141,7 @@ const Services4Page = () => {
                   className="object-cover transform hover:scale-105 transition-transform duration-700"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent"></div>
               </div>
             </motion.div>
 
@@ -154,21 +154,21 @@ const Services4Page = () => {
               viewport={{ once: true }}
             >
               <motion.p 
-                className="text-xl text-gray-300 leading-relaxed"
+                className="text-xl text-gray-700 leading-relaxed font-semibold"
                 variants={fadeIn}
               >
                 New platforms may emerge, but your website remains your digital headquarters. It's the only online space you fully own and control — and it pays dividends.
               </motion.p>
 
               <motion.p 
-                className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
+                className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed font-semibold"
                 variants={fadeIn}
               >
                 Whether you're an ambitious startup in Delhi or a fitness hub in Pune, your website often sets the tone for how the world sees you.
               </motion.p>
 
               <motion.p 
-                className="text-xl md:text-2xl font-semibold text-blue-400 mb-12"
+                className="text-xl md:text-2xl font-bold text-blue-600 mb-12"
                 variants={fadeIn}
               >
                 Welcome to Leadzoro — where innovation meets craftsmanship. As a top website development company in Pune and India, we empower businesses with dynamic, conversion-focused websites that drive growth and elevate brand perception.
@@ -179,11 +179,11 @@ const Services4Page = () => {
       </section>
 
       {/* Why Pune and Indian Businesses Need Scalable Websites Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
         {/* Decorative background elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/4 right-0 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-purple-500 rounded-full filter blur-3xl"></div>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 right-0 w-64 h-64 bg-blue-200 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-purple-200 rounded-full filter blur-3xl"></div>
         </div>
 
         <motion.div 
@@ -203,14 +203,14 @@ const Services4Page = () => {
               viewport={{ once: true }}
             >
               <motion.h2 
-                className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+                className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-800"
                 variants={fadeIn}
               >
                 Why Pune and Indian Businesses Need Scalable Websites
               </motion.h2>
 
               <motion.p 
-                className="text-lg text-gray-300 leading-relaxed"
+                className="text-lg text-gray-700 leading-relaxed font-semibold"
                 variants={fadeIn}
               >
                 From Pune to Chandigarh, Jaipur to Kochi, digital transformation is reshaping India. Whether it's a tech startup or a local salon, an effective website is no longer a luxury — it's a launchpad for business success.
@@ -221,7 +221,7 @@ const Services4Page = () => {
                 variants={staggerContainer}
               >
                 <motion.h3 
-                  className="text-xl font-semibold text-blue-300"
+                  className="text-xl font-bold text-blue-700"
                   variants={fadeIn}
                 >
                   Here's why more Indian businesses are prioritizing website development:
@@ -257,7 +257,7 @@ const Services4Page = () => {
                   ].map((item, index) => (
                     <motion.div
                       key={index}
-                      className="p-4 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/30 hover:border-blue-500/30 transition-all duration-300 group"
+                      className="p-4 rounded-xl bg-white shadow-lg border border-gray-200 hover:border-blue-300 transition-all duration-300 group"
                       variants={fadeIn}
                       whileHover={{ scale: 1.02 }}
                     >
@@ -265,7 +265,7 @@ const Services4Page = () => {
                         <div className={`min-w-[48px] h-12 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center text-white font-bold text-sm shrink-0`}>
                           {item.stat}
                         </div>
-                        <p className="text-gray-300 text-sm leading-tight">{item.text}</p>
+                        <p className="text-gray-700 text-sm leading-tight font-semibold">{item.text}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -273,10 +273,10 @@ const Services4Page = () => {
               </motion.div>
 
               <motion.div 
-                className="mt-8 p-6 rounded-xl bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/20"
+                className="mt-8 p-6 rounded-xl bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200"
                 variants={fadeIn}
               >
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                   Rather than relying solely on social media or listings, forward-thinking businesses build powerful websites that can scale.
                 </p>
               </motion.div>
@@ -299,7 +299,7 @@ const Services4Page = () => {
                   className="object-cover transform hover:scale-105 transition-transform duration-700"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent"></div>
               </div>
             </motion.div>
           </div>
@@ -307,7 +307,7 @@ const Services4Page = () => {
       </section>
 
       {/* Why Partner with Leadzoro Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-800 to-gray-900 relative overflow-hidden">
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
@@ -328,24 +328,24 @@ const Services4Page = () => {
               variants={staggerContainer}
             >
               <motion.div variants={fadeIn}>
-                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-4">
+                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-800 mb-4">
                   Why Partner with Leadzoro for Web Development?
                 </h2>
-                <div className="flex items-center space-x-2 text-blue-300 text-xl">
+                <div className="flex items-center space-x-2 text-blue-700 text-xl font-bold">
                   <span>🎯</span>
                   <span>Based in Pune. Trusted across India.</span>
                 </div>
               </motion.div>
 
               <motion.p 
-                className="text-lg text-gray-300 leading-relaxed"
+                className="text-lg text-gray-700 leading-relaxed font-semibold"
                 variants={fadeIn}
               >
                 We craft websites that blend design, performance, and purpose. At Leadzoro, we don't just build websites — we engineer experiences.
               </motion.p>
 
               <motion.div variants={fadeIn}>
-                <h3 className="text-2xl font-semibold text-blue-300 mb-6">Here's what you get:</h3>
+                <h3 className="text-2xl font-bold text-blue-700 mb-6">Here's what you get:</h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[
@@ -353,52 +353,52 @@ const Services4Page = () => {
                       icon: "⚙️",
                       title: "CMS or Custom-Built",
                       description: "WordPress, Shopify, HTML/CSS, Next.js",
-                      gradient: "from-blue-500/20 to-blue-600/20"
+                      gradient: "from-blue-50 to-blue-100"
                     },
                     {
                       icon: "📱",
                       title: "Mobile-First Design",
                       description: "Optimized for on-the-go audiences",
-                      gradient: "from-purple-500/20 to-purple-600/20"
+                      gradient: "from-purple-50 to-purple-100"
                     },
                     {
                       icon: "🚀",
                       title: "Speed-Tuned Layouts",
                       description: "Optimized for conversions",
-                      gradient: "from-pink-500/20 to-pink-600/20"
+                      gradient: "from-pink-50 to-pink-100"
                     },
                     {
                       icon: "🎨",
                       title: "UX/UI Excellence",
                       description: "Inspired by behavioral psychology",
-                      gradient: "from-indigo-500/20 to-indigo-600/20"
+                      gradient: "from-indigo-50 to-indigo-100"
                     },
                     {
                       icon: "📈",
                       title: "SEO-Ready Structure",
                       description: "Schema, metadata, and content hierarchy",
-                      gradient: "from-cyan-500/20 to-cyan-600/20"
+                      gradient: "from-cyan-50 to-cyan-100"
                     },
                     {
                       icon: "🌐",
                       title: "Core Web Vitals",
                       description: "Compliant for better rankings",
-                      gradient: "from-teal-500/20 to-teal-600/20"
+                      gradient: "from-teal-50 to-teal-100"
                     }
                   ].map((item, index) => (
                     <motion.div
                       key={index}
-                      className={`p-6 rounded-xl bg-gradient-to-br ${item.gradient} backdrop-blur-sm border border-gray-700/30 hover:border-blue-500/30 transition-all duration-300 group`}
+                      className={`p-6 rounded-xl bg-gradient-to-br ${item.gradient} shadow-lg border border-gray-200 hover:border-blue-300 transition-all duration-300 group`}
                       variants={fadeIn}
                       whileHover={{ scale: 1.02, y: -5 }}
                     >
                       <div className="flex items-start space-x-4">
                         <span className="text-3xl">{item.icon}</span>
                         <div>
-                          <h4 className="text-lg font-semibold text-blue-300 mb-2 group-hover:text-blue-200 transition-colors">
+                          <h4 className="text-lg font-bold text-blue-700 mb-2 group-hover:text-blue-800 transition-colors">
                             {item.title}
                           </h4>
-                          <p className="text-gray-300 text-sm leading-relaxed">
+                          <p className="text-gray-700 text-sm leading-relaxed font-semibold">
                             {item.description}
                           </p>
                         </div>
@@ -409,10 +409,10 @@ const Services4Page = () => {
               </motion.div>
 
               <motion.div 
-                className="p-6 rounded-xl bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 border border-blue-500/20 backdrop-blur-sm"
+                className="p-6 rounded-xl bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 shadow-lg"
                 variants={fadeIn}
               >
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                   You deserve more than just a pretty homepage. We deliver complete, scalable platforms tailored to your business goals.
                 </p>
               </motion.div>
@@ -427,7 +427,7 @@ const Services4Page = () => {
               viewport={{ once: true }}
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl transform -rotate-6 scale-95"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-purple-200 rounded-2xl blur-3xl transform -rotate-6 scale-95"></div>
                 <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src={require('../../public/assets/r4.png')}
@@ -437,7 +437,7 @@ const Services4Page = () => {
                     className="object-cover transform hover:scale-105 transition-transform duration-700"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent"></div>
                 </div>
               </div>
             </motion.div>
@@ -446,11 +446,11 @@ const Services4Page = () => {
       </section>
 
       {/* Our Website Development Services Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-transparent to-gray-800"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-gray-50"></div>
         </div>
 
         <motion.div 
@@ -466,7 +466,7 @@ const Services4Page = () => {
             variants={fadeIn}
           >
             <h2 className="text-4xl md:text-5xl font-bold inline-block">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
                 Our Website Development Services
               </span>
             </h2>
@@ -479,9 +479,9 @@ const Services4Page = () => {
             variants={staggerContainer}
           >
             {/* Background Card with Gradient Border */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-purple-100 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
             
-            <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm border border-gray-700/50">
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Content Column */}
                 <motion.div
@@ -489,18 +489,18 @@ const Services4Page = () => {
                   variants={fadeIn}
                 >
                   <div className="space-y-6">
-                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 backdrop-blur-sm">
-                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 shadow-sm">
+                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
                         Static Website Development
                       </h3>
                     </div>
                     
-                    <p className="text-lg text-gray-300 leading-relaxed">
+                    <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                       Ideal for startups, consultants, or event landing pages — fast to build, simple to maintain, and beautifully structured.
                     </p>
 
                     <motion.button
-                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
+                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -529,7 +529,7 @@ const Services4Page = () => {
                       className="object-cover transform hover:scale-105 transition-transform duration-700"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-900/60 via-transparent to-transparent lg:bg-gradient-to-l"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-transparent lg:bg-gradient-to-l"></div>
                   </div>
                 </motion.div>
               </div>
@@ -542,9 +542,9 @@ const Services4Page = () => {
             variants={staggerContainer}
           >
             {/* Background Card with Gradient Border */}
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl blur-3xl opacity-20 transform rotate-1"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-100 to-pink-100 rounded-3xl blur-3xl opacity-20 transform rotate-1"></div>
             
-            <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm border border-gray-700/50">
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Content Column */}
                 <motion.div
@@ -552,18 +552,18 @@ const Services4Page = () => {
                   variants={fadeIn}
                 >
                   <div className="space-y-6">
-                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 backdrop-blur-sm">
-                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 shadow-sm">
+                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
                         Dynamic Website Development
                       </h3>
                     </div>
                     
-                    <p className="text-lg text-gray-300 leading-relaxed">
+                    <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                       Need something robust? Whether it's appointment scheduling, dashboards, or customer portals — we build with flexibility and function in mind.
                     </p>
 
                     <motion.button
-                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 group"
+                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 group"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -592,7 +592,7 @@ const Services4Page = () => {
                       className="object-cover transform hover:scale-105 transition-transform duration-700"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-l from-gray-900/60 via-transparent to-transparent lg:bg-gradient-to-r"></div>
+                    <div className="absolute inset-0 bg-gradient-to-l from-white/60 via-transparent to-transparent lg:bg-gradient-to-r"></div>
                   </div>
                 </motion.div>
               </div>
@@ -605,9 +605,9 @@ const Services4Page = () => {
             variants={staggerContainer}
           >
             {/* Background Card with Gradient Border */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
             
-            <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm border border-gray-700/50">
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Content Column */}
                 <motion.div
@@ -615,37 +615,37 @@ const Services4Page = () => {
                   variants={fadeIn}
                 >
                   <div className="space-y-6">
-                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 backdrop-blur-sm">
-                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
+                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 shadow-sm">
+                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
                         WordPress Development Services
                       </h3>
                     </div>
                     
-                    <p className="text-lg text-gray-300 leading-relaxed">
+                    <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                       Our WordPress developers in Pune create:
                     </p>
 
-                    <ul className="space-y-4 text-gray-300">
+                    <ul className="space-y-4 text-gray-700">
                       <li className="flex items-start space-x-3">
-                        <span className="text-blue-400">✓</span>
-                        <span>Fully responsive, branded themes</span>
+                        <span className="text-blue-600 font-bold">✓</span>
+                        <span className="font-semibold">Fully responsive, branded themes</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <span className="text-blue-400">✓</span>
-                        <span>WooCommerce stores for small and medium brands</span>
+                        <span className="text-blue-600 font-bold">✓</span>
+                        <span className="font-semibold">WooCommerce stores for small and medium brands</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <span className="text-blue-400">✓</span>
-                        <span>Lightweight and secure plugin setups</span>
+                        <span className="text-blue-600 font-bold">✓</span>
+                        <span className="font-semibold">Lightweight and secure plugin setups</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <span className="text-blue-400">✓</span>
-                        <span>Backend panels even beginners can manage</span>
+                        <span className="text-blue-600 font-bold">✓</span>
+                        <span className="font-semibold">Backend panels even beginners can manage</span>
                       </li>
                     </ul>
 
                     <motion.button
-                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
+                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -674,7 +674,7 @@ const Services4Page = () => {
                       className="object-cover transform hover:scale-105 transition-transform duration-700"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-900/60 via-transparent to-transparent lg:bg-gradient-to-l"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-transparent lg:bg-gradient-to-l"></div>
                   </div>
                 </motion.div>
               </div>
@@ -687,9 +687,9 @@ const Services4Page = () => {
             variants={staggerContainer}
           >
             {/* Background Card with Gradient Border */}
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-violet-500/20 rounded-3xl blur-3xl opacity-20 transform rotate-1"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-violet-100 rounded-3xl blur-3xl opacity-20 transform rotate-1"></div>
             
-            <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm border border-gray-700/50">
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Content Column */}
                 <motion.div
@@ -697,37 +697,37 @@ const Services4Page = () => {
                   variants={fadeIn}
                 >
                   <div className="space-y-6">
-                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/10 to-violet-500/10 border border-indigo-500/20 backdrop-blur-sm">
-                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-violet-400">
+                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-indigo-50 to-violet-50 border border-indigo-200 shadow-sm">
+                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">
                         E-commerce Website Development (Fashion, D2C, Retail)
                       </h3>
                     </div>
                     
-                    <p className="text-lg text-gray-300 leading-relaxed">
+                    <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                       Whether you're launching a boutique brand or managing a large catalog:
                     </p>
 
-                    <ul className="space-y-4 text-gray-300">
+                    <ul className="space-y-4 text-gray-700">
                       <li className="flex items-start space-x-3">
-                        <span className="text-indigo-400">✓</span>
-                        <span>Shopify with custom product logic & dynamic checkouts</span>
+                        <span className="text-indigo-600 font-bold">✓</span>
+                        <span className="font-semibold">Shopify with custom product logic & dynamic checkouts</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <span className="text-indigo-400">✓</span>
-                        <span>WooCommerce for deep content and product control</span>
+                        <span className="text-indigo-600 font-bold">✓</span>
+                        <span className="font-semibold">WooCommerce for deep content and product control</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <span className="text-indigo-400">✓</span>
-                        <span>Magento for high-volume B2B/B2C commerce</span>
+                        <span className="text-indigo-600 font-bold">✓</span>
+                        <span className="font-semibold">Magento for high-volume B2B/B2C commerce</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <span className="text-indigo-400">✓</span>
-                        <span>Mobile cart flows and trust-building payment integrations</span>
+                        <span className="text-indigo-600 font-bold">✓</span>
+                        <span className="font-semibold">Mobile cart flows and trust-building payment integrations</span>
                       </li>
                     </ul>
 
                     <motion.button
-                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-violet-600 text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 group"
+                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-violet-600 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 group"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -756,7 +756,7 @@ const Services4Page = () => {
                       className="object-cover transform hover:scale-105 transition-transform duration-700"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-l from-gray-900/60 via-transparent to-transparent lg:bg-gradient-to-r"></div>
+                    <div className="absolute inset-0 bg-gradient-to-l from-white/60 via-transparent to-transparent lg:bg-gradient-to-r"></div>
                   </div>
                 </motion.div>
               </div>
@@ -769,9 +769,9 @@ const Services4Page = () => {
             variants={staggerContainer}
           >
             {/* Background Card with Gradient Border */}
-            <div className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-emerald-500/20 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-teal-100 to-emerald-100 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
             
-            <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm border border-gray-700/50">
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Content Column */}
                 <motion.div
@@ -779,37 +779,37 @@ const Services4Page = () => {
                   variants={fadeIn}
                 >
                   <div className="space-y-6">
-                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-teal-500/10 to-emerald-500/10 border border-teal-500/20 backdrop-blur-sm">
-                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-emerald-400">
+                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-teal-50 to-emerald-50 border border-teal-200 shadow-sm">
+                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-emerald-600">
                         Custom Website Development Solutions
                       </h3>
                     </div>
                     
-                    <p className="text-lg text-gray-300 leading-relaxed">
+                    <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                       Need something unique? We build from scratch using:
                     </p>
 
-                    <ul className="space-y-4 text-gray-300">
+                    <ul className="space-y-4 text-gray-700">
                       <li className="flex items-start space-x-3">
-                        <span className="text-teal-400">✓</span>
-                        <span>HTML5 / CSS3 / JavaScript</span>
+                        <span className="text-teal-600 font-bold">✓</span>
+                        <span className="font-semibold">HTML5 / CSS3 / JavaScript</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <span className="text-teal-400">✓</span>
-                        <span>Laravel for secure backends</span>
+                        <span className="text-teal-600 font-bold">✓</span>
+                        <span className="font-semibold">Laravel for secure backends</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <span className="text-teal-400">✓</span>
-                        <span>React & Next.js for seamless app-like user journeys</span>
+                        <span className="text-teal-600 font-bold">✓</span>
+                        <span className="font-semibold">React & Next.js for seamless app-like user journeys</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <span className="text-teal-400">✓</span>
-                        <span>Tailwind & Bootstrap for modern UI frameworks</span>
+                        <span className="text-teal-600 font-bold">✓</span>
+                        <span className="font-semibold">Tailwind & Bootstrap for modern UI frameworks</span>
                       </li>
                     </ul>
 
                     <motion.button
-                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-teal-500 to-emerald-600 text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 group"
+                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-teal-500 to-emerald-600 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 group"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -838,7 +838,7 @@ const Services4Page = () => {
                       className="object-cover transform hover:scale-105 transition-transform duration-700"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-900/60 via-transparent to-transparent lg:bg-gradient-to-l"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-transparent lg:bg-gradient-to-l"></div>
                   </div>
                 </motion.div>
               </div>
@@ -851,9 +851,9 @@ const Services4Page = () => {
             variants={staggerContainer}
           >
             {/* Background Card with Gradient Border */}
-            <div className="absolute inset-0 bg-gradient-to-r from-rose-500/20 to-pink-500/20 rounded-3xl blur-3xl opacity-20 transform rotate-1"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-rose-100 to-pink-100 rounded-3xl blur-3xl opacity-20 transform rotate-1"></div>
             
-            <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm border border-gray-700/50">
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-white">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Content Column */}
                 <motion.div
@@ -861,33 +861,33 @@ const Services4Page = () => {
                   variants={fadeIn}
                 >
                   <div className="space-y-6">
-                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-rose-500/10 to-pink-500/10 border border-rose-500/20 backdrop-blur-sm">
-                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-pink-400">
+                    <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-200 shadow-sm">
+                      <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600">
                         Website Redesign Services
                       </h3>
                     </div>
                     
-                    <p className="text-lg text-gray-300 leading-relaxed">
+                    <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                       If your site is underperforming, it's time to revamp:
                     </p>
 
-                    <ul className="space-y-4 text-gray-300">
+                    <ul className="space-y-4 text-gray-700">
                       <li className="flex items-start space-x-3">
-                        <span className="text-rose-400">✓</span>
-                        <span>Update outdated visuals with modern, branded UI</span>
+                        <span className="text-rose-600 font-bold">✓</span>
+                        <span className="font-semibold">Update outdated visuals with modern, branded UI</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <span className="text-rose-400">✓</span>
-                        <span>Reorganize content and navigation for better SEO</span>
+                        <span className="text-rose-600 font-bold">✓</span>
+                        <span className="font-semibold">Reorganize content and navigation for better SEO</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <span className="text-rose-400">✓</span>
-                        <span>Streamline performance for faster loading and mobile use</span>
+                        <span className="text-rose-600 font-bold">✓</span>
+                        <span className="font-semibold">Streamline performance for faster loading and mobile use</span>
                       </li>
                     </ul>
 
                     <motion.button
-                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-rose-500 to-pink-600 text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-rose-500/25 group"
+                      className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-rose-500 to-pink-600 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-rose-500/25 group"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -916,7 +916,7 @@ const Services4Page = () => {
                       className="object-cover transform hover:scale-105 transition-transform duration-700"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-l from-gray-900/60 via-transparent to-transparent lg:bg-gradient-to-r"></div>
+                    <div className="absolute inset-0 bg-gradient-to-l from-white/60 via-transparent to-transparent lg:bg-gradient-to-r"></div>
                   </div>
                 </motion.div>
               </div>
@@ -929,12 +929,12 @@ const Services4Page = () => {
             variants={staggerContainer}
           >
             {/* Background Card with Gradient Border */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-indigo-600/20 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-100 via-purple-100 to-indigo-100 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
             
-            <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm border border-blue-500/20 p-8 lg:p-12">
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-blue-200 p-8 lg:p-12 bg-white">
               <div className="text-center mb-12">
-                <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-indigo-600/10 border border-blue-500/20 backdrop-blur-sm">
-                  <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400">
+                <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 via-purple-50 to-indigo-50 border border-blue-200 shadow-sm">
+                  <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
                     Tech Stack That Powers Leadzoro Websites
                   </h3>
                 </div>
@@ -945,69 +945,69 @@ const Services4Page = () => {
                 <div className="space-y-8 lg:col-span-2">
                   {/* HTML/CSS/JS Card */}
                   <motion.div 
-                    className="p-6 rounded-xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
+                    className="p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 shadow-lg border border-blue-200 hover:border-blue-400 transition-all duration-300 group"
                     whileHover={{ y: -5 }}
                   >
                     <div className="flex items-center space-x-3 mb-3">
                       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
                         <span className="text-white text-xl font-bold">H</span>
                       </div>
-                      <h4 className="text-xl font-semibold text-blue-300 group-hover:text-blue-200">HTML / CSS / JS</h4>
+                      <h4 className="text-xl font-bold text-blue-700 group-hover:text-blue-800">HTML / CSS / JS</h4>
                     </div>
-                    <p className="text-blue-100/80">Best-in-class front-end technologies for fast, lightweight design execution.</p>
+                    <p className="text-blue-800 font-semibold">Best-in-class front-end technologies for fast, lightweight design execution.</p>
                   </motion.div>
 
                   {/* React/Next.js Card */}
                   <motion.div 
-                    className="p-6 rounded-xl bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
+                    className="p-6 rounded-xl bg-gradient-to-br from-purple-50 to-indigo-50 shadow-lg border border-purple-200 hover:border-purple-400 transition-all duration-300 group"
                     whileHover={{ y: -5 }}
                   >
                     <div className="flex items-center space-x-3 mb-3">
                       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
                         <span className="text-white text-xl font-bold">R</span>
                       </div>
-                      <h4 className="text-xl font-semibold text-purple-300 group-hover:text-purple-200">React / Next.js</h4>
+                      <h4 className="text-xl font-bold text-purple-700 group-hover:text-purple-800">React / Next.js</h4>
                     </div>
-                    <p className="text-purple-100/80">Perfect for SaaS, startups, and apps. Server-side rendering improves load speed and SEO rankings.</p>
+                    <p className="text-purple-800 font-semibold">Perfect for SaaS, startups, and apps. Server-side rendering improves load speed and SEO rankings.</p>
                   </motion.div>
 
                   {/* PHP Stack Card */}
                   <motion.div 
-                    className="p-6 rounded-xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
+                    className="p-6 rounded-xl bg-gradient-to-br from-indigo-50 to-blue-50 shadow-lg border border-indigo-200 hover:border-indigo-400 transition-all duration-300 group"
                     whileHover={{ y: -5 }}
                   >
                     <div className="flex items-start space-x-3 mb-3">
                       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center">
                         <span className="text-white text-xl font-bold">P</span>
                       </div>
-                      <h4 className="text-xl font-semibold text-indigo-300 group-hover:text-indigo-200">PHP / WordPress / Laravel</h4>
+                      <h4 className="text-xl font-bold text-indigo-700 group-hover:text-indigo-800">PHP / WordPress / Laravel</h4>
                     </div>
-                    <p className="text-indigo-100/80">From blogs to business platforms, these trusted tools power content-rich sites and powerful custom apps.</p>
+                    <p className="text-indigo-800 font-semibold">From blogs to business platforms, these trusted tools power content-rich sites and powerful custom apps.</p>
                   </motion.div>
 
                   {/* E-commerce Stack Card */}
                   <motion.div 
-                    className="p-6 rounded-xl bg-gradient-to-br from-blue-900/50 to-purple-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-purple-400/50 transition-all duration-300 group"
+                    className="p-6 rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 shadow-lg border border-blue-200 hover:border-purple-400 transition-all duration-300 group"
                     whileHover={{ y: -5 }}
                   >
                     <div className="flex items-start space-x-3 mb-3">
                       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                         <span className="text-white text-xl font-bold">E</span>
                       </div>
-                      <h4 className="text-xl font-semibold text-blue-300 group-hover:text-purple-200">Shopify / WooCommerce / Magento</h4>
+                      <h4 className="text-xl font-bold text-blue-700 group-hover:text-purple-800">Shopify / WooCommerce / Magento</h4>
                     </div>
-                    <p className="text-blue-100/80 mb-4">We help brands build digital storefronts that convert — fast.</p>
-                    <ul className="space-y-2 text-blue-100/80">
-                      <li className="flex items-start space-x-2">
-                        <span className="text-blue-400">•</span>
+                    <p className="text-blue-800 mb-4 font-semibold">We help brands build digital storefronts that convert — fast.</p>
+                    <ul className="space-y-2 text-blue-800">
+                      <li className="flex items-start space-x-2 font-semibold">
+                        <span className="text-blue-600">•</span>
                         <span>Shopify: Rapid deployment and simplicity</span>
                       </li>
-                      <li className="flex items-start space-x-2">
-                        <span className="text-blue-400">•</span>
+                      <li className="flex items-start space-x-2 font-semibold">
+                        <span className="text-blue-600">•</span>
                         <span>WooCommerce: Complete WordPress eCommerce control</span>
                       </li>
-                      <li className="flex items-start space-x-2">
-                        <span className="text-blue-400">•</span>
+                      <li className="flex items-start space-x-2 font-semibold">
+                        <span className="text-blue-600">•</span>
                         <span>Magento: Ideal for enterprise-level commerce</span>
                       </li>
                     </ul>
@@ -1031,14 +1031,14 @@ const Services4Page = () => {
                       className="object-cover transform hover:scale-105 transition-transform duration-700"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 via-purple-900/40 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-200/60 via-purple-200/40 to-transparent"></div>
                   </div>
                 </motion.div>
               </div>
 
               <div className="text-center mt-12">
                 <motion.button
-                  className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
+                  className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -1059,42 +1059,42 @@ const Services4Page = () => {
         variants={staggerContainer}
       >
         {/* Background Card with Gradient Border */}
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 via-orange-600/20 to-red-600/20 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-100 via-orange-100 to-red-100 rounded-3xl blur-3xl opacity-20 transform -rotate-1"></div>
         
-        <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm border border-amber-500/20 p-8 lg:p-12">
+        <div className="relative rounded-3xl overflow-hidden shadow-lg border border-amber-200 p-8 lg:p-12 bg-white">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content Column */}
             <motion.div
               className="space-y-8"
               variants={fadeIn}
             >
-              <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-amber-600/10 via-orange-600/10 to-red-600/10 border border-amber-500/20 backdrop-blur-sm">
-                <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-orange-400 to-red-400">
+              <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-amber-50 via-orange-50 to-red-50 border border-amber-200 shadow-sm">
+                <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-600 via-orange-600 to-red-600">
                   Industry-Specific Website Solutions
                 </h3>
               </div>
 
-              <p className="text-lg text-amber-100/90 leading-relaxed">
+              <p className="text-lg text-amber-800 leading-relaxed font-semibold">
                 Tailored solutions for your industry's unique needs and challenges.
               </p>
 
               <div className="space-y-8">
                 {/* Real Estate Firms */}
                 <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-amber-900/50 to-orange-900/50 backdrop-blur-sm border border-amber-500/30 hover:border-amber-400/50 transition-all duration-300 group"
+                  className="p-6 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 shadow-lg border border-amber-200 hover:border-amber-400 transition-all duration-300 group"
                   whileHover={{ y: -5 }}
                 >
                   <div className="flex items-start space-x-3 mb-3">
                     <span className="text-2xl">🏢</span>
-                    <h4 className="text-xl font-semibold text-amber-300 group-hover:text-amber-200">Real Estate Firms</h4>
+                    <h4 className="text-xl font-bold text-amber-700 group-hover:text-amber-800">Real Estate Firms</h4>
                   </div>
-                  <ul className="space-y-2 text-amber-100/90">
-                    <li className="flex items-start space-x-2">
-                      <span className="text-amber-400">•</span>
+                  <ul className="space-y-2 text-amber-800">
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-amber-600">•</span>
                       <span>Property listings with image carousels and smart filters</span>
                     </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-amber-400">•</span>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-amber-600">•</span>
                       <span>Contact integrations with WhatsApp & CRM tools</span>
                     </li>
                   </ul>
@@ -1102,24 +1102,24 @@ const Services4Page = () => {
 
                 {/* Clinics & Health Professionals */}
                 <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-orange-900/50 to-red-900/50 backdrop-blur-sm border border-orange-500/30 hover:border-orange-400/50 transition-all duration-300 group"
+                  className="p-6 rounded-xl bg-gradient-to-br from-orange-50 to-red-50 shadow-lg border border-orange-200 hover:border-orange-400 transition-all duration-300 group"
                   whileHover={{ y: -5 }}
                 >
                   <div className="flex items-start space-x-3 mb-3">
                     <span className="text-2xl">🏥</span>
-                    <h4 className="text-xl font-semibold text-orange-300 group-hover:text-orange-200">Clinics & Health Professionals</h4>
+                    <h4 className="text-xl font-bold text-orange-700 group-hover:text-orange-800">Clinics & Health Professionals</h4>
                   </div>
-                  <ul className="space-y-2 text-orange-100/90">
-                    <li className="flex items-start space-x-2">
-                      <span className="text-orange-400">•</span>
+                  <ul className="space-y-2 text-orange-800">
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-orange-600">•</span>
                       <span>Appointment scheduling, patient intake forms</span>
                     </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-orange-400">•</span>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-orange-600">•</span>
                       <span>Gallery for services & client testimonials</span>
                     </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-orange-400">•</span>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-orange-600">•</span>
                       <span>Secure health info pages + blog</span>
                     </li>
                   </ul>
@@ -1127,24 +1127,24 @@ const Services4Page = () => {
 
                 {/* Coaches & Educators */}
                 <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-red-900/50 to-amber-900/50 backdrop-blur-sm border border-red-500/30 hover:border-red-400/50 transition-all duration-300 group"
+                  className="p-6 rounded-xl bg-gradient-to-br from-red-50 to-amber-50 shadow-lg border border-red-200 hover:border-red-400 transition-all duration-300 group"
                   whileHover={{ y: -5 }}
                 >
                   <div className="flex items-start space-x-3 mb-3">
                     <span className="text-2xl">👨‍🏫</span>
-                    <h4 className="text-xl font-semibold text-red-300 group-hover:text-red-200">Coaches & Educators</h4>
+                    <h4 className="text-xl font-bold text-red-700 group-hover:text-red-800">Coaches & Educators</h4>
                   </div>
-                  <ul className="space-y-2 text-red-100/90">
-                    <li className="flex items-start space-x-2">
-                      <span className="text-red-400">•</span>
+                  <ul className="space-y-2 text-red-800">
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-red-600">•</span>
                       <span>LMS platforms (Thinkific, custom LMS)</span>
                     </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-red-400">•</span>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-red-600">•</span>
                       <span>Recorded sessions + live class integration</span>
                     </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-red-400">•</span>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-red-600">•</span>
                       <span>Lead magnet setups + email automation tools</span>
                     </li>
                   </ul>
@@ -1152,24 +1152,24 @@ const Services4Page = () => {
 
                 {/* Local Businesses */}
                 <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-amber-900/50 to-orange-900/50 backdrop-blur-sm border border-amber-500/30 hover:border-amber-400/50 transition-all duration-300 group"
+                  className="p-6 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 shadow-lg border border-amber-200 hover:border-amber-400 transition-all duration-300 group"
                   whileHover={{ y: -5 }}
                 >
                   <div className="flex items-start space-x-3 mb-3">
                     <span className="text-2xl">🏪</span>
-                    <h4 className="text-xl font-semibold text-amber-300 group-hover:text-amber-200">Local Businesses (Restaurants, Salons, Gyms)</h4>
+                    <h4 className="text-xl font-bold text-amber-700 group-hover:text-amber-800">Local Businesses (Restaurants, Salons, Gyms)</h4>
                   </div>
-                  <ul className="space-y-2 text-amber-100/90">
-                    <li className="flex items-start space-x-2">
-                      <span className="text-amber-400">•</span>
+                  <ul className="space-y-2 text-amber-800">
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-amber-600">•</span>
                       <span>Booking slots synced with your calendar</span>
                     </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-amber-400">•</span>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-amber-600">•</span>
                       <span>Google Maps and review integrations</span>
                     </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-amber-400">•</span>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-amber-600">•</span>
                       <span>Promo pages for offers and events</span>
                     </li>
                   </ul>
@@ -1177,24 +1177,24 @@ const Services4Page = () => {
 
                 {/* SaaS / Tech Products */}
                 <motion.div 
-                  className="p-6 rounded-xl bg-gradient-to-br from-orange-900/50 to-red-900/50 backdrop-blur-sm border border-orange-500/30 hover:border-orange-400/50 transition-all duration-300 group"
+                  className="p-6 rounded-xl bg-gradient-to-br from-orange-50 to-red-50 shadow-lg border border-orange-200 hover:border-orange-400 transition-all duration-300 group"
                   whileHover={{ y: -5 }}
                 >
                   <div className="flex items-start space-x-3 mb-3">
                     <span className="text-2xl">💻</span>
-                    <h4 className="text-xl font-semibold text-orange-300 group-hover:text-orange-200">SaaS / Tech Products</h4>
+                    <h4 className="text-xl font-bold text-orange-700 group-hover:text-orange-800">SaaS / Tech Products</h4>
                   </div>
-                  <ul className="space-y-2 text-orange-100/90">
-                    <li className="flex items-start space-x-2">
-                      <span className="text-orange-400">•</span>
+                  <ul className="space-y-2 text-orange-800">
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-orange-600">•</span>
                       <span>API documentation + changelog sections</span>
                     </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-orange-400">•</span>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-orange-600">•</span>
                       <span>Pricing tables, comparison charts</span>
                     </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-orange-400">•</span>
+                    <li className="flex items-start space-x-2 font-semibold">
+                      <span className="text-orange-600">•</span>
                       <span>Feature explanation using micro-animations</span>
                     </li>
                   </ul>
@@ -1219,7 +1219,7 @@ const Services4Page = () => {
                   className="object-cover transform hover:scale-105 transition-transform duration-700"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-amber-900/60 via-orange-900/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-amber-200/60 via-orange-200/40 to-transparent"></div>
               </div>
             </motion.div>
           </div>
@@ -1227,11 +1227,11 @@ const Services4Page = () => {
       </motion.div>
 
       {/* 5-Step Web Development Framework */}
-      <section className="py-20 px-4 bg-black-to-b from-emerald-600 to-teal-600 relative overflow-hidden">
+      <section className="py-20 px-4 bg-gradient-to-b from-emerald-50 to-teal-50 relative overflow-hidden">
         {/* Decorative background elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl"></div>
         </div>
 
         <motion.div 
@@ -1242,7 +1242,7 @@ const Services4Page = () => {
           viewport={{ once: true }}
         >
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-800"
             variants={fadeIn}
           >
             Our 5-Step Web Development Framework
@@ -1256,7 +1256,7 @@ const Services4Page = () => {
             >
               {/* Step 1 */}
               <motion.div 
-                className="p-6 rounded-xl bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-gradient-to-br from-indigo-50 to-purple-50 shadow-lg border border-indigo-200 hover:border-indigo-400 transition-all duration-300 group"
                 whileHover={{ y: -5 }}
               >
                 <div className="flex items-start space-x-4">
@@ -1264,8 +1264,8 @@ const Services4Page = () => {
                     1
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-indigo-300 group-hover:text-indigo-200 mb-2">Discovery & Planning</h4>
-                    <p className="text-indigo-100/90">
+                    <h4 className="text-xl font-bold text-indigo-700 group-hover:text-indigo-800 mb-2">Discovery & Planning</h4>
+                    <p className="text-indigo-800 font-semibold">
                       We understand your audience, brand, and goals. Then we plan the sitemap, features, and structure.
                     </p>
                   </div>
@@ -1274,7 +1274,7 @@ const Services4Page = () => {
 
               {/* Step 2 */}
               <motion.div 
-                className="p-6 rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg border border-purple-200 hover:border-purple-400 transition-all duration-300 group"
                 whileHover={{ y: -5 }}
               >
                 <div className="flex items-start space-x-4">
@@ -1282,8 +1282,8 @@ const Services4Page = () => {
                     2
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-purple-300 group-hover:text-purple-200 mb-2">UI/UX Design Mockups</h4>
-                    <p className="text-purple-100/90">
+                    <h4 className="text-xl font-bold text-purple-700 group-hover:text-purple-800 mb-2">UI/UX Design Mockups</h4>
+                    <p className="text-purple-800 font-semibold">
                       Designers create wireframes and visuals. You'll see your future site before we write a line of code.
                     </p>
                   </div>
@@ -1309,13 +1309,13 @@ const Services4Page = () => {
                     className="object-cover transform hover:scale-105 transition-transform duration-700"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/60 via-purple-900/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-indigo-200/60 via-purple-200/40 to-transparent"></div>
                 </div>
               </div>
 
               {/* Step 3 - Below Image */}
               <motion.div 
-                className="mt-8 p-6 rounded-xl bg-gradient-to-br from-pink-900/50 to-indigo-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
+                className="mt-8 p-6 rounded-xl bg-gradient-to-br from-pink-50 to-indigo-50 shadow-lg border border-pink-200 hover:border-pink-400 transition-all duration-300 group"
                 whileHover={{ y: -5 }}
               >
                 <div className="flex items-start space-x-4">
@@ -1323,8 +1323,8 @@ const Services4Page = () => {
                     3
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-pink-300 group-hover:text-pink-200 mb-2">Development</h4>
-                    <p className="text-pink-100/90">
+                    <h4 className="text-xl font-bold text-pink-700 group-hover:text-pink-800 mb-2">Development</h4>
+                    <p className="text-pink-800 font-semibold">
                       We write clean code, build custom logic, and integrate third-party tools. CMS or fully coded? You choose.
                     </p>
                   </div>
@@ -1339,7 +1339,7 @@ const Services4Page = () => {
             >
               {/* Step 4 */}
               <motion.div 
-                className="p-6 rounded-xl bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-gradient-to-br from-indigo-50 to-purple-50 shadow-lg border border-indigo-200 hover:border-indigo-400 transition-all duration-300 group"
                 whileHover={{ y: -5 }}
               >
                 <div className="flex items-start space-x-4">
@@ -1347,21 +1347,21 @@ const Services4Page = () => {
                     4
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-indigo-300 group-hover:text-indigo-200 mb-2">QA & Performance Optimization</h4>
-                    <p className="text-indigo-100/90 mb-2">
+                    <h4 className="text-xl font-bold text-indigo-700 group-hover:text-indigo-800 mb-2">QA & Performance Optimization</h4>
+                    <p className="text-indigo-800 mb-2 font-semibold">
                       Each page is tested on major browsers, devices, and load times. We ensure:
                     </p>
-                    <ul className="space-y-1 text-indigo-100/90">
-                      <li className="flex items-start space-x-2">
-                        <span className="text-indigo-400">•</span>
+                    <ul className="space-y-1 text-indigo-800">
+                      <li className="flex items-start space-x-2 font-semibold">
+                        <span className="text-indigo-600">•</span>
                         <span>Lazy loading for images</span>
                       </li>
-                      <li className="flex items-start space-x-2">
-                        <span className="text-indigo-400">•</span>
+                      <li className="flex items-start space-x-2 font-semibold">
+                        <span className="text-indigo-600">•</span>
                         <span>Clean code hierarchy</span>
                       </li>
-                      <li className="flex items-start space-x-2">
-                        <span className="text-indigo-400">•</span>
+                      <li className="flex items-start space-x-2 font-semibold">
+                        <span className="text-indigo-600">•</span>
                         <span>Fast database queries</span>
                       </li>
                     </ul>
@@ -1371,7 +1371,7 @@ const Services4Page = () => {
 
               {/* Step 5 */}
               <motion.div 
-                className="p-6 rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg border border-purple-200 hover:border-purple-400 transition-all duration-300 group"
                 whileHover={{ y: -5 }}
               >
                 <div className="flex items-start space-x-4">
@@ -1379,8 +1379,8 @@ const Services4Page = () => {
                     5
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-purple-300 group-hover:text-purple-200 mb-2">Launch + Post-Launch Support</h4>
-                    <p className="text-purple-100/90">
+                    <h4 className="text-xl font-bold text-purple-700 group-hover:text-purple-800 mb-2">Launch + Post-Launch Support</h4>
+                    <p className="text-purple-800 font-semibold">
                       We deploy your site and offer 30 days of free support for tweaks, bug fixes, and feedback implementation.
                     </p>
                   </div>
@@ -1392,11 +1392,11 @@ const Services4Page = () => {
       </section>
 
       {/* Who We Work With Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
         {/* Decorative background elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl"></div>
         </div>
 
         <motion.div 
@@ -1407,7 +1407,7 @@ const Services4Page = () => {
           viewport={{ once: true }}
         >
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-800"
             variants={fadeIn}
           >
             Who We Work With
@@ -1416,7 +1416,7 @@ const Services4Page = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Service-Based Small Businesses */}
             <motion.div 
-              className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
+              className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 shadow-lg border border-blue-200 hover:border-blue-400 transition-all duration-300 group"
               variants={fadeIn}
               whileHover={{ y: -5, scale: 1.02 }}
             >
@@ -1424,13 +1424,13 @@ const Services4Page = () => {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center">
                   <span className="text-2xl">🏢</span>
                 </div>
-                <h3 className="text-xl font-semibold text-blue-300 group-hover:text-blue-200">Service-Based Small Businesses</h3>
+                <h3 className="text-xl font-bold text-blue-700 group-hover:text-blue-800">Service-Based Small Businesses</h3>
               </div>
             </motion.div>
 
             {/* Product Startups & D2C Brands */}
             <motion.div 
-              className="p-6 rounded-2xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
+              className="p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg border border-purple-200 hover:border-purple-400 transition-all duration-300 group"
               variants={fadeIn}
               whileHover={{ y: -5, scale: 1.02 }}
             >
@@ -1438,13 +1438,13 @@ const Services4Page = () => {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
                   <span className="text-2xl">🚀</span>
                 </div>
-                <h3 className="text-xl font-semibold text-purple-300 group-hover:text-purple-200">Product Startups & D2C Brands</h3>
+                <h3 className="text-xl font-bold text-purple-700 group-hover:text-purple-800">Product Startups & D2C Brands</h3>
               </div>
             </motion.div>
 
             {/* Realtors, Developers, Brokers */}
             <motion.div 
-              className="p-6 rounded-2xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
+              className="p-6 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-50 shadow-lg border border-pink-200 hover:border-pink-400 transition-all duration-300 group"
               variants={fadeIn}
               whileHover={{ y: -5, scale: 1.02 }}
             >
@@ -1452,13 +1452,13 @@ const Services4Page = () => {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center">
                   <span className="text-2xl">🏠</span>
                 </div>
-                <h3 className="text-xl font-semibold text-pink-300 group-hover:text-pink-200">Realtors, Developers, Brokers</h3>
+                <h3 className="text-xl font-bold text-pink-700 group-hover:text-pink-800">Realtors, Developers, Brokers</h3>
               </div>
             </motion.div>
 
             {/* Doctors, Clinics, and Hospitals */}
             <motion.div 
-              className="p-6 rounded-2xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
+              className="p-6 rounded-2xl bg-gradient-to-br from-indigo-50 to-blue-50 shadow-lg border border-indigo-200 hover:border-indigo-400 transition-all duration-300 group"
               variants={fadeIn}
               whileHover={{ y: -5, scale: 1.02 }}
             >
@@ -1466,13 +1466,13 @@ const Services4Page = () => {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center">
                   <span className="text-2xl">🏥</span>
                 </div>
-                <h3 className="text-xl font-semibold text-indigo-300 group-hover:text-indigo-200">Doctors, Clinics, and Hospitals</h3>
+                <h3 className="text-xl font-bold text-indigo-700 group-hover:text-indigo-800">Doctors, Clinics, and Hospitals</h3>
               </div>
             </motion.div>
 
             {/* Trainers, Coaches, Educators */}
             <motion.div 
-              className="p-6 rounded-2xl bg-gradient-to-br from-cyan-900/50 to-teal-900/50 backdrop-blur-sm border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 group"
+              className="p-6 rounded-2xl bg-gradient-to-br from-cyan-50 to-teal-50 shadow-lg border border-cyan-200 hover:border-cyan-400 transition-all duration-300 group"
               variants={fadeIn}
               whileHover={{ y: -5, scale: 1.02 }}
             >
@@ -1480,13 +1480,13 @@ const Services4Page = () => {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center">
                   <span className="text-2xl">👨‍🏫</span>
                 </div>
-                <h3 className="text-xl font-semibold text-cyan-300 group-hover:text-cyan-200">Trainers, Coaches, Educators</h3>
+                <h3 className="text-xl font-bold text-cyan-700 group-hover:text-cyan-800">Trainers, Coaches, Educators</h3>
               </div>
             </motion.div>
 
             {/* Local Retailers & Restaurants */}
             <motion.div 
-              className="p-6 rounded-2xl bg-gradient-to-br from-emerald-900/50 to-green-900/50 backdrop-blur-sm border border-emerald-500/30 hover:border-emerald-400/50 transition-all duration-300 group"
+              className="p-6 rounded-2xl bg-gradient-to-br from-emerald-50 to-green-50 shadow-lg border border-emerald-200 hover:border-emerald-400 transition-all duration-300 group"
               variants={fadeIn}
               whileHover={{ y: -5, scale: 1.02 }}
             >
@@ -1494,13 +1494,13 @@ const Services4Page = () => {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center">
                   <span className="text-2xl">🏪</span>
                 </div>
-                <h3 className="text-xl font-semibold text-emerald-300 group-hover:text-emerald-200">Local Retailers & Restaurants</h3>
+                <h3 className="text-xl font-bold text-emerald-700 group-hover:text-emerald-800">Local Retailers & Restaurants</h3>
               </div>
             </motion.div>
 
             {/* Legal & Accounting Firms */}
             <motion.div 
-              className="p-6 rounded-2xl bg-gradient-to-br from-amber-900/50 to-orange-900/50 backdrop-blur-sm border border-amber-500/30 hover:border-amber-400/50 transition-all duration-300 group"
+              className="p-6 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 shadow-lg border border-amber-200 hover:border-amber-400 transition-all duration-300 group"
               variants={fadeIn}
               whileHover={{ y: -5, scale: 1.02 }}
             >
@@ -1508,13 +1508,13 @@ const Services4Page = () => {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center">
                   <span className="text-2xl">⚖️</span>
                 </div>
-                <h3 className="text-xl font-semibold text-amber-300 group-hover:text-amber-200">Legal & Accounting Firms</h3>
+                <h3 className="text-xl font-bold text-amber-700 group-hover:text-amber-800">Legal & Accounting Firms</h3>
               </div>
             </motion.div>
 
             {/* SaaS Founders & App Creators */}
             <motion.div 
-              className="p-6 rounded-2xl bg-gradient-to-br from-violet-900/50 to-fuchsia-900/50 backdrop-blur-sm border border-violet-500/30 hover:border-violet-400/50 transition-all duration-300 group"
+              className="p-6 rounded-2xl bg-gradient-to-br from-violet-50 to-fuchsia-50 shadow-lg border border-violet-200 hover:border-violet-400 transition-all duration-300 group"
               variants={fadeIn}
               whileHover={{ y: -5, scale: 1.02 }}
             >
@@ -1522,13 +1522,13 @@ const Services4Page = () => {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
                   <span className="text-2xl">💻</span>
                 </div>
-                <h3 className="text-xl font-semibold text-violet-300 group-hover:text-violet-200">SaaS Founders & App Creators</h3>
+                <h3 className="text-xl font-bold text-violet-700 group-hover:text-violet-800">SaaS Founders & App Creators</h3>
               </div>
             </motion.div>
 
             {/* NGOs & Purpose-Driven Brands */}
             <motion.div 
-              className="p-6 rounded-2xl bg-gradient-to-br from-rose-900/50 to-red-900/50 backdrop-blur-sm border border-rose-500/30 hover:border-rose-400/50 transition-all duration-300 group"
+              className="p-6 rounded-2xl bg-gradient-to-br from-rose-50 to-red-50 shadow-lg border border-rose-200 hover:border-rose-400 transition-all duration-300 group"
               variants={fadeIn}
               whileHover={{ y: -5, scale: 1.02 }}
             >
@@ -1536,7 +1536,7 @@ const Services4Page = () => {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-red-500 flex items-center justify-center">
                   <span className="text-2xl">🌍</span>
                 </div>
-                <h3 className="text-xl font-semibold text-rose-300 group-hover:text-rose-200">NGOs & Purpose-Driven Brands</h3>
+                <h3 className="text-xl font-bold text-rose-700 group-hover:text-rose-800">NGOs & Purpose-Driven Brands</h3>
               </div>
             </motion.div>
           </div>
@@ -1544,11 +1544,11 @@ const Services4Page = () => {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         {/* Decorative background elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl"></div>
         </div>
 
         <motion.div 
@@ -1564,7 +1564,7 @@ const Services4Page = () => {
             variants={fadeIn}
           >
             <motion.h2 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-700 to-pink-800"
               variants={fadeIn}
             >
               FAQs About Website Development
@@ -1591,7 +1591,7 @@ const Services4Page = () => {
                     className="object-cover transform hover:scale-105 transition-transform duration-700"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent"></div>
                 </div>
               </div>
             </motion.div>
@@ -1603,72 +1603,72 @@ const Services4Page = () => {
             >
               {/* FAQ Item 1 */}
               <motion.div 
-                className="p-6 rounded-xl bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 shadow-lg border border-blue-200 hover:border-blue-400 transition-all duration-300 group"
                 variants={fadeIn}
                 whileHover={{ y: -2 }}
               >
-                <h3 className="text-xl font-semibold text-blue-300 group-hover:text-blue-200 mb-2">What's the typical website build time?</h3>
-                <p className="text-blue-100/90">5 to 30 days based on scope and features.</p>
+                <h3 className="text-xl font-bold text-blue-700 group-hover:text-blue-800 mb-2">What's the typical website build time?</h3>
+                <p className="text-blue-800 font-semibold">5 to 30 days based on scope and features.</p>
               </motion.div>
 
               {/* FAQ Item 2 */}
               <motion.div 
-                className="p-6 rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg border border-purple-200 hover:border-purple-400 transition-all duration-300 group"
                 variants={fadeIn}
                 whileHover={{ y: -2 }}
               >
-                <h3 className="text-xl font-semibold text-purple-300 group-hover:text-purple-200 mb-2">What platforms do you offer?</h3>
-                <p className="text-purple-100/90">We specialize in WordPress, Shopify, Laravel, HTML/CSS, and React-based frameworks.</p>
+                <h3 className="text-xl font-bold text-purple-700 group-hover:text-purple-800 mb-2">What platforms do you offer?</h3>
+                <p className="text-purple-800 font-semibold">We specialize in WordPress, Shopify, Laravel, HTML/CSS, and React-based frameworks.</p>
               </motion.div>
 
               {/* FAQ Item 3 */}
               <motion.div 
-                className="p-6 rounded-xl bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400/50 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-gradient-to-br from-pink-50 to-rose-50 shadow-lg border border-pink-200 hover:border-pink-400 transition-all duration-300 group"
                 variants={fadeIn}
                 whileHover={{ y: -2 }}
               >
-                <h3 className="text-xl font-semibold text-pink-300 group-hover:text-pink-200 mb-2">Will my website be SEO-friendly?</h3>
-                <p className="text-pink-100/90">Yes. All sites include metadata, schema markup, fast loads, and crawl-friendly structure.</p>
+                <h3 className="text-xl font-bold text-pink-700 group-hover:text-pink-800 mb-2">Will my website be SEO-friendly?</h3>
+                <p className="text-pink-800 font-semibold">Yes. All sites include metadata, schema markup, fast loads, and crawl-friendly structure.</p>
               </motion.div>
 
               {/* FAQ Item 4 */}
               <motion.div 
-                className="p-6 rounded-xl bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-gradient-to-br from-indigo-50 to-blue-50 shadow-lg border border-indigo-200 hover:border-indigo-400 transition-all duration-300 group"
                 variants={fadeIn}
                 whileHover={{ y: -2 }}
               >
-                <h3 className="text-xl font-semibold text-indigo-300 group-hover:text-indigo-200 mb-2">Can I manage the site myself later?</h3>
-                <p className="text-indigo-100/90">Absolutely. We provide admin access and guidance.</p>
+                <h3 className="text-xl font-bold text-indigo-700 group-hover:text-indigo-800 mb-2">Can I manage the site myself later?</h3>
+                <p className="text-indigo-800 font-semibold">Absolutely. We provide admin access and guidance.</p>
               </motion.div>
 
               {/* FAQ Item 5 */}
               <motion.div 
-                className="p-6 rounded-xl bg-gradient-to-br from-cyan-900/50 to-teal-900/50 backdrop-blur-sm border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-gradient-to-br from-cyan-50 to-teal-50 shadow-lg border border-cyan-200 hover:border-cyan-400 transition-all duration-300 group"
                 variants={fadeIn}
                 whileHover={{ y: -2 }}
               >
-                <h3 className="text-xl font-semibold text-cyan-300 group-hover:text-cyan-200 mb-2">Do you handle domain/hosting too?</h3>
-                <p className="text-cyan-100/90">Yes — we help you choose, purchase, and connect your hosting.</p>
+                <h3 className="text-xl font-bold text-cyan-700 group-hover:text-cyan-800 mb-2">Do you handle domain/hosting too?</h3>
+                <p className="text-cyan-800 font-semibold">Yes — we help you choose, purchase, and connect your hosting.</p>
               </motion.div>
 
               {/* FAQ Item 6 */}
               <motion.div 
-                className="p-6 rounded-xl bg-gradient-to-br from-emerald-900/50 to-green-900/50 backdrop-blur-sm border border-emerald-500/30 hover:border-emerald-400/50 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-gradient-to-br from-emerald-50 to-green-50 shadow-lg border border-emerald-200 hover:border-emerald-400 transition-all duration-300 group"
                 variants={fadeIn}
                 whileHover={{ y: -2 }}
               >
-                <h3 className="text-xl font-semibold text-emerald-300 group-hover:text-emerald-200 mb-2">Do you offer redesigns of existing websites?</h3>
-                <p className="text-emerald-100/90">Yes. We can modernize your site without losing SEO value or branding.</p>
+                <h3 className="text-xl font-bold text-emerald-700 group-hover:text-emerald-800 mb-2">Do you offer redesigns of existing websites?</h3>
+                <p className="text-emerald-800 font-semibold">Yes. We can modernize your site without losing SEO value or branding.</p>
               </motion.div>
 
               {/* FAQ Item 7 */}
               <motion.div 
-                className="p-6 rounded-xl bg-gradient-to-br from-amber-900/50 to-orange-900/50 backdrop-blur-sm border border-amber-500/30 hover:border-amber-400/50 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 shadow-lg border border-amber-200 hover:border-amber-400 transition-all duration-300 group"
                 variants={fadeIn}
                 whileHover={{ y: -2 }}
               >
-                <h3 className="text-xl font-semibold text-amber-300 group-hover:text-amber-200 mb-2">What happens after launch?</h3>
-                <p className="text-amber-100/90">We offer 30-day support and optional maintenance packages for updates, monitoring, and more.</p>
+                <h3 className="text-xl font-bold text-amber-700 group-hover:text-amber-800 mb-2">What happens after launch?</h3>
+                <p className="text-amber-800 font-semibold">We offer 30-day support and optional maintenance packages for updates, monitoring, and more.</p>
               </motion.div>
             </motion.div>
           </div>
@@ -1676,7 +1676,7 @@ const Services4Page = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(59,130,246,0.1),transparent_70%)]"></div>
@@ -1692,14 +1692,14 @@ const Services4Page = () => {
         >
           <div className="text-center mb-12">
             <motion.h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 flex items-center justify-center space-x-4"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-700 to-pink-800 flex items-center justify-center space-x-4"
               variants={fadeIn}
             >
-              <FaCalendarAlt className="text-4xl md:text-5xl lg:text-6xl text-blue-400 transform hover:scale-110 transition-transform duration-300" />
+              <FaCalendarAlt className="text-4xl md:text-5xl lg:text-6xl text-blue-600 transform hover:scale-110 transition-transform duration-300" />
               <span>Book a Free Website Strategy Call</span>
             </motion.h2>
             <motion.p 
-              className="text-xl text-gray-300 mb-8"
+              className="text-xl text-gray-700 mb-8 font-semibold"
               variants={fadeIn}
             >
               Let's build something remarkable together.
@@ -1707,7 +1707,7 @@ const Services4Page = () => {
           </div>
 
           <motion.div 
-            className="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-gray-800/50 to-black/50 backdrop-blur-sm border border-gray-700/30 shadow-2xl"
+            className="p-8 md:p-12 rounded-3xl bg-white shadow-2xl border border-gray-200"
             variants={fadeIn}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -1716,12 +1716,12 @@ const Services4Page = () => {
                 className="space-y-6"
                 variants={fadeIn}
               >
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                   Whether you're launching your first business site or revamping your existing digital presence, Leadzoro has the tools, creativity, and expertise to make it happen.
                 </p>
-                <div className="flex items-center space-x-4 text-blue-400">
+                <div className="flex items-center space-x-4 text-blue-600">
                   <span className="text-2xl">📞</span>
-                  <p className="text-lg font-semibold">Call or WhatsApp us now — or book your free website strategy session below:</p>
+                  <p className="text-lg font-bold">Call or WhatsApp us now — or book your free website strategy session below:</p>
                 </div>
               </motion.div>
 
@@ -1731,7 +1731,7 @@ const Services4Page = () => {
                 variants={fadeIn}
               >
                 <motion.button
-                  className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-600 text-white font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-purple-500/25 transition-all duration-300 group"
+                  className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-600 text-white font-bold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-purple-500/25 transition-all duration-300 group"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

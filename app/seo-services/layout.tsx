@@ -5,6 +5,8 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+export const revalidate = 86400; // Revalidate every 24 hours for ISR
+
 export const metadata: Metadata = {
   title: 'SEO Services in India & Pune | Best SEO Company - Leadzoro',
   description: 'Rank higher with Leadzoro – India\'s trusted SEO agency. Get affordable SEO services for startups, clinics, real estate & e-commerce across Pune & India.',

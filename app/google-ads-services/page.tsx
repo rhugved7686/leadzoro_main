@@ -1,5 +1,6 @@
 'use client';
 
+import React, { useEffect } from "react";
 import Image from 'next/image';
 import { 
   motion, 
@@ -27,7 +28,6 @@ import {
   FaIndustry 
 } from 'react-icons/fa';
 
-
 const fadeIn: Variants = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 }
@@ -41,13 +41,8 @@ const staggerContainer: Variants = {
   }
 };
 
-// Near the top of the file, add the export for Fast Refresh support
-
-
-import { useEffect } from "react";
-
 const Services2Page = () => {
-  // Add this effect for development feedback when the page refreshes
+  // Development console feedback
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
       console.log('Services2 page loaded/refreshed');
@@ -55,7 +50,7 @@ const Services2Page = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+    <div className="min-h-screen bg-white text-slate-900">
       <Navbar />
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
@@ -64,10 +59,11 @@ const Services2Page = () => {
             src={Services10}
             alt="Google Ads Services"
             fill
-            className="object-cover opacity-40"
+            className="object-cover opacity-70"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900"></div>
+          {/* lighter overlay for readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/80"></div>
         </div>
         
         <motion.div 
@@ -76,20 +72,20 @@ const Services2Page = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
             Google Ads Services India & Pune
           </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-blue-300">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-blue-700">
             ROI-Focused PPC Campaigns by Leadzoro
           </h2>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300">
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-slate-700">
             Drive Revenue, Not Just Clicks – Performance-Based Google Ads by Leadzoro
           </p>
         </motion.div>
       </section>
 
       {/* Main Content Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white">
         <motion.div 
           className="container mx-auto max-w-4xl"
           variants={staggerContainer}
@@ -98,21 +94,21 @@ const Services2Page = () => {
           viewport={{ once: true }}
         >
           <motion.p 
-            className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
+            className="text-lg md:text-xl text-slate-700 mb-8 leading-relaxed"
             variants={fadeIn}
           >
             In today's fast-paced digital ecosystem, your customers are already searching for what you offer — the real question is, are they finding you?
           </motion.p>
           
           <motion.p 
-            className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
+            className="text-lg md:text-xl text-slate-700 mb-8 leading-relaxed"
             variants={fadeIn}
           >
             At Leadzoro, we empower ambitious businesses, startups, e-commerce founders, and local service providers with laser-targeted Google Ads Services in India. Whether you're looking to generate leads, drive sales, or scale profitably — our team of experts ensures every ad spend returns results.
           </motion.p>
 
           <motion.p 
-            className="text-xl md:text-2xl font-semibold text-blue-400 mb-12"
+            className="text-xl md:text-2xl font-semibold text-blue-700 mb-12"
             variants={fadeIn}
           >
             Let's transform your digital presence into a profit-generating machine — powered by precision, data, and creativity.
@@ -121,7 +117,7 @@ const Services2Page = () => {
       </section>
 
       {/* What Are Google Ads Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-800 to-gray-900">
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-gray-100">
         <motion.div 
           className="container mx-auto max-w-4xl"
           variants={staggerContainer}
@@ -130,7 +126,7 @@ const Services2Page = () => {
           viewport={{ once: true }}
         >
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+            className="text-3xl md:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600"
             variants={fadeIn}
           >
             What Are Google Ads and Why Should You Use Them?
@@ -141,7 +137,7 @@ const Services2Page = () => {
             variants={staggerContainer}
           >
             <motion.p 
-              className="text-lg text-gray-300 leading-relaxed"
+              className="text-lg text-slate-700 leading-relaxed"
               variants={fadeIn}
             >
               Google Ads is the world's leading online advertising platform that allows businesses to place their brand in front of ready-to-buy customers through:
@@ -154,17 +150,17 @@ const Services2Page = () => {
               {["Search results", "Display banners", "Shopping listings", "YouTube videos", "Mobile apps"].map((item, index) => (
                 <motion.li 
                   key={index}
-                  className="flex items-center space-x-3 bg-gradient-to-r from-gray-800 to-gray-700 p-4 rounded-lg"
+                  className="flex items-center space-x-3 bg-white p-4 rounded-lg border border-gray-200 shadow-sm"
                   variants={fadeIn}
                 >
-                  <span className="text-blue-400">✓</span>
-                  <span>{item}</span>
+                  <span className="text-blue-600 font-bold">✓</span>
+                  <span className="text-slate-700">{item}</span>
                 </motion.li>
               ))}
             </motion.ul>
 
             <motion.p 
-              className="text-lg text-gray-300 leading-relaxed mb-6"
+              className="text-lg text-slate-700 leading-relaxed mb-6"
               variants={fadeIn}
             >
               It works on a Pay-Per-Click (PPC) model, where you pay only when someone clicks your ad. But launching ads is not enough. You need:
@@ -182,31 +178,31 @@ const Services2Page = () => {
               ].map((item, index) => (
                 <motion.li 
                   key={index}
-                  className="flex items-center space-x-3 text-gray-300"
+                  className="flex items-center space-x-3 text-slate-700"
                   variants={fadeIn}
                 >
-                  <span className="text-blue-400">•</span>
+                  <span className="text-blue-600 mt-1">•</span>
                   <span>{item}</span>
                 </motion.li>
               ))}
             </motion.ul>
 
             <motion.p 
-              className="text-lg text-gray-300 leading-relaxed"
+              className="text-lg text-slate-700 leading-relaxed"
               variants={fadeIn}
             >
               That's where a trusted Google Ads Management Company in India like Leadzoro makes all the difference.
             </motion.p>
 
             <motion.p 
-              className="text-lg text-gray-300 leading-relaxed"
+              className="text-lg text-slate-700 leading-relaxed"
               variants={fadeIn}
             >
               Google Ads also offers detailed targeting options like demographics, interests, devices, custom audiences, and more, helping you hyper-target your ideal customers with incredible accuracy.
             </motion.p>
 
             <motion.p 
-              className="text-lg text-gray-300 leading-relaxed"
+              className="text-lg text-slate-700 leading-relaxed"
               variants={fadeIn}
             >
               With multiple bidding strategies like Target CPA, ROAS, Manual CPC, and Smart Bidding, our certified experts ensure that you get the best return for your marketing investment.
@@ -216,7 +212,7 @@ const Services2Page = () => {
       </section>
 
       {/* Why Indian Businesses Need Google Ads Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-gray-800">
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-100 to-gray-50">
         <motion.div 
           className="container mx-auto max-w-6xl"
           variants={staggerContainer}
@@ -226,7 +222,7 @@ const Services2Page = () => {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              className="relative w-full h-auto aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl"
+              className="relative w-full h-auto aspect-[4/3] rounded-2xl overflow-hidden shadow-lg"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -240,7 +236,7 @@ const Services2Page = () => {
                 className="object-contain transform hover:scale-105 transition-transform duration-700"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent"></div>
             </motion.div>
 
             <motion.div
@@ -251,14 +247,14 @@ const Services2Page = () => {
               viewport={{ once: true }}
             >
               <motion.h2 
-                className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+                className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600"
                 variants={fadeIn}
               >
                 Why Indian Businesses (Especially in Pune) Need Google Ads
               </motion.h2>
 
               <motion.p 
-                className="text-lg text-gray-300 leading-relaxed"
+                className="text-lg text-slate-700 leading-relaxed"
                 variants={fadeIn}
               >
                 India is home to more than 900 million internet users, and Google is the first place they go to find products, services, and solutions. From tech parks in Pune to remote towns across India — your ideal customer is online.
@@ -269,7 +265,7 @@ const Services2Page = () => {
                 variants={staggerContainer}
               >
                 <motion.h3 
-                  className="text-xl font-semibold text-blue-300 mb-4"
+                  className="text-xl font-semibold text-blue-600 mb-4"
                   variants={fadeIn}
                 >
                   Google Ads helps you:
@@ -288,8 +284,8 @@ const Services2Page = () => {
                       className="flex items-start space-x-3 group"
                       variants={fadeIn}
                     >
-                      <span className="text-blue-400 mt-1">→</span>
-                      <span className="text-gray-300 group-hover:text-blue-300 transition-colors duration-300">{item}</span>
+                      <span className="text-blue-600 mt-1">→</span>
+                      <span className="text-slate-700 group-hover:text-blue-600 transition-colors duration-300">{item}</span>
                     </motion.li>
                   ))}
                 </motion.ul>
@@ -300,14 +296,14 @@ const Services2Page = () => {
                 variants={staggerContainer}
               >
                 <motion.p 
-                  className="text-lg text-gray-300 leading-relaxed"
+                  className="text-lg text-slate-700 leading-relaxed"
                   variants={fadeIn}
                 >
                   If you're in Pune, the digital competition is intense. But with Google Ads Services in Pune by Leadzoro, your business can dominate local SERPs and stay ahead.
                 </motion.p>
 
                 <motion.p 
-                  className="text-lg text-gray-300 leading-relaxed"
+                  className="text-lg text-slate-700 leading-relaxed"
                   variants={fadeIn}
                 >
                   Imagine a customer searching "best salon in Kalyani Nagar" or "real estate agents in Wakad"—wouldn't you want your business to be the first result they click? That's the power of search intent combined with smart PPC execution.
@@ -315,7 +311,7 @@ const Services2Page = () => {
               </motion.div>
 
               <motion.button
-                className="mt-8 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
+                className="mt-8 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white font-semibold shadow transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -327,11 +323,11 @@ const Services2Page = () => {
       </section>
 
       {/* Why Choose Leadzoro Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-800 to-gray-900 relative overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
+      <section className="py-20 px-4 bg-white relative overflow-hidden">
+        {/* subtle decorative elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-40"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-100 rounded-full filter blur-3xl opacity-40"></div>
         </div>
 
         <motion.div 
@@ -342,22 +338,21 @@ const Services2Page = () => {
           viewport={{ once: true }}
         >
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600"
             variants={fadeIn}
           >
             Why Choose Leadzoro as Your Google Ads Partner?
           </motion.h2>
 
-          {/* New content starts here */}
           <motion.div 
             className="text-center mb-12"
             variants={fadeIn}
           >
-            <p className="text-2xl text-blue-300 font-semibold mb-8">
+            <p className="text-2xl text-blue-600 font-semibold mb-8">
               Because we do more than run ads — we deliver performance.
             </p>
-            <h3 className="text-3xl font-bold text-white mb-10">
-              What makes us the <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">Best Google Ads Agency in India</span>:
+            <h3 className="text-3xl font-bold text-slate-900 mb-10">
+              What makes us the <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">Best Google Ads Agency in India</span>:
             </h3>
           </motion.div>
 
@@ -365,7 +360,7 @@ const Services2Page = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
             variants={staggerContainer}
           >
-            {[
+            {[ 
               "Certified Google Ads Professionals",
               "300+ Campaigns Successfully Executed",
               "Focus on ROI, Not Just Reach",
@@ -376,34 +371,33 @@ const Services2Page = () => {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="p-6 rounded-xl bg-gradient-to-r from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/30 hover:border-blue-500/30 transition-all duration-300 transform hover:-translate-y-2"
+                className="p-6 rounded-xl bg-white border border-gray-200 hover:border-blue-100 transition-all duration-300 transform hover:-translate-y-2 shadow-sm"
                 variants={fadeIn}
                 whileHover={{ scale: 1.03 }}
               >
                 <div className="flex items-start space-x-4">
-                  <span className="text-blue-400 text-2xl flex-shrink-0">✅</span>
-                  <p className="text-lg text-gray-200 font-medium">{item}</p>
+                  <span className="text-blue-600 text-2xl flex-shrink-0">✅</span>
+                  <p className="text-lg text-slate-800 font-medium">{item}</p>
                 </div>
               </motion.div>
             ))}
           </motion.div>
 
           <motion.div 
-            className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20 mb-16"
+            className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-50 mb-16"
             variants={fadeIn}
           >
-            <p className="text-xl text-center text-gray-200 leading-relaxed">
+            <p className="text-xl text-center text-slate-800 leading-relaxed">
               We are not just another PPC Company in Pune. We are your digital growth partner. We handle everything from landing page optimization to analytics integration — offering a one-stop solution for Google Ads success.
             </p>
           </motion.div>
-          {/* New content ends here */}
 
           {/* Our 5-Step Process to Google Ads Success Section */}
           <motion.div 
             className="mb-20"
             variants={fadeIn}
           >
-            <motion.div className="relative h-[300px] mb-12 rounded-xl overflow-hidden shadow-2xl">
+            <motion.div className="relative h-[300px] mb-12 rounded-xl overflow-hidden shadow-md">
               <Image
                 src={require('../../public/assets/Services15.png')}
                 alt="Our 5-Step Process to Google Ads Success"
@@ -412,9 +406,9 @@ const Services2Page = () => {
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/70"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/70 to-white/60"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <h3 className="text-3xl md:text-4xl font-bold text-center px-6 py-4 rounded-lg bg-gray-900/60 backdrop-blur-sm text-white border border-blue-500/30 shadow-xl">
+                <h3 className="text-3xl md:text-4xl font-bold text-center px-6 py-4 rounded-lg bg-white/80 text-slate-900 border border-gray-200 shadow">
                   Our 5-Step Process to Google Ads Success
                 </h3>
               </div>
@@ -463,7 +457,7 @@ const Services2Page = () => {
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="relative p-6 rounded-xl bg-gradient-to-b from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/40 hover:border-blue-500/40 transition-all duration-300 shadow-lg hover:shadow-xl h-full"
+                  className="relative p-6 rounded-xl bg-white border border-gray-200 hover:border-blue-100 transition-all duration-300 shadow-sm h-full"
                   variants={fadeIn}
                   whileHover={{ 
                     scale: 1.03,
@@ -471,8 +465,8 @@ const Services2Page = () => {
                     zIndex: 10
                   }}
                 >
-                  <div className="absolute -top-5 -left-2 w-12 h-12 rounded-full bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 flex items-center justify-center shadow-lg">
-                    <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center text-xl font-bold`}>
+                  <div className="absolute -top-5 -left-2 w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow">
+                    <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center text-xl font-bold text-white`}>
                       {item.step}
                     </div>
                   </div>
@@ -480,22 +474,20 @@ const Services2Page = () => {
                   <div className="mt-4">
                     <div className="flex items-center mb-3">
                       <span className="text-2xl mr-2">{item.icon}</span>
-                      <h4 className="text-lg font-bold text-white">
+                      <h4 className="text-lg font-bold text-slate-900">
                         {item.title}
                       </h4>
                     </div>
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <p className="text-slate-700 text-sm leading-relaxed">
                       {item.description}
                     </p>
                   </div>
                   
                   {index < 4 && (
-                    <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                      <div className="flex items-center justify-center w-full h-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
+                    <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                      </svg>
                     </div>
                   )}
                 </motion.div>
@@ -503,10 +495,10 @@ const Services2Page = () => {
             </motion.div>
             
             <motion.div 
-              className="mt-12 bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-6 rounded-xl border border-blue-500/20 max-w-4xl mx-auto"
+              className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-50 max-w-4xl mx-auto"
               variants={fadeIn}
             >
-              <p className="text-center text-blue-300 font-medium">
+              <p className="text-center text-blue-700 font-medium">
                 Our proven process has helped businesses across India achieve consistent ROI from Google Ads
               </p>
             </motion.div>
@@ -514,11 +506,11 @@ const Services2Page = () => {
 
           {/* Real Campaign Wins Section */}
           <motion.div 
-            className="mb-20 overflow-hidden"
+            className="mb-20"
             variants={fadeIn}
           >
             <div className="relative">
-              {/* Background Image with Parallax Effect */}
+              {/* Background Image */}
               <div className="relative h-[250px] overflow-hidden rounded-t-2xl">
                 <Image
                   src={require('../../public/assets/Services16.png')}
@@ -528,23 +520,23 @@ const Services2Page = () => {
                   className="object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-gray-900/60 to-gray-900/90"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-white/70 to-white/90"></div>
                 
                 {/* Floating Elements for Visual Interest */}
-                <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-blue-500/20 blur-xl"></div>
-                <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-purple-500/20 blur-xl"></div>
+                <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-blue-100 blur-xl"></div>
+                <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-indigo-100 blur-xl"></div>
                 
                 {/* Headline */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <h3 className="text-3xl md:text-4xl font-bold text-center text-white mb-2">
+                  <h3 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-2">
                     Real Campaign Wins
                   </h3>
-                  <p className="text-blue-300 text-lg">Success Stories</p>
+                  <p className="text-blue-700 text-lg">Success Stories</p>
                 </div>
               </div>
               
               {/* Success Stories Cards */}
-              <div className="relative bg-gradient-to-b from-gray-900 to-gray-950 rounded-b-2xl p-8 shadow-2xl border-t border-blue-500/30">
+              <div className="relative bg-white rounded-b-2xl p-8 border border-gray-200 shadow">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {[
                     {
@@ -552,88 +544,85 @@ const Services2Page = () => {
                       location: "Pune",
                       description: "Grew sales 300% in 90 days with Shopping + YouTube Ads. ROAS: 5.2X",
                       icon: "👕",
-                      color: "from-rose-500 to-pink-600"
+                      color: "from-rose-400 to-pink-500"
                     },
                     {
                       title: "Real Estate Consultant",
                       location: "India",
                       description: "₹1.2Cr+ pipeline in 60 days. CPL: ₹540, CTR: 7.1%",
                       icon: "🏢",
-                      color: "from-emerald-500 to-green-600"
+                      color: "from-emerald-400 to-green-500"
                     },
                     {
                       title: "EdTech Startup",
                       location: "",
                       description: "500+ student leads in 3 months. CAC reduced by 40% through conversion-focused landing page testing.",
                       icon: "🎓",
-                      color: "from-blue-500 to-indigo-600"
+                      color: "from-blue-400 to-indigo-500"
                     },
                     {
                       title: "Fitness Studio",
                       location: "Baner",
                       description: "70+ monthly calls via Local Search Ads at just ₹29 per call.",
                       icon: "💪",
-                      color: "from-amber-500 to-orange-600"
+                      color: "from-amber-400 to-orange-500"
                     },
                     {
                       title: "SaaS Tool",
                       location: "National",
                       description: "Reduced cost per demo from ₹890 to ₹312 in 45 days. 4X pipeline uplift.",
                       icon: "🧰",
-                      color: "from-violet-500 to-purple-600"
+                      color: "from-violet-400 to-purple-500"
                     },
                     {
                       title: "Healthcare Clinic",
                       location: "Koregaon Park",
                       description: "Increased new patient appointments by 320% with targeted search + GMB call ads.",
                       icon: "🏥",
-                      color: "from-cyan-500 to-blue-600"
+                      color: "from-cyan-400 to-blue-500"
                     }
                   ].map((item, index) => (
                     <motion.div
                       key={index}
-                      className="relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/30 transition-all duration-300 group"
+                      className="relative overflow-hidden rounded-xl bg-white border border-gray-200 transition-all duration-300 group shadow-sm"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1, duration: 0.5 }}
                       viewport={{ once: true }}
                       whileHover={{ 
                         scale: 1.02,
-                        boxShadow: "0 10px 30px -10px rgba(0, 0, 0, 0.5)"
+                        boxShadow: "0 10px 30px -10px rgba(14,165,233,0.08)"
                       }}
                     >
-                      {/* Gradient Border Effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -translate-x-full group-hover:translate-x-0 transform"></div>
-                      
                       <div className="p-5">
                         <div className="flex items-center mb-3">
-                          <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center text-2xl shadow-lg mr-3`}>
+                          <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center text-2xl shadow mr-3`}>
                             {item.icon}
                           </div>
                           <div>
-                            <h4 className="text-lg font-bold text-white">
+                            <h4 className="text-lg font-bold text-slate-900">
                               {item.title}
                             </h4>
                             {item.location && (
-                              <p className="text-gray-400 text-sm">
+                              <p className="text-slate-500 text-sm">
                                 {item.location}
                               </p>
                             )}
                           </div>
                         </div>
-                        <div className="pl-2 border-l-2 border-blue-500/50">
-                          <p className="text-gray-300 text-sm leading-relaxed">
+                        <div className="pl-2 border-l-2 border-blue-100">
+                          <p className="text-slate-700 text-sm leading-relaxed">
                             {item.description}
                           </p>
                         </div>
                         
                         {/* Success Indicator */}
                         <div className="mt-4 flex items-center">
-                          <div className="h-1 w-full bg-gray-700 rounded-full overflow-hidden">
+                          <div className="h-1 w-full bg-gray-200 rounded-full overflow-hidden">
                             <div className={`h-full bg-gradient-to-r ${item.color} w-full`}></div>
                           </div>
-                          <div className="ml-2 text-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                          <div className="ml-2 text-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
                           </div>
@@ -645,8 +634,8 @@ const Services2Page = () => {
                 
                 {/* Call to Action */}
                 <div className="mt-10 text-center">
-                  <p className="text-blue-300 mb-4">Ready to become our next success story?</p>
-                  <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/20">
+                  <p className="text-blue-700 mb-4">Ready to become our next success story?</p>
+                  <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow">
                     Schedule Your Strategy Call
                   </button>
                 </div>
@@ -661,45 +650,36 @@ const Services2Page = () => {
           >
             {/* Decorative Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div className="absolute top-20 left-20 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-blue-900/5 to-transparent"></div>
+              <div className="absolute top-20 left-20 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-40"></div>
+              <div className="absolute bottom-20 right-20 w-80 h-80 bg-indigo-100 rounded-full blur-3xl opacity-40"></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-blue-50/20 to-transparent"></div>
             </div>
             
             {/* Content Container */}
-            <div className="relative z-10 bg-gradient-to-br from-gray-900/90 to-gray-950/90 backdrop-blur-sm rounded-3xl border border-gray-800/50 overflow-hidden">
-              {/* Animated Border */}
-              <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute -top-[500px] -left-[500px] w-[1000px] h-[1000px] animate-slow-spin">
-                  <div className="absolute top-0 left-0 right-0 bottom-0 border-2 border-blue-500/20 rounded-full"></div>
-                  <div className="absolute top-10 left-10 right-10 bottom-10 border-2 border-purple-500/20 rounded-full"></div>
-                  <div className="absolute top-20 left-20 right-20 bottom-20 border-2 border-pink-500/20 rounded-full"></div>
-                </div>
-              </div>
-              
+            <div className="relative z-10 bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm">
               {/* Header with Gradient Line */}
               <div className="relative pt-12 pb-8">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-                <h3 className="text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-2">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-pink-500"></div>
+                <h3 className="text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-pink-500 mb-2">
                   Who We Help
                 </h3>
               </div>
               
               {/* Main Content */}
               <div className="p-8">
-                {/* Industries Hexagon Grid */}
+                {/* Industries Grid */}
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                   {[
-                    { name: "Startups & Entrepreneurs", icon: "🚀", color: "from-blue-500 to-blue-600" },
-                    { name: "E-commerce Brands", icon: "🛍️", color: "from-green-500 to-green-600" },
-                    { name: "Real Estate Consultants", icon: "🏢", color: "from-yellow-500 to-yellow-600" },
-                    { name: "Educational Institutes", icon: "🎓", color: "from-red-500 to-red-600" },
-                    { name: "Doctors, Dentists, Clinics", icon: "⚕️", color: "from-teal-500 to-teal-600" },
-                    { name: "B2B SaaS & Service Companies", icon: "💻", color: "from-indigo-500 to-indigo-600" },
-                    { name: "Coaching & Course Creators", icon: "📚", color: "from-purple-500 to-purple-600" },
-                    { name: "Fitness & Beauty Professionals", icon: "💪", color: "from-pink-500 to-pink-600" },
-                    { name: "Event & Wedding Planners", icon: "💍", color: "from-amber-500 to-amber-600" },
-                    { name: "Industrial Suppliers & Manufacturers", icon: "🏭", color: "from-cyan-500 to-cyan-600" }
+                    { name: "Startups & Entrepreneurs", icon: "🚀", color: "from-blue-400 to-blue-500" },
+                    { name: "E-commerce Brands", icon: "🛍️", color: "from-green-400 to-green-500" },
+                    { name: "Real Estate Consultants", icon: "🏢", color: "from-yellow-400 to-yellow-500" },
+                    { name: "Educational Institutes", icon: "🎓", color: "from-red-400 to-red-500" },
+                    { name: "Doctors, Dentists, Clinics", icon: "⚕️", color: "from-teal-400 to-teal-500" },
+                    { name: "B2B SaaS & Service Companies", icon: "💻", color: "from-indigo-400 to-indigo-500" },
+                    { name: "Coaching & Course Creators", icon: "📚", color: "from-purple-400 to-purple-500" },
+                    { name: "Fitness & Beauty Professionals", icon: "💪", color: "from-pink-400 to-pink-500" },
+                    { name: "Event & Wedding Planners", icon: "💍", color: "from-amber-400 to-amber-500" },
+                    { name: "Industrial Suppliers & Manufacturers", icon: "🏭", color: "from-cyan-400 to-cyan-500" }
                   ].map((industry, index) => (
                     <motion.div
                       key={index}
@@ -710,40 +690,32 @@ const Services2Page = () => {
                       viewport={{ once: true }}
                       whileHover={{ scale: 1.05, y: -5, zIndex: 20 }}
                     >
-                      {/* Hexagon Shape with Gradient Border */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-[130px] h-[150px] bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/30 group-hover:border-blue-500/50 transition-all duration-300 rounded-2xl transform rotate-0 group-hover:rotate-3"></div>
+                        <div className="w-[130px] h-[150px] bg-white border border-gray-200 rounded-2xl transform rotate-0 group-hover:rotate-3 transition-all duration-300 shadow">
+                        </div>
                       </div>
                       
-                      {/* Content */}
                       <div className="relative z-10 p-4 flex flex-col items-center text-center">
-                        {/* Icon with Gradient Background */}
-                        <div className={`w-14 h-14 mb-3 rounded-xl bg-gradient-to-br ${industry.color} flex items-center justify-center text-2xl shadow-lg transform transition-transform duration-500 group-hover:rotate-12`}>
+                        <div className={`w-14 h-14 mb-3 rounded-xl bg-gradient-to-br ${industry.color} flex items-center justify-center text-2xl shadow-lg transition-transform duration-500 group-hover:rotate-12`}>
                           <span>{industry.icon}</span>
                         </div>
-                        
-                        {/* Industry Name */}
-                        <p className="text-sm font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
+                        <p className="text-sm font-medium text-slate-700 group-hover:text-slate-900 transition-colors duration-300">
                           {industry.name}
                         </p>
-                        
-                        {/* Hover Indicator Dot */}
-                        <div className="absolute -bottom-1 w-1.5 h-1.5 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute -bottom-1 w-1.5 h-1.5 rounded-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
                     </motion.div>
                   ))}
                 </div>
                 
-                {/* Bottom Message with Animated Gradient */}
                 <div className="text-center relative max-w-3xl mx-auto">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 blur-xl opacity-30 -z-10"></div>
-                  <p className="text-xl text-blue-300 font-medium py-6 px-4">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 blur-xl opacity-30 -z-10"></div>
+                  <p className="text-xl text-blue-700 font-medium py-6 px-4">
                     Wherever your business stands — we help you grow profitably with Google Ads.
                   </p>
                   
-                  {/* CTA Button */}
                   <motion.button
-                    className="mt-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold shadow-lg shadow-blue-900/20 hover:shadow-blue-500/30 transition-all duration-300"
+                    className="mt-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white font-semibold shadow transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -759,76 +731,71 @@ const Services2Page = () => {
             </div>
           </motion.div>
 
-                    {/* FAQ Section */}
-                    <motion.div 
+          {/* FAQ Section */}
+          <motion.div 
             className="mb-20 relative"
             variants={fadeIn}
           >
-            {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div className="absolute -top-20 -left-20 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl"></div>
-              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-blue-900/5 to-transparent"></div>
+              <div className="absolute -top-20 -left-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-30"></div>
+              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-indigo-100 rounded-full blur-3xl opacity-30"></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-blue-50/10 to-transparent"></div>
             </div>
             
-            {/* Content Container */}
-            <div className="relative z-10 bg-gradient-to-br from-gray-900/80 to-gray-950/80 backdrop-blur-sm rounded-3xl border border-gray-800/50 overflow-hidden">
-              {/* Header with Gradient Border */}
+            <div className="relative z-10 bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm">
               <div className="relative">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-pink-500"></div>
                 <div className="pt-8 pb-4 px-8">
-                  <h3 className="text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-2">
+                  <h3 className="text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-pink-500 mb-2">
                     Frequently Asked Questions
                   </h3>
                 </div>
               </div>
               
-              {/* Main Content */}
               <div className="p-8">
-                {/* FAQ Accordion */}
                 <div className="max-w-3xl mx-auto space-y-6">
                   {[
                     {
                       question: "What is the minimum ad budget I need to start?",
                       answer: "We recommend a minimum budget of ₹10,000/month for effective lead generation.",
                       icon: "💰",
-                      color: "from-blue-500 to-blue-600"
+                      color: "from-blue-400 to-blue-500"
                     },
                     {
                       question: "Do you offer Google Ads for e-commerce?",
                       answer: "Yes, we specialize in Google Ads for E-commerce Stores in India using Shopping, Display & Performance Max.",
                       icon: "🛍️",
-                      color: "from-purple-500 to-purple-600"
+                      color: "from-purple-400 to-purple-500"
                     },
                     {
                       question: "Can you guarantee leads?",
                       answer: "No ethical agency can guarantee leads. But we optimize daily to bring consistent ROI and performance.",
                       icon: "📊",
-                      color: "from-pink-500 to-pink-600"
+                      color: "from-pink-400 to-pink-500"
                     },
                     {
                       question: "What's the difference between Google Ads and SEO?",
                       answer: "Google Ads is paid and offers instant visibility. SEO is organic and long-term. Both work best together.",
                       icon: "🔍",
-                      color: "from-indigo-500 to-indigo-600"
+                      color: "from-indigo-400 to-indigo-500"
                     },
                     {
                       question: "How soon can I expect results?",
                       answer: "Initial results are typically seen within 7–10 days of campaign launch.",
                       icon: "⏱️",
-                      color: "from-cyan-500 to-cyan-600"
+                      color: "from-cyan-400 to-cyan-500"
                     },
                     {
                       question: "Do you provide real-time reports?",
                       answer: "Yes! Clients get access to transparent dashboards and weekly performance reports.",
                       icon: "📈",
-                      color: "from-green-500 to-green-600"
+                      color: "from-green-400 to-green-500"
                     },
                     {
                       question: "What types of businesses can benefit from Google Ads?",
                       answer: "Any business that wants more traffic, leads, or sales can benefit — including service-based, product-based, and B2B models.",
                       icon: "🏢",
-                      color: "from-amber-500 to-amber-600"
+                      color: "from-amber-400 to-amber-500"
                     }
                   ].map((faq, index) => (
                     <motion.div
@@ -839,37 +806,32 @@ const Services2Page = () => {
                       transition={{ delay: index * 0.1, duration: 0.5 }}
                       viewport={{ once: true }}
                     >
-                      {/* Accordion Item */}
                       <motion.div
                         className="group"
                         initial={{ height: "auto" }}
                         whileHover={{ scale: 1.01 }}
                       >
-                        {/* Question Header */}
-                        <div className="flex items-center justify-between p-5 rounded-xl bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/30 group-hover:border-blue-500/30 transition-all duration-300 cursor-pointer overflow-hidden relative">
-                          {/* Animated Background Gradient */}
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -translate-x-full group-hover:translate-x-0 transform"></div>
+                        <div className="flex items-center justify-between p-5 rounded-xl bg-white border border-gray-200 group-hover:border-blue-100 transition-all duration-300 cursor-pointer overflow-hidden relative">
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -translate-x-full group-hover:translate-x-0 transform"></div>
                           
-                          {/* Question Content */}
                           <div className="flex items-center space-x-4 relative z-10">
-                            <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${faq.color} flex items-center justify-center text-2xl shadow-lg flex-shrink-0`}>
+                            <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${faq.color} flex items-center justify-center text-2xl shadow flex-shrink-0`}>
                               <span>{faq.icon}</span>
                             </div>
-                            <h4 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors duration-300">
+                            <h4 className="text-lg font-semibold text-slate-900 group-hover:text-blue-600 transition-colors duration-300">
                               {faq.question}
                             </h4>
                           </div>
                           
-                          {/* Expand/Collapse Button with Animation */}
                           <div className="relative z-10">
                             <motion.div
-                              className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center group-hover:from-blue-600 group-hover:to-purple-600 transition-colors duration-300"
+                              className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center group-hover:from-blue-600 group-hover:to-indigo-600 transition-colors duration-300"
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
                             >
                               <motion.svg 
                                 xmlns="http://www.w3.org/2000/svg" 
-                                className="h-5 w-5 text-gray-300 group-hover:text-white" 
+                                className="h-5 w-5 text-gray-600 group-hover:text-blue-600" 
                                 fill="none" 
                                 viewBox="0 0 24 24" 
                                 stroke="currentColor"
@@ -884,21 +846,17 @@ const Services2Page = () => {
                           </div>
                         </div>
                         
-                        {/* Answer Panel with Reveal Animation */}
                         <motion.div
                           className="overflow-hidden"
                           initial={{ height: 0, opacity: 0 }}
                           whileInView={{ height: "auto", opacity: 1 }}
                           transition={{ duration: 0.5, delay: 0.1 }}
                         >
-                          <div className="p-5 bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm border-l border-r border-b border-gray-700/30 rounded-b-xl">
+                          <div className="p-5 bg-white border-t border-gray-100 rounded-b-xl">
                             <div className="pl-16">
                               <div className="relative">
-                                {/* Vertical Line Connector */}
-                                <div className="absolute left-[-28px] top-[-20px] w-0.5 h-[calc(100%+20px)] bg-gradient-to-b from-blue-500/50 to-purple-500/50"></div>
-                                
-                                {/* Answer Text */}
-                                <p className="text-gray-300 leading-relaxed">
+                                <div className="absolute left-[-28px] top-[-20px] w-0.5 h-[calc(100%+20px)] bg-gradient-to-b from-blue-200 to-indigo-200"></div>
+                                <p className="text-slate-700 leading-relaxed">
                                   {faq.answer}
                                 </p>
                               </div>
@@ -910,7 +868,6 @@ const Services2Page = () => {
                   ))}
                 </div>
                 
-                {/* CTA Button */}
                 <motion.div
                   className="mt-12 text-center"
                   initial={{ opacity: 0, y: 20 }}
@@ -918,7 +875,7 @@ const Services2Page = () => {
                   transition={{ delay: 0.7, duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:scale-105">
+                  <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white font-semibold shadow transition-all duration-300 transform hover:scale-105">
                     <span className="flex items-center">
                       <span>Have More Questions? Let's Talk</span>
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -939,21 +896,17 @@ const Services2Page = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            {/* Decorative Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]"></div>
-              <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px]"></div>
+              <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-50 rounded-full blur-[100px]"></div>
+              <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-50 rounded-full blur-[100px]"></div>
             </div>
             
-            {/* Glass Card Container */}
             <div className="relative z-10">
-              <div className="bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-3xl border border-gray-700/50 overflow-hidden shadow-2xl">
-                {/* Animated Border */}
+              <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-lg">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-pink-500"></div>
                 </div>
                 
-                {/* Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   {/* Left Column - Content */}
                   <div className="p-10 lg:p-12 flex flex-col justify-center">
@@ -963,17 +916,17 @@ const Services2Page = () => {
                       transition={{ delay: 0.2, duration: 0.5 }}
                       viewport={{ once: true }}
                     >
-                      <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+                      <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-pink-500">
                         Let's Scale Your Business with Google Ads
                       </h3>
                       
-                      <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                      <p className="text-lg text-slate-700 mb-8 leading-relaxed">
                         At Leadzoro, we treat your business like our own. Our team doesn't just aim for traffic — we aim for leads, revenue, and real returns.
                       </p>
                       
                       <div className="mb-8">
                         <motion.button
-                          className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold shadow-lg hover:shadow-blue-500/30 transition-all duration-300 flex items-center justify-center space-x-2"
+                          className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white font-semibold shadow transition-all duration-300 flex items-center justify-center space-x-2"
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                         >
@@ -993,14 +946,14 @@ const Services2Page = () => {
                           transition={{ delay: 0.3, duration: 0.5 }}
                           viewport={{ once: true }}
                         >
-                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                           </div>
                           <div>
-                            <p className="text-gray-400 text-sm">Call/WhatsApp</p>
-                            <p className="text-white font-semibold group-hover:text-blue-400 transition-colors duration-300">+91 8166922792</p>
+                            <p className="text-slate-500 text-sm">Call/WhatsApp</p>
+                            <p className="text-slate-900 font-semibold group-hover:text-blue-600 transition-colors duration-300">+91 8166922792</p>
                           </div>
                         </motion.div>
                         
@@ -1011,14 +964,14 @@ const Services2Page = () => {
                           transition={{ delay: 0.4, duration: 0.5 }}
                           viewport={{ once: true }}
                         >
-                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center shadow flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                           </div>
                           <div>
-                            <p className="text-gray-400 text-sm">Email</p>
-                            <p className="text-white font-semibold group-hover:text-purple-400 transition-colors duration-300">hello@leadzoro.com</p>
+                            <p className="text-slate-500 text-sm">Email</p>
+                            <p className="text-slate-900 font-semibold group-hover:text-indigo-600 transition-colors duration-300">hello@leadzoro.com</p>
                           </div>
                         </motion.div>
                         
@@ -1029,14 +982,14 @@ const Services2Page = () => {
                           transition={{ delay: 0.5, duration: 0.5 }}
                           viewport={{ once: true }}
                         >
-                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center shadow flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                             </svg>
                           </div>
                           <div>
-                            <p className="text-gray-400 text-sm">Website</p>
-                            <p className="text-white font-semibold group-hover:text-pink-400 transition-colors duration-300">www.leadzoro.com</p>
+                            <p className="text-slate-500 text-sm">Website</p>
+                            <p className="text-slate-900 font-semibold group-hover:text-pink-600 transition-colors duration-300">www.leadzoro.com</p>
                           </div>
                         </motion.div>
                       </div>
@@ -1045,17 +998,14 @@ const Services2Page = () => {
                   
                   {/* Right Column - Decorative Image/Animation */}
                   <div className="relative h-full min-h-[300px] lg:min-h-0 overflow-hidden">
-                    {/* Background Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-purple-900/30"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50"></div>
                     
-                    {/* Decorative Elements */}
                     <div className="absolute inset-0 overflow-hidden">
-                      {/* Animated Circles */}
                       <motion.div 
-                        className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-xl"
+                        className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-100 rounded-full blur-xl"
                         animate={{ 
-                          scale: [1, 1.2, 1],
-                          opacity: [0.3, 0.6, 0.3]
+                          scale: [1, 1.05, 1],
+                          opacity: [0.6, 0.9, 0.6]
                         }}
                         transition={{ 
                           repeat: Infinity, 
@@ -1065,10 +1015,10 @@ const Services2Page = () => {
                       ></motion.div>
                       
                       <motion.div 
-                        className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-purple-500/20 rounded-full blur-xl"
+                        className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-indigo-100 rounded-full blur-xl"
                         animate={{ 
-                          scale: [1, 1.3, 1],
-                          opacity: [0.3, 0.5, 0.3]
+                          scale: [1, 1.08, 1],
+                          opacity: [0.6, 0.9, 0.6]
                         }}
                         transition={{ 
                           repeat: Infinity, 
@@ -1079,19 +1029,16 @@ const Services2Page = () => {
                       ></motion.div>
                     </div>
                     
-                    {/* Decorative Grid Lines */}
                     <div className="absolute inset-0 grid grid-cols-4 grid-rows-4 pointer-events-none">
                       {Array.from({ length: 16 }).map((_, i) => (
-                        <div key={i} className="border border-white/5"></div>
+                        <div key={i} className="border border-gray-100"></div>
                       ))}
                     </div>
                     
-                    {/* Floating Elements */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="relative w-64 h-64">
-                        {/* Orbit Circles */}
                         <motion.div 
-                          className="absolute inset-0 border-2 border-blue-500/20 rounded-full"
+                          className="absolute inset-0 border-2 border-blue-100 rounded-full"
                           animate={{ rotate: 360 }}
                           transition={{ 
                             repeat: Infinity, 
@@ -1099,14 +1046,11 @@ const Services2Page = () => {
                             ease: "linear" 
                           }}
                         >
-                          {/* Orbiting Element 1 */}
-                          <motion.div 
-                            className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full shadow-lg shadow-blue-500/50"
-                          ></motion.div>
+                          <motion.div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full shadow" />
                         </motion.div>
                         
                         <motion.div 
-                          className="absolute inset-8 border-2 border-purple-500/20 rounded-full"
+                          className="absolute inset-8 border-2 border-indigo-100 rounded-full"
                           animate={{ rotate: -360 }}
                           transition={{ 
                             repeat: Infinity, 
@@ -1114,16 +1058,12 @@ const Services2Page = () => {
                             ease: "linear" 
                           }}
                         >
-                          {/* Orbiting Element 2 */}
-                          <motion.div 
-                            className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-purple-500 rounded-full shadow-lg shadow-purple-500/50"
-                          ></motion.div>
+                          <motion.div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-indigo-600 rounded-full shadow" />
                         </motion.div>
                         
-                        {/* Center Element */}
                         <div className="absolute inset-0 flex items-center justify-center">
                           <motion.div 
-                            className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 shadow-lg shadow-blue-500/20 flex items-center justify-center"
+                            className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 shadow-lg flex items-center justify-center"
                             animate={{ 
                               rotate: [0, 5, -5, 0],
                             }}
@@ -1175,13 +1115,13 @@ const Services2Page = () => {
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    className="p-6 rounded-xl bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/30 hover:border-blue-500/30 transition-all duration-300 group"
+                    className="p-6 rounded-xl bg-white border border-gray-200 hover:border-blue-100 transition-all duration-300 group shadow-sm"
                     variants={fadeIn}
                   >
-                    <h3 className="text-xl font-semibold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors">
+                    <h3 className="text-xl font-semibold text-blue-600 mb-2 group-hover:text-blue-500 transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                       {item.description}
                     </p>
                   </motion.div>
@@ -1189,7 +1129,7 @@ const Services2Page = () => {
               </motion.div>
 
               <motion.button
-                className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
+                className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white font-semibold transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -1198,7 +1138,7 @@ const Services2Page = () => {
             </motion.div>
 
             <motion.div
-              className="order-1 lg:order-2 relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl"
+              className="order-1 lg:order-2 relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -1212,7 +1152,7 @@ const Services2Page = () => {
                 className="object-contain transform hover:scale-105 transition-transform duration-700"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent"></div>
             </motion.div>
           </div>
         </motion.div>

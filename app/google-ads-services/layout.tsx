@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+export const revalidate = 86400; // Revalidate every 24 hours for ISR
+
 export const metadata: Metadata = {
   title: 'Google Ads Services in India & Pune | Leadzoro PPC Experts',
   description: 'Leadzoro is India\'s trusted Google Ads agency offering ROI-focused PPC, e-commerce campaigns, YouTube, Display & Search Ads. Book your expert now.',
